@@ -5,9 +5,8 @@ import { StyledHeader } from "../styles/Header.styled";
 const Header = () => {
   return (
     <StyledHeader>
-      <img src={logo} />
-      <h1>smart Tech</h1>
-      <img src={cart} />
+      <img className="logo" src={logo} alt="Smart Tech logo" />
+      <img className="cart" src={cart} alt="cart emoji" />
     </StyledHeader>
   );
 };
