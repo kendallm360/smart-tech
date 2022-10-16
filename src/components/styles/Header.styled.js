@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   background-color: #df0000;
-  border: 1px solid red;
   height: 10vh;
   display: flex;
   flex-direction: row;
