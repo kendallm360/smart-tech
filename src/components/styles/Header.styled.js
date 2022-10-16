@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   background-color: #df0000;
+  cursor: pointer;
   height: 10vh;
   display: flex;
   flex-direction: row;
