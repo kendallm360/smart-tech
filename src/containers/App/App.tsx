@@ -8,6 +8,7 @@ const App = () => {
   return (
     <>
       <Header />
+
       <Route exact path="/">
         <div className="App">
           <Categories />
