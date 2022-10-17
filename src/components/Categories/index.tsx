@@ -16,7 +16,7 @@ const Categories = () => {
       <h2>Fall Sale</h2>
       <h3> Shop these deals and more by category:</h3>
       <div className="categories">
-        <Link to={`/cellphones`}>
+        <Link to={`/Cellphones`}>
           <section className="category">
             <div className="category-body">
               <img
@@ -29,12 +29,15 @@ const Categories = () => {
           </section>
         </Link>
 
-        <section className="category">
-          <div className="category-body">
-            <img className="category-images" src={desktop} alt="Desktop" />
-          </div>
-          <p className="category-label">Desktops</p>
-        </section>
+        <Link to={`/Desktops`}>
+          <section className="category">
+            <div className="category-body">
+              <img className="category-images" src={desktop} alt="Desktop" />
+            </div>
+            <p className="category-label">Desktops</p>
+          </section>
+        </Link>
+
         <section className="category">
           <div className="category-body">
             <img

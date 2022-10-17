@@ -3,9 +3,7 @@ import { fetchCategory } from "../../utils/apicalls";
 
 const Category = ({ id }: any) => {
   useEffect(() => {
-    fetchCategory("pcmcat209400050001").then((data) =>
-      console.log(data.products)
-    );
+    fetchCategory("abcat0501000").then((data) => console.log(data));
   });
   return (
     <>
@@ -15,3 +13,7 @@ const Category = ({ id }: any) => {
 };
 
 export default Category;
+
+//desktops = abcat0501000
+//phones = pcmcat209400050001
+//maybe use product template  or department for id?
