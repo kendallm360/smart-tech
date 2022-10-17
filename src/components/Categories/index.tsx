@@ -8,6 +8,7 @@ import refrigerator from "../../images/refrigerator.jpeg";
 import tablet from "../../images/tablet.jpeg";
 import tv from "../../images/tv.jpeg";
 import washers from "../../images/washers.jpeg";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   return (
@@ -15,14 +16,18 @@ const Categories = () => {
       <h2>Fall Sale</h2>
       <h3> Shop these deals and more by category:</h3>
       <div className="categories">
-        {/* <Link to=> */}
-        <section className="category">
-          <div className="category-body">
-            <img className="category-images" src={cellphone} alt="Cell Phone" />
-          </div>
-          <p className="category-label">Cell Phones</p>
-        </section>
-        {/* </Link> */}
+        <Link to={`/cellphones`}>
+          <section className="category">
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={cellphone}
+                alt="Cell Phone"
+              />
+            </div>
+            <p className="category-label">Cell Phones</p>
+          </section>
+        </Link>
 
         <section className="category">
           <div className="category-body">
