@@ -11,7 +11,9 @@ const App = () => {
 
       <Route exact path="/">
         <div className="App">
-          <Categories />
+          <div className="background">
+            <Categories />
+          </div>
         </div>
       </Route>
     </>
