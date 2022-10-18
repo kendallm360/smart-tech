@@ -1,19 +1,24 @@
-import { useEffect } from "react";
-import { fetchCategory } from "../../utils/apicalls";
+import { useEffect, useState } from "react";
+// import { fetchCategory } from "../../utils/apicalls";
+import { findCategory } from "../../utils/utils";
 
 const Category = ({ id }: any) => {
+  const [title, setTitle] = useState<any>("");
+  const [itemList, setItemList] = useState([]);
+
   useEffect(() => {
-    fetchCategory("abcat0501000").then((data) => console.log(data));
-  });
+    setTitle(id);
+    findCategory(id)?.then((data) => {
+      setItemList(data.products);
+    });
+  }, []);
+
+  console.log(itemList[0], "itemlist");
   return (
     <>
-      <h2>Category title here</h2>
+      <h2>{title}</h2>
     </>
   );
 };
 
 export default Category;
-
-//desktops = abcat0501000
-//phones = pcmcat209400050001
-//maybe use product template  or department for id?
