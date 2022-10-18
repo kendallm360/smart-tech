@@ -13,10 +13,21 @@ const Category = ({ id }: any) => {
     });
   }, []);
 
-  console.log(itemList[0], "itemlist");
+  let allItems = itemList.map((item: any) => {
+    return (
+      <div className="item-card">
+        <img src={item.image} />
+        <h2>{item.name}</h2>
+        <h3>{item.regularPrice}</h3>
+        <button>Add to Cart</button>
+      </div>
+    );
+  });
+
   return (
     <>
       <h2>{title}</h2>
+      {allItems}
     </>
   );
 };
