@@ -38,64 +38,84 @@ const Categories = () => {
           </section>
         </Link>
 
-        <section className="category">
-          <div className="category-body">
-            <img
-              className="category-images"
-              src={digital_camera}
-              alt="Digital Camera"
-            />
-          </div>
-          <p className="category-label">Digital Cameras</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img
-              className="category-images"
-              src={headphones}
-              alt="Headphones"
-            />
-          </div>
-          <p className="category-label">Headphones</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img className="category-images" src={laptop} alt="Laptop" />
-          </div>
-          <p className="category-label">Laptops</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img
-              className="category-images"
-              src={refrigerator}
-              alt="Refrigerator"
-            />
-          </div>
-          <p className="category-label">Refrigerators</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img className="category-images" src={tablet} alt="Tablet" />
-          </div>
-          <p className="category-label">Tablets</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img className="category-images" src={tv} alt="Flat screen TV" />
-          </div>
-          <p className="category-label">TVs</p>
-        </section>
-        <section className="category">
-          <div className="category-body">
-            <img
-              className="category-images"
-              src={washers}
-              alt="Side by Side Washer and Dryer combo"
-            />
-          </div>
-          <p className="category-label">Washer & Dryers</p>
-        </section>
+        <Link to={`/Digital_Cameras`}>
+          <section className="category">
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={digital_camera}
+                alt="Digital Camera"
+              />
+            </div>
+            <p className="category-label">Digital Cameras</p>
+          </section>
+        </Link>
+
+        <Link to={`/Headphones`}>
+          <section className="category">
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={headphones}
+                alt="Headphones"
+              />
+            </div>
+            <p className="category-label">Headphones</p>
+          </section>
+        </Link>
+
+        <Link to={`/Laptops`}>
+          <section className="category">
+            <div className="category-body">
+              <img className="category-images" src={laptop} alt="Laptop" />
+            </div>
+            <p className="category-label">Laptops</p>
+          </section>
+        </Link>
+
+        <Link to={`/Refrigerators`}>
+          <section className="category">
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={refrigerator}
+                alt="Refrigerator"
+              />
+            </div>
+            <p className="category-label">Refrigerators</p>
+          </section>
+        </Link>
+
+        <Link to={`/Tablets`}>
+          <section className="category">
+            <div className="category-body">
+              <img className="category-images" src={tablet} alt="Tablet" />
+            </div>
+            <p className="category-label">Tablets</p>
+          </section>
+        </Link>
+
+        <Link to={`/TVs`}>
+          <section className="category">
+            <div className="category-body">
+              <img className="category-images" src={tv} alt="Flat screen TV" />
+            </div>
+            <p className="category-label">TVs</p>
+          </section>
+        </Link>
+
+        <Link to={`/Washers_and_Dryers`}>
+          <section className="category">
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={washers}
+                alt="Side by Side Washer and Dryer combo"
+              />
+            </div>
+            <p className="category-label">Washer & Dryers</p>
+          </section>
+        </Link>
       </div>
     </StyledCategories>
   );
