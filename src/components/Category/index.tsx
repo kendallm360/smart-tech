@@ -1,9 +1,9 @@
-import { FC, useEffect, useState } from "react";
-import { TypeState, Item } from "../../utils/Types";
+import { useEffect, useState } from "react";
+import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 
-const Category: FC<TypeState> = ({ id }) => {
+const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
 
