@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-// import { fetchCategory } from "../../utils/apicalls";
+import { FC, useEffect, useState } from "react";
+import { TypeState, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 
-const Category = ({ id }: any) => {
-  const [title, setTitle] = useState<any>("");
+const Category: FC<TypeState> = ({ id }) => {
+  const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Category = ({ id }: any) => {
     });
   }, []);
 
-  let allItems = itemList.map((item: any) => {
+  let allItems = itemList.map((item: Item) => {
     return (
       <div className="item-card">
         <img className="item-image" src={item.image} />
