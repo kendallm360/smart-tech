@@ -8,4 +8,5 @@ export type Item = {
   image: string;
   name: string;
   regularPrice: string;
+  sku: number;
 };

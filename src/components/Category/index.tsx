@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
@@ -16,14 +17,16 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   let allItems = itemList.map((item: Item) => {
     return (
-      <div className="item-card">
-        <img className="item-image" src={item.image} />
-        <h2>{item.name}</h2>
-        <div className="price-cart">
-          <h3>{item.regularPrice}</h3>
-          <button className="cart-button">Add to Cart</button>
+      <Link to={`/${id}/${item.name}`}>
+        <div key={item.sku} className="item-card">
+          <img className="item-image" src={item.image} />
+          <h2>{item.name}</h2>
+          <div className="price-cart">
+            <h3>{item.regularPrice}</h3>
+            <button className="cart-button">Add to Cart</button>
+          </div>
         </div>
-      </div>
+      </Link>
     );
   });
 
