@@ -31,12 +31,7 @@ const App = () => {
         exact
         path="/:id/:name"
         render={({ match }) => {
-          return (
-            <Item
-              id={match.params.id}
-              // name={match.params.id}
-            />
-          );
+          return <Item id={match.params.id} name={match.params.name} />;
         }}
       />
     </>

@@ -7,6 +7,15 @@ const fetchCategory = (category: string) => {
     throw Error(response.status.toString());
   });
 };
-// pcmcat209400050001
 
-export { fetchCategory };
+const fetchItem = () => {
+  //   return fetch(`https://api.bestbuy.com/v1/products((categoryPath.id=${category}))?apiKey=bEisDAA5LpWenkpnbqEt7RmL&pageSize=50&format=json
+  // `).then((response) => {
+  //     if (response.ok) {
+  //       return response.json();
+  //     }
+  //     throw Error(response.status.toString());
+  //   });
+};
+
+export { fetchCategory, fetchItem };
