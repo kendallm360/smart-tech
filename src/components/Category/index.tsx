@@ -29,7 +29,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   return (
     <StyledCategory>
-      <h2>{title}</h2>
+      <h2>{title.split("_").join(" ")}</h2>
       {allItems}
     </StyledCategory>
   );

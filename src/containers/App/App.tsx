@@ -4,6 +4,7 @@ import "./App.css";
 import { Route } from "react-router-dom";
 import Categories from "../../components/Categories";
 import Category from "../../components/Category";
+import Item from "../../components/Item";
 
 const App = () => {
   return (
@@ -23,6 +24,19 @@ const App = () => {
         path="/:id"
         render={({ match }) => {
           return <Category id={match.params.id} />;
+        }}
+      />
+
+      <Route
+        exact
+        path="/:id/:name"
+        render={({ match }) => {
+          return (
+            <Item
+              id={match.params.id}
+              // name={match.params.id}
+            />
+          );
         }}
       />
     </>
