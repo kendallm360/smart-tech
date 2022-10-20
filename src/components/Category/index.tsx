@@ -17,8 +17,8 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   let allItems = itemList.map((item: Item) => {
     return (
-      <Link to={`/${id}/${item.name}`}>
-        <div key={item.sku} className="item-card">
+      <Link key={item.sku} to={`/${id}/${item.name}`}>
+        <div className="item-card">
           <img className="item-image" src={item.image} />
           <h2>{item.name}</h2>
           <div className="price-cart">
