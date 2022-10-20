@@ -3,24 +3,17 @@ import { ICategory } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledItem } from "../styles/Item.styled";
 
-// type TItem = {
-//   image: string;
-//   longDescription: string;
-//   sku: number;
-//   regularPrice: number;
-// };
-
 const Item = ({ id, name }: ICategory): JSX.Element => {
   const [item, setItem] = useState<{
-    image?: string;
-    longDescription?: string;
-    sku?: number;
-    regularPrice?: number;
+    image: string;
+    longDescription: string;
+    sku: number;
+    regularPrice: number;
   }>({
-    // image: "",
-    // longDescription: "",
-    // sku: 0,
-    // regularPrice: 0,
+    image: "",
+    longDescription: "",
+    sku: 0,
+    regularPrice: 0,
   });
 
   useEffect(() => {
