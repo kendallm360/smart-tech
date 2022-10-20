@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-// import { fetchCategory } from "../../utils/apicalls";
+import { Link } from "react-router-dom";
+import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 
-const Category = ({ id }: any) => {
-  const [title, setTitle] = useState<any>("");
+const Category = ({ id }: ICategory): JSX.Element => {
+  const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
@@ -14,22 +15,24 @@ const Category = ({ id }: any) => {
     });
   }, []);
 
-  let allItems = itemList.map((item: any) => {
+  let allItems = itemList.map((item: Item) => {
     return (
-      <div className="item-card">
-        <img className="item-image" src={item.image} />
-        <h2>{item.name}</h2>
-        <div className="price-cart">
-          <h3>{item.regularPrice}</h3>
-          <button className="cart-button">Add to Cart</button>
+      <Link key={item.sku} to={`/${id}/${item.name}`}>
+        <div className="item-card">
+          <img className="item-image" src={item.image} />
+          <h2>{item.name}</h2>
+          <div className="price-cart">
+            <h3>{item.regularPrice}</h3>
+            <button className="cart-button">Add to Cart</button>
+          </div>
         </div>
-      </div>
+      </Link>
     );
   });
 
   return (
     <StyledCategory>
-      <h2>{title}</h2>
+      <h2>{title.split("_").join(" ")}</h2>
       {allItems}
     </StyledCategory>
   );

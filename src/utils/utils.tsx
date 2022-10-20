@@ -1,6 +1,6 @@
 import { fetchCategory } from "./apicalls";
 
-const findCategory = (id: any) => {
+const findCategory = (id: string) => {
   if (id === "Cellphones") {
     return fetchCategory("pcmcat209400050001");
   }

@@ -7,6 +7,5 @@ const fetchCategory = (category: string) => {
     throw Error(response.status.toString());
   });
 };
-// pcmcat209400050001
 
 export { fetchCategory };
