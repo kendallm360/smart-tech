@@ -1,3 +1,5 @@
+import cypress from "cypress";
+
 describe("empty spec", () => {
   beforeEach(() => {
     cy.intercept(
@@ -21,5 +23,14 @@ describe("empty spec", () => {
       .click()
       .url()
       .should("equal", "http://localhost:3000/");
+  });
+
+  it("Should have at least 9 categories to choose from", () => {
+    cy.get('[data-cy="category"]').should("have.lengthOf.at.least", 9);
+  });
+
+  it("Should be able to update the url to reflect the selected category", () => {
+    cy.get('[data-cy="category"]').eq(0).click();
+    cy.url().should("equal", "http://localhost:3000/Cellphones");
   });
 });

@@ -15,9 +15,9 @@ const Categories = () => {
     <StyledCategories>
       <h2>Fall Sale</h2>
       <h3> Shop these deals and more by category:</h3>
-      <div className="categories">
+      <div data-cy="categories" className="categories">
         <Link to={`/Cellphones`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img
                 className="category-images"
@@ -30,7 +30,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Desktops`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img className="category-images" src={desktop} alt="Desktop" />
             </div>
@@ -39,7 +39,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Digital_Cameras`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img
                 className="category-images"
@@ -52,7 +52,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Headphones`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img
                 className="category-images"
@@ -65,7 +65,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Laptops`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img className="category-images" src={laptop} alt="Laptop" />
             </div>
@@ -74,7 +74,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Refrigerators`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img
                 className="category-images"
@@ -87,7 +87,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Tablets`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img className="category-images" src={tablet} alt="Tablet" />
             </div>
@@ -96,7 +96,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/TVs`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img className="category-images" src={tv} alt="Flat screen TV" />
             </div>
@@ -105,7 +105,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Washers_and_Dryers`}>
-          <section className="category">
+          <section data-cy="category" className="category">
             <div className="category-body">
               <img
                 className="category-images"
