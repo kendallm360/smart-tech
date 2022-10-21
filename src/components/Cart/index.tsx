@@ -1,4 +1,5 @@
 const Cart = () => {
+  //   console.log(cart);
   return (
     <>
       <h2>Your Cart: </h2>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
-import { findCategory } from "../../utils/utils";
+import { addToCart, findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 
 const Category = ({ id }: ICategory): JSX.Element => {
@@ -23,7 +23,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
           <h2>{item.name}</h2>
           <div className="price-cart">
             <h3>{item.regularPrice}</h3>
-            <button className="cart-button">Add to Cart</button>
+            <button className="cart-button" onClick={addToCart}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </Link>
