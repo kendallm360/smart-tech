@@ -18,7 +18,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
   let allItems = itemList.map((item: Item) => {
     return (
       <Link key={item.sku} to={`/${id}/${item.name}`}>
-        <div className="item-card">
+        <div data-cy="item-card" className="item-card">
           <img className="item-image" src={item.image} />
           <h2>{item.name}</h2>
           <div className="price-cart">
@@ -32,7 +32,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   return (
     <StyledCategory>
-      <h2>{title.split("_").join(" ")}</h2>
+      <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
       {allItems}
     </StyledCategory>
   );
