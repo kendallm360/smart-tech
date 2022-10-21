@@ -27,12 +27,12 @@ describe("empty spec", () => {
 
   it("Should have back and forward functionality through Router", () => {
     cy.go("back").url().should("equal", "http://localhost:3000/");
-    cy.wait(3000);
+    cy.wait(4000);
     cy.go("forward").url().should("equal", "http://localhost:3000/Laptops");
     cy.get('[data-cy="item-card"]')
       .eq(3)
       .click()
-      .wait(3000)
+      .wait(4000)
       .go("back")
       .url()
       .should("equal", "http://localhost:3000/Laptops");
