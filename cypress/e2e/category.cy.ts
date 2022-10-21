@@ -26,6 +26,7 @@ describe("empty spec", () => {
   });
 
   it("Should have back and forward functionality through Router", () => {
+    cy.wait(4000);
     cy.go("back").url().should("equal", "http://localhost:3000/");
     cy.wait(4000);
     cy.go("forward").url().should("equal", "http://localhost:3000/Laptops");
