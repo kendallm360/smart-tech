@@ -1,8 +1,11 @@
+import { StyledError } from "../styles/Error.styled";
+
 const Error = () => {
   return (
-    <>
-      <h2>working</h2>
-    </>
+    <StyledError>
+      <h2>Loading...</h2>
+      {/* add graphic here */}
+    </StyledError>
   );
 };
 

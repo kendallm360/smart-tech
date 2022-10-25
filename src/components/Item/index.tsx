@@ -16,20 +16,18 @@ const Item = ({ id, name }: ICategory): JSX.Element => {
     sku: 0,
     regularPrice: 0,
   });
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   useEffect(() => {
-    findCategory(id)
-      ?.then((data) => {
-        setItem(
-          data.products.find((product: ICategory) => product.name === name)
-        );
-      })
-      .catch(() => {
-        setError(true);
-      });
+    findCategory(id)?.then((data) => {
+      setItem(
+        data.products.find((product: ICategory) => product.name === name)
+      );
+    });
+    // .catch(() => {
+    //   setError(true);
+    // });
   }, []);
-  console.log(error);
   return (
     <>
       {item.regularPrice === 0 ? (
