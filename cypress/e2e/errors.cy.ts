@@ -15,7 +15,10 @@ describe("errors", () => {
 
   it("Should show a loading page while data is being fetched", () => {
     cy.get('[data-cy="category"]').eq(3).click();
-    cy.get('[data-cy="item-info"]').eq(1).click();
-    cy.get('[data-cy="loading"]').should("exist");
+    cy.get('[data-cy="item-info"]')
+      .eq(0)
+      .click()
+      .get('[data-cy="loading"]')
+      .should("exist");
   });
 });
