@@ -14,7 +14,7 @@ describe("errors", () => {
   });
 
   it("Should show a loading page while item data is being fetched", () => {
-    cy.get('[data-cy="category"]').eq(3).click();
+    cy.get('[data-cy="category"]').eq(3).click().wait(3000);
     cy.get('[data-cy="item-info"]').eq(0).click();
     cy.get('[data-cy="loading"]').should("exist");
   });
