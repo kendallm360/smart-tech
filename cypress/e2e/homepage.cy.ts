@@ -34,6 +34,7 @@ describe("empty spec", () => {
 
   it("Should allow the user to go back to use the back and forward arrows", () => {
     cy.get('[data-cy="category"]').eq(0).click();
+    cy.wait(5000);
     cy.url().should("equal", "http://localhost:3000/Cellphones");
     cy.go("back").url().should("equal", "http://localhost:3000/");
     cy.go("forward").url().should("equal", "http://localhost:3000/Cellphones");
