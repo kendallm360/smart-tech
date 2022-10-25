@@ -17,7 +17,7 @@ describe("empty spec", () => {
   });
 
   it("Should have a header that routes the user back to the homepage when clicked", () => {
-    cy.get('[data-cy="header"]')
+    cy.get('[data-cy="smart-tech-logo"]')
       .click()
       .url()
       .should("equal", "http://localhost:3000/");
