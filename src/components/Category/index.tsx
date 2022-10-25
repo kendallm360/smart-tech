@@ -1,12 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
-import { addToCart, findCategory } from "../../utils/utils";
+import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
+
+export type TCartItem = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+  amount: number;
+};
 
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
+  const [cart, setCart] = useState([] as TCartItem[]);
 
   useEffect(() => {
     setTitle(id);
@@ -14,6 +23,11 @@ const Category = ({ id }: ICategory): JSX.Element => {
       setItemList(data.products);
     });
   }, []);
+
+  // handleAddToCart = (item: Item) => {};
+  const handleAddToCart = (item: Item) => {
+    console.log(item.name);
+  };
 
   let allItems = itemList.map((item: Item) => {
     return (
@@ -23,7 +37,10 @@ const Category = ({ id }: ICategory): JSX.Element => {
           <h2>{item.name}</h2>
           <div className="price-cart">
             <h3>{item.regularPrice}</h3>
-            <button className="cart-button" onClick={addToCart}>
+            <button
+              className="cart-button"
+              onClick={() => handleAddToCart(item)}
+            >
               Add to Cart
             </button>
           </div>
