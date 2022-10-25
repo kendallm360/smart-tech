@@ -5,6 +5,7 @@ import App from "./containers/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
+import CartC from "./context/CartContext";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <QueryClientProvider client={client}>
     <BrowserRouter>
-      <App />
+      <CartC>
+        <App />
+      </CartC>
     </BrowserRouter>
   </QueryClientProvider>
 );
