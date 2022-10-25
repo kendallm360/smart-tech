@@ -1,12 +1,22 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
+import { CartContext } from "../../context/CartContext";
+
+// export type TCartItem = {
+//   name: string;
+//   image: string;
+//   price: number;
+//   amount: number;
+// };
 
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
+  const { cart, setCart } = useContext(CartContext);
+  // const [cart, setCart] = useState([] as TCartItem[]);
 
   useEffect(() => {
     setTitle(id);
@@ -15,23 +25,50 @@ const Category = ({ id }: ICategory): JSX.Element => {
     });
   }, []);
 
+  //need to convert from use of any below
+  // const handleAddToCart = (item: any) => {
+  //   setCart((prev) => {
+  //     //failed error handling logic below
+  //     // const itemIsInCart = prev.find((p) => p.name === item.name);
+  //     // if (itemIsInCart) {
+  //     //   item.amount++;
+  //     // }
+  //     // if (!itemIsInCart) {
+  //     //   return [...prev, item];
+  //     // }
+  //     return [...prev, item];
+  //   });
+  //   console.log(cart);
+  //   // <Cart cartItems={cart} />;
+  // };
+
   let allItems = itemList.map((item: Item) => {
     return (
-      <Link key={item.sku} to={`/${id}/${item.name}`}>
-        <div data-cy="item-card" className="item-card">
-          <img className="item-image" src={item.image} />
-          <h2>{item.name}</h2>
-          <div className="price-cart">
-            <h3>{item.regularPrice}</h3>
-            <button className="cart-button">Add to Cart</button>
+      <div key={item.sku} data-cy="item-card" className="item-card">
+        <Link to={`/${id}/${item.name}`}>
+          <div className="item-info">
+            <img className="item-image" src={item.image} />
+            <h2>{item.name}</h2>
           </div>
+        </Link>
+        <div className="price-cart">
+          <h3>{item.regularPrice}</h3>
+          <button className="cart-button" onClick={() => setCart()}>
+            Add to Cart
+          </button>
         </div>
-      </Link>
+      </div>
     );
   });
 
+  // const seeCart = () => {
+  //   console.log(cart);
+  // };
+
+  console.log(cart);
   return (
     <StyledCategory>
+      {/* <button onClick={seeCart}>test</button> */}
       <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
       {allItems}
     </StyledCategory>

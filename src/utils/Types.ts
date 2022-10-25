@@ -5,6 +5,7 @@ export interface ICategory {
 }
 
 export type Item = {
+  // id?: string;
   image: string;
   name: string;
   regularPrice: string;

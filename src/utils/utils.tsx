@@ -30,4 +30,10 @@ const findCategory = (id: string) => {
   }
 };
 
-export { findCategory };
+const addToCart = (item: object) => {
+  let cart = [];
+  cart.push(item);
+  return cart;
+};
+
+export { findCategory, addToCart };
