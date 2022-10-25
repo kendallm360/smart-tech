@@ -5,7 +5,7 @@ import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 
 export type TCartItem = {
-  id: number;
+  // id: number;
   name: string;
   image: string;
   price: number;
@@ -25,8 +25,18 @@ const Category = ({ id }: ICategory): JSX.Element => {
   }, []);
 
   // handleAddToCart = (item: Item) => {};
-  const handleAddToCart = (item: Item) => {
-    console.log(item.name);
+  const handleAddToCart = (item: any) => {
+    setCart((prev) => {
+      //failed error handling logic below
+      // const itemIsInCart = prev.find((p) => p.name === item.name);
+      // if (itemIsInCart) {
+      //   item.amount++;
+      // }
+      // if (!itemIsInCart) {
+      //   return [...prev, item];
+      // }
+      return [...prev, item];
+    });
   };
 
   let allItems = itemList.map((item: Item) => {
