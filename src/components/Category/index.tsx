@@ -4,7 +4,7 @@ import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import { CartContext } from "../../context/CartContext";
-
+import Error from "../Error";
 // export type TCartItem = {
 //   name: string;
 //   image: string;
@@ -65,13 +65,18 @@ const Category = ({ id }: ICategory): JSX.Element => {
   //   console.log(cart);
   // };
 
-  console.log(cart);
   return (
-    <StyledCategory>
-      {/* <button onClick={seeCart}>test</button> */}
-      <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
-      {allItems}
-    </StyledCategory>
+    <>
+      {itemList.length === 0 ? (
+        <Error />
+      ) : (
+        <StyledCategory>
+          {/* <button onClick={seeCart}>test</button> */}
+          <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
+          {allItems}
+        </StyledCategory>
+      )}
+    </>
   );
 };
 
