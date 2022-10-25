@@ -1,5 +1,3 @@
-import cypress from "cypress";
-
 describe("category", () => {
   beforeEach(() => {
     cy.intercept(
@@ -8,7 +6,7 @@ describe("category", () => {
       { fixture: "categories" }
     );
     cy.visit("http://localhost:3000/");
-    cy.get('[data-cy="category"]').eq(4).click();
+    cy.get('[data-cy="category"]').eq(4).click().wait(4000);
   });
 
   it("Should have a header that says laptops", () => {
@@ -26,17 +24,9 @@ describe("category", () => {
   });
 
   it("Should have back and forward functionality through Router", () => {
-    cy.wait(4000);
     cy.go("back").url().should("equal", "http://localhost:3000/");
-    cy.wait(4000);
-    cy.go("forward").url().should("equal", "http://localhost:3000/Laptops");
-    cy.get('[data-cy="item-card"]')
-      .eq(3)
-      .click()
-      .wait(4000)
-      .go("back")
-      .url()
-      .should("equal", "http://localhost:3000/Laptops");
+    cy.go("forward");
+    cy.url().should("equal", "http://localhost:3000/Laptops");
   });
   // add testing coverage for sorting and fitering once that is implemented
 });
