@@ -4,7 +4,7 @@ import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import { CartContext } from "../../context/CartContext";
-import Error from "../Error";
+import Error from "../Error/index";
 // export type TCartItem = {
 //   name: string;
 //   image: string;
@@ -46,7 +46,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
     return (
       <div key={item.sku} data-cy="item-card" className="item-card">
         <Link to={`/${id}/${item.name}`}>
-          <div className="item-info">
+          <div data-cy="item-info" className="item-info">
             <img className="item-image" src={item.image} />
             <h2>{item.name}</h2>
           </div>
