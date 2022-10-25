@@ -8,17 +8,14 @@ describe("errors", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  it("should show a loading page while data is being fetched", () => {
+  it("Should show a loading page while category data is being fetched", () => {
     cy.get('[data-cy="category"]').eq(2).click();
     cy.get('[data-cy="loading"]').should("exist");
   });
 
-  it("Should show a loading page while data is being fetched", () => {
+  it("Should show a loading page while item data is being fetched", () => {
     cy.get('[data-cy="category"]').eq(3).click();
-    cy.get('[data-cy="item-info"]')
-      .eq(0)
-      .click()
-      .get('[data-cy="loading"]')
-      .should("exist");
+    cy.get('[data-cy="item-info"]').eq(0).click();
+    cy.get('[data-cy="loading"]').should("exist");
   });
 });
