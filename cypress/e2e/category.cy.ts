@@ -1,6 +1,6 @@
 import cypress from "cypress";
 
-describe("empty spec", () => {
+describe("category", () => {
   beforeEach(() => {
     cy.intercept(
       "GET",

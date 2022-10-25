@@ -1,4 +1,4 @@
-describe("empty spec", () => {
+describe("homepage", () => {
   beforeEach(() => {
     cy.intercept(
       "GET",
