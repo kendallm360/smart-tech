@@ -15,17 +15,25 @@ export const StyledCategory = styled.section`
 
   .item-card {
     border-bottom: solid 1px #df0000;
+    margin-bottom: 5%;
     margin-left: 5%;
     width: 90%;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
+  }
+
+  .item-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%;
   }
 
   .item-image {
     height: 5em;
     width: 6em;
+    margin-bottom: 5%;
   }
 
   .cart-button {

@@ -31,21 +31,20 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   let allItems = itemList.map((item: Item) => {
     return (
-      <Link key={item.sku} to={`/${id}/${item.name}`}>
-        <div data-cy="item-card" className="item-card">
-          <img className="item-image" src={item.image} />
-          <h2>{item.name}</h2>
-          <div className="price-cart">
-            <h3>{item.regularPrice}</h3>
-            <button
-              className="cart-button"
-              onClick={() => handleAddToCart(item)}
-            >
-              Add to Cart
-            </button>
+      <div data-cy="item-card" className="item-card">
+        <Link key={item.sku} to={`/${id}/${item.name}`}>
+          <div className="item-info">
+            <img className="item-image" src={item.image} />
+            <h2>{item.name}</h2>
           </div>
+        </Link>
+        <div className="price-cart">
+          <h3>{item.regularPrice}</h3>
+          <button className="cart-button" onClick={() => handleAddToCart(item)}>
+            Add to Cart
+          </button>
         </div>
-      </Link>
+      </div>
     );
   });
 
