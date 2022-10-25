@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
+import cartImage from "../../images/empty-cart.png";
+import Cart from "../Cart";
 import { StyledCategory } from "../styles/Category.styled";
 
 export type TCartItem = {
-  // id: number;
   name: string;
   image: string;
   price: number;
@@ -24,7 +25,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
     });
   }, []);
 
-  // handleAddToCart = (item: Item) => {};
+  //need to convert from use of any below
   const handleAddToCart = (item: any) => {
     setCart((prev) => {
       //failed error handling logic below
@@ -37,6 +38,8 @@ const Category = ({ id }: ICategory): JSX.Element => {
       // }
       return [...prev, item];
     });
+    console.log(cart);
+    // <Cart cartItems={cart} />;
   };
 
   let allItems = itemList.map((item: Item) => {
@@ -60,7 +63,17 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   return (
     <StyledCategory>
+      {/* <Link to="/cart">
+        <div> */}
       <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
+      {/* <img
+            data-cy="cart-logo"
+            className="cart"
+            src={cartImage}
+            alt="cart emoji"
+          />
+        </div>
+      </Link> */}
       {allItems}
     </StyledCategory>
   );
