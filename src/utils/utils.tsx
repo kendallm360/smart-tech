@@ -1,5 +1,8 @@
 import { fetchCategory } from "./apicalls";
 
+//add jest testing
+// type Categories = "Cellphones" | "Desktops";
+
 const findCategory = (id: string) => {
   if (id === "Cellphones") {
     return fetchCategory("pcmcat209400050001");
@@ -30,6 +33,7 @@ const findCategory = (id: string) => {
   }
 };
 
+//add jest testing
 const addToCart = (item: object) => {
   let cart = [];
   cart.push(item);
