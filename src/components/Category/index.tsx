@@ -59,7 +59,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           </div>
         </Link>
         <div className="price-cart">
-          <h3>{item.regularPrice}</h3>
+          <h3>${parseInt(item.regularPrice).toFixed(2)}</h3>
           <button className="cart-button" onClick={() => setCart()}>
             Add to Cart
           </button>
@@ -81,15 +81,30 @@ const Category = ({ id }: ICategory): JSX.Element => {
     }
     if (target.value === "low") {
       setSorted(
-        itemList.sort((a: any, b: any) => a.regularPrice - b.regularPrice)
+        itemList.sort(
+          (a: any, b: any) =>
+            parseInt(a.regularPrice.toFixed(2)) -
+            parseInt(b.regularPrice.toFixed(2))
+        )
       );
     }
     if (target.value === "high") {
       setSorted(
-        itemList.sort((a: any, b: any) => b.regularPrice - a.regularPrice)
+        itemList.sort(
+          (a: any, b: any) =>
+            parseInt(b.regularPrice.toFixed(2)) -
+            parseInt(a.regularPrice.toFixed(2))
+        )
       );
     }
-    // return sorted;
+    //no worky for some reason
+    // if (target.value === "new") {
+    //   setSorted(
+    //     itemList
+    //       .sort((a: any, b: any) => b.startDate - a.startDate)
+    //       .splice(0, 10)
+    //   );
+    // }
   };
 
   return (
@@ -101,11 +116,12 @@ const Category = ({ id }: ICategory): JSX.Element => {
           {/* <button onClick={seeCart}>test</button> */}
           <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
           <select value={select} onChange={handleSelect}>
-            <option value="">--Sort By Feature--</option>
+            <option selected value="">
+              --Sort By Feature--
+            </option>
             <option value="high">Price High to Low</option>
             <option value="low">Price Low to High</option>
-            {/* <option>Price High to Low</option>
-            <option>Price High to Low</option> */}
+            {/* <option value="new">New Arrivals</option> */}
           </select>
           {allItems}
         </StyledCategory>
