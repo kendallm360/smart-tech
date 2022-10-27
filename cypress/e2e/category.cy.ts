@@ -1,3 +1,5 @@
+// import cypress from "cypress";
+
 describe("category", () => {
   beforeEach(() => {
     cy.intercept(
@@ -12,8 +14,6 @@ describe("category", () => {
   it("Should have a header that says laptops", () => {
     cy.get('[data-cy="category-header"]').contains("Laptops");
   });
-
-  //should show an error page if not more than 10
   it("Should have more than 10 items to choose from", () => {
     cy.wait(4000);
     cy.get('[data-cy="item-card"]').should("have.length.at.least", 10);
@@ -28,5 +28,23 @@ describe("category", () => {
     cy.go("forward");
     cy.url().should("equal", "http://localhost:3000/Laptops");
   });
-  // add testing coverage for sorting and fitering once that is implemented
+
+  it("Should be able to sort items from lowest price to highest", () => {
+    cy.get("select").select("low");
+    cy.get('[data-cy="name"]')
+      .eq(0)
+      .contains(
+        "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
+      );
+    cy.get('[data-cy="price"]').eq(0).contains(199.0);
+  });
+
+  it("Should be able to sort items from highest price to lowest", () => {
+    cy.get("select").select("high");
+    cy.get('[data-cy="name"]')
+      .eq(0)
+      .contains("Alienware - AREA-51 2.8GHz Notebook");
+    cy.get('[data-cy="price"]').eq(0).contains(2529.0);
+  });
+  // add testing coverage for fitering once that is implemented
 });

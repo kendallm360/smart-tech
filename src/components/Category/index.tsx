@@ -55,11 +55,11 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <Link to={`/${id}/${item.name}`}>
           <div data-cy="item-info" className="item-info">
             <img className="item-image" src={item.image} />
-            <h2>{item.name}</h2>
+            <h2 data-cy="name">{item.name}</h2>
           </div>
         </Link>
         <div className="price-cart">
-          <h3>${parseInt(item.regularPrice).toFixed(2)}</h3>
+          <h3 data-cy="price">${parseInt(item.regularPrice).toFixed(2)}</h3>
           <button className="cart-button" onClick={() => setCart()}>
             Add to Cart
           </button>
