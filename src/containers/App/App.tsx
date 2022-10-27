@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { useQuery } from "react-query";
 import Header from "../../components/Header";
 import "./App.css";
@@ -19,8 +19,9 @@ export type TCartItem = {
   name: string;
   image: string;
   price: number;
-  amount: number;
+  quantity: number;
 };
+
 const App = () => {
   return (
     <>

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
-import { CartContext } from "../../context/CartContext";
 import Error from "../Error/index";
+import { myContext } from "../..";
 // export type TCartItem = {
 //   name: string;
 //   image: string;
@@ -17,8 +17,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
-  const { cart, setCart } = useContext(CartContext);
+  const appContext = useContext(myContext);
   // const [cart, setCart] = useState([] as TCartItem[]);
+  console.log(appContext.cart);
 
   useEffect(() => {
     setTitle(id);
@@ -60,9 +61,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
         </Link>
         <div className="price-cart">
           <h3 data-cy="price">${parseInt(item.regularPrice).toFixed(2)}</h3>
-          <button className="cart-button" onClick={() => setCart()}>
+          {/* <button className="cart-button" onClick={() => setCart()}>
             Add to Cart
-          </button>
+          </button> */}
         </div>
       </div>
     );
