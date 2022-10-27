@@ -24,8 +24,11 @@ const Item = ({ id, name }: ICategory): JSX.Element => {
         data.products.find((product: ICategory) => product.name === name)
       );
     });
-    // .catch(() => {
-    //   setError(true);
+    //attempt at async await
+    // ?.finally((data) => {
+    //   setItem(
+    //     data.products.find((product: ICategory) => product.name === name)
+    //   );
     // });
   }, []);
   return (
