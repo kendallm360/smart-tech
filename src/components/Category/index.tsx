@@ -15,6 +15,8 @@ import Error from "../Error/index";
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
+  const [select, setSelect] = useState("high" || "low");
+  const [sorted, setSorted] = useState([]);
   const { cart, setCart } = useContext(CartContext);
   // const [cart, setCart] = useState([] as TCartItem[]);
 
@@ -44,7 +46,12 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   let allItems = itemList.map((item: Item) => {
     return (
-      <div key={item.sku} data-cy="item-card" className="item-card">
+      <div
+        key={item.sku}
+        id={item.regularPrice}
+        data-cy="item-card"
+        className="item-card"
+      >
         <Link to={`/${id}/${item.name}`}>
           <div data-cy="item-info" className="item-info">
             <img className="item-image" src={item.image} />
@@ -65,6 +72,27 @@ const Category = ({ id }: ICategory): JSX.Element => {
   //   console.log(cart);
   // };
 
+  //convert from any below
+  const handleSelect = (event: any) => {
+    const target = event.target as HTMLInputElement;
+    setSelect(target.value);
+  };
+
+  const handleSort = () => {
+    if (select === "low") {
+      setSorted(
+        itemList.sort((a: any, b: any) => a.regularPrice - b.regularPrice)
+      );
+    }
+    // if (select === "high") {
+    //   setSorted(
+    //     itemList.sort((a: any, b: any) => b.regularPrice - a.regularPrice)
+    //   );
+    // }
+    return sorted;
+  };
+
+  // console.log(sorted);
   return (
     <>
       {itemList.length === 0 ? (
@@ -73,7 +101,19 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <StyledCategory>
           {/* <button onClick={seeCart}>test</button> */}
           <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
+          <select value={select} onChange={handleSelect}>
+            <option value="high">Price High to Low</option>
+            <option value="low">Price Low to High</option>
+            {/* <option>Price High to Low</option>
+            <option>Price High to Low</option> */}
+          </select>
+          <button data-cy="sort" className="sort" onClick={handleSort}>
+            Sort
+          </button>
           {allItems}
+          {/* {sorted.length === 0 ? allItems : sorted} */}
+          {/* {select === "" ? allItems : sorted} */}
+          {/* {select === "" && allItems} */}
         </StyledCategory>
       )}
     </>
