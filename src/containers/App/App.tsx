@@ -14,13 +14,13 @@ import Cart from "../../components/Cart";
 // import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart"
 // import Badge from "@material-ui/core/Badge"
 
-export type TCartItem = {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  quantity: number;
-};
+// export type TCartItem = {
+//   id: number;
+//   name: string;
+//   image: string;
+//   price: number;
+//   quantity: number;
+// };
 
 const App = () => {
   return (
