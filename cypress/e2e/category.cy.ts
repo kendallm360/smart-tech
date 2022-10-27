@@ -1,4 +1,4 @@
-import cypress from "cypress";
+// import cypress from "cypress";
 
 describe("category", () => {
   beforeEach(() => {
@@ -14,8 +14,6 @@ describe("category", () => {
   it("Should have a header that says laptops", () => {
     cy.get('[data-cy="category-header"]').contains("Laptops");
   });
-
-  //should show an error page if not more than 10
   it("Should have more than 10 items to choose from", () => {
     cy.wait(4000);
     cy.get('[data-cy="item-card"]').should("have.length.at.least", 10);
@@ -40,6 +38,7 @@ describe("category", () => {
       );
     cy.get('[data-cy="price"]').eq(0).contains(199.0);
   });
+
   it("Should be able to sort items from highest price to lowest", () => {
     cy.get("select").select("high");
     cy.get('[data-cy="name"]')
