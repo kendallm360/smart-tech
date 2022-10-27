@@ -31,7 +31,7 @@ describe("category", () => {
     cy.url().should("equal", "http://localhost:3000/Laptops");
   });
 
-  it.only("Should be able to sort items from lowest price to highest", () => {
+  it("Should be able to sort items from lowest price to highest", () => {
     cy.get("select").select("low");
     cy.get('[data-cy="name"]')
       .eq(0)
@@ -40,5 +40,12 @@ describe("category", () => {
       );
     cy.get('[data-cy="price"]').eq(0).contains(199.0);
   });
-  // add testing coverage for sorting and fitering once that is implemented
+  it("Should be able to sort items from highest price to lowest", () => {
+    cy.get("select").select("high");
+    cy.get('[data-cy="name"]')
+      .eq(0)
+      .contains("Alienware - AREA-51 2.8GHz Notebook");
+    cy.get('[data-cy="price"]').eq(0).contains(2529.0);
+  });
+  // add testing coverage for fitering once that is implemented
 });
