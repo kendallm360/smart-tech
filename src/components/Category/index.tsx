@@ -76,23 +76,22 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const handleSelect = (event: any) => {
     const target = event.target as HTMLInputElement;
     setSelect(target.value);
-  };
-
-  const handleSort = () => {
-    if (select === "low") {
+    if (target.value === "") {
+      return allItems;
+    }
+    if (target.value === "low") {
       setSorted(
         itemList.sort((a: any, b: any) => a.regularPrice - b.regularPrice)
       );
     }
-    // if (select === "high") {
-    //   setSorted(
-    //     itemList.sort((a: any, b: any) => b.regularPrice - a.regularPrice)
-    //   );
-    // }
-    return sorted;
+    if (target.value === "high") {
+      setSorted(
+        itemList.sort((a: any, b: any) => b.regularPrice - a.regularPrice)
+      );
+    }
+    // return sorted;
   };
 
-  // console.log(sorted);
   return (
     <>
       {itemList.length === 0 ? (
@@ -102,18 +101,13 @@ const Category = ({ id }: ICategory): JSX.Element => {
           {/* <button onClick={seeCart}>test</button> */}
           <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
           <select value={select} onChange={handleSelect}>
+            <option value="">--Sort By Feature--</option>
             <option value="high">Price High to Low</option>
             <option value="low">Price Low to High</option>
             {/* <option>Price High to Low</option>
             <option>Price High to Low</option> */}
           </select>
-          <button data-cy="sort" className="sort" onClick={handleSort}>
-            Sort
-          </button>
           {allItems}
-          {/* {sorted.length === 0 ? allItems : sorted} */}
-          {/* {select === "" ? allItems : sorted} */}
-          {/* {select === "" && allItems} */}
         </StyledCategory>
       )}
     </>
