@@ -32,12 +32,12 @@ describe("homepage", () => {
     cy.url().should("equal", "http://localhost:3000/Cellphones");
   });
 
-  it("Should allow the user to go back to use the back and forward arrows", () => {
-    cy.get('[data-cy="category"]').eq(0).click();
-    cy.url().should("equal", "http://localhost:3000/Cellphones");
-    cy.go("back");
-    cy.url().should("equal", "http://localhost:3000/");
-    cy.go("forward");
-    cy.url().should("equal", "http://localhost:3000/Cellphones");
-  });
+  // it("Should allow the user to go back to use the back and forward arrows", () => {
+  //   cy.get('[data-cy="category"]').eq(0).click();
+  //   cy.url().should("equal", "http://localhost:3000/Cellphones");
+  //   cy.go("back");
+  //   cy.url().should("equal", "http://localhost:3000/");
+  //   cy.go("forward");
+  //   cy.url().should("equal", "http://localhost:3000/Cellphones");
+  // });
 });
