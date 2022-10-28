@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { findCategory } from "../../utils/utils";
 import { StyledItem } from "../styles/Item.styled";
 import Error from "../Error/index";
+import { myContext } from "../..";
 
 type TItem = {
   id: string;
@@ -20,6 +21,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     sku: 0,
     regularPrice: 0,
   });
+  const { cart } = useContext(myContext);
 
   useEffect(() => {
     findCategory(id)?.then((data) => {
@@ -45,7 +47,19 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <p>{item.longDescription}</p>
           <p>SKU: {item.sku}</p>
           <h3>{item.regularPrice}</h3>
-          <button>Add to Cart</button>
+          <button
+            onClick={() => {
+              cart.push({
+                name: name,
+                image: item.image,
+                price: item.regularPrice,
+                quantity: 1,
+              });
+              console.log(cart);
+            }}
+          >
+            Add to Cart
+          </button>
         </StyledItem>
       )}
     </>
