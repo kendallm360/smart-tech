@@ -20,7 +20,6 @@ export const StyledCart = styled.section`
     align-self: center;
     height: 7em;
     margin-bottom: 5%;
-    /* margin-left: 3%; */
     width: 7em;
   }
 

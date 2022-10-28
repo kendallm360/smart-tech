@@ -1,4 +1,3 @@
-// import { all } from "cypress/types/bluebird";
 import { useContext } from "react";
 import { myContext } from "../..";
 import { StyledCart } from "../styles/Cart.styled";
