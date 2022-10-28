@@ -1,11 +1,22 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ICategory, Item } from "../../utils/Types";
+// import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { myContext } from "../..";
 
+interface ICategory {
+  id: string;
+  // item: Item[];
+}
+
+type Item = {
+  image: string;
+  name: string;
+  regularPrice: string;
+  sku: number;
+};
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
