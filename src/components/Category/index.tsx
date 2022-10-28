@@ -5,21 +5,13 @@ import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { myContext } from "../..";
-// export type TCartItem = {
-//   name: string;
-//   image: string;
-//   price: number;
-//   amount: number;
-// };
 
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
-  const appContext = useContext(myContext);
-  // const [cart, setCart] = useState([] as TCartItem[]);
-  console.log(appContext.cart);
+  const { cart } = useContext(myContext);
 
   useEffect(() => {
     setTitle(id);
@@ -27,23 +19,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
       setItemList(data.products);
     });
   }, []);
-
-  //need to convert from use of any below
-  // const handleAddToCart = (item: any) => {
-  //   setCart((prev) => {
-  //     //failed error handling logic below
-  //     // const itemIsInCart = prev.find((p) => p.name === item.name);
-  //     // if (itemIsInCart) {
-  //     //   item.amount++;
-  //     // }
-  //     // if (!itemIsInCart) {
-  //     //   return [...prev, item];
-  //     // }
-  //     return [...prev, item];
-  //   });
-  //   console.log(cart);
-  //   // <Cart cartItems={cart} />;
-  // };
 
   let allItems = itemList.map((item: Item) => {
     return (
@@ -61,17 +36,24 @@ const Category = ({ id }: ICategory): JSX.Element => {
         </Link>
         <div className="price-cart">
           <h3 data-cy="price">${parseInt(item.regularPrice).toFixed(2)}</h3>
-          {/* <button className="cart-button" onClick={() => setCart()}>
+          <button
+            className="cart-button"
+            onClick={() => {
+              cart.push({
+                name: item.name,
+                image: item.image,
+                price: parseInt(item.regularPrice),
+                quantity: 1,
+              });
+              console.log(cart);
+            }}
+          >
             Add to Cart
-          </button> */}
+          </button>
         </div>
       </div>
     );
   });
-
-  // const seeCart = () => {
-  //   console.log(cart);
-  // };
 
   //convert from any below
   const handleSelect = (event: any) => {
@@ -108,13 +90,13 @@ const Category = ({ id }: ICategory): JSX.Element => {
     // }
   };
 
+  console.log(cart, "test");
   return (
     <>
       {itemList.length === 0 ? (
         <Error />
       ) : (
         <StyledCategory>
-          {/* <button onClick={seeCart}>test</button> */}
           <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
           <select value={select} onChange={handleSelect}>
             <option selected value="">
