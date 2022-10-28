@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+// import { createContext, useState } from "react";
 
 // export type TCartItem = {
 //   name: string,
@@ -7,15 +7,15 @@ import { createContext, useState } from "react";
 //   amount: number,
 // };
 
-export const CartContext = createContext();
+// export const CartContext = createContext();
 
-const CartC = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  return (
-    <CartContext.Provider value={{ cart, setCart }}>
-      {children}
-    </CartContext.Provider>
-  );
-};
+// const CartC = ({ children }) => {
+//   const [cart, setCart] = useState([]);
+//   return (
+//     <CartContext.Provider value={{ cart, setCart }}>
+//       {children}
+//     </CartContext.Provider>
+//   );
+// };
 
-export default CartC;
+// export default CartC;

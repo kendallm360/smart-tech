@@ -1,6 +1,19 @@
 import { fetchCategory } from "./apicalls";
 
-const findCategory = (id: string) => {
+export type TCategories =
+  | "Cellphones"
+  | "Desktops"
+  | "Digital_Cameras"
+  | "Headphones"
+  | "Laptops"
+  | "Refrigerators"
+  | "Tablets"
+  | "TVs"
+  | "Washers_and_Dryers"
+  // only works if i also add the line below
+  | string;
+
+const findCategory = (id: TCategories) => {
   if (id === "Cellphones") {
     return fetchCategory("pcmcat209400050001");
   }

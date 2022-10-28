@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { useQuery } from "react-query";
 import Header from "../../components/Header";
 import "./App.css";
@@ -14,13 +14,14 @@ import Cart from "../../components/Cart";
 // import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart"
 // import Badge from "@material-ui/core/Badge"
 
-export type TCartItem = {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  amount: number;
-};
+// export type TCartItem = {
+//   id: number;
+//   name: string;
+//   image: string;
+//   price: number;
+//   quantity: number;
+// };
+
 const App = () => {
   return (
     <>

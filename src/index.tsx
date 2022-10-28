@@ -1,24 +1,44 @@
-import React from "react";
+import { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./containers/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import CartC from "./context/CartContext";
 
-const client = new QueryClient();
+interface ICartItem {
+  name: string;
+  image: string;
+  price: number;
+  quantity: number;
+}
+
+interface AppContextInterface {
+  cart: ICartItem[];
+}
+
+//alterate logic for the line above myContext
+const defaultContext = {
+  cart: [
+    //in the event I wanted cart to have at least 1 object inside with given structure
+    // {
+    //   name: "",
+    //   image: "",
+    //   price: 0,
+    //   quantity: 0,
+    // },
+  ],
+};
+// export const myContext = createContext<AppContextInterface | null>(null);
+export const myContext = createContext<AppContextInterface>(defaultContext);
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <QueryClientProvider client={client}>
-    <BrowserRouter>
-      <CartC>
-        <App />
-      </CartC>
-    </BrowserRouter>
-  </QueryClientProvider>
+  <BrowserRouter>
+    <myContext.Provider value={defaultContext}>
+      <App />
+    </myContext.Provider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
