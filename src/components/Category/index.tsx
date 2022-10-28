@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { ICategory, Item } from "../../utils/Types";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
@@ -8,7 +7,6 @@ import { myContext } from "../..";
 
 interface ICategory {
   id: string;
-  // item: Item[];
 }
 
 type Item = {

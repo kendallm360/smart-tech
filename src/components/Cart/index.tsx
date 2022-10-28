@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import { myContext } from "../..";
 const Cart = () => {
-  //   console.log(cart);
+  const { cart } = useContext(myContext);
+
+  let allCart = cart.map((e: any) => e);
+  console.log(allCart, "worky?");
   return (
     <>
       <h2>Your Cart: </h2>
-      <button>Checkout</button>
+      <button disabled>Checkout</button>
     </>
   );
 };
