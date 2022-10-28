@@ -6,7 +6,7 @@ const Cart = () => {
 
   let entireCart = cart.map((e: any) => {
     return (
-      <div key={e.name + Date.now} className="cart-item" data-cy="cart-item">
+      <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
         <img className="cart-item-image" src={e.image} alt={e.name}></img>
         <div data-cy="cart-item-info" className="cart-item-info">
           <h3>{e.name}</h3>
@@ -17,7 +17,7 @@ const Cart = () => {
       </div>
     );
   });
-
+  console.log(entireCart);
   return (
     <StyledCart>
       <h2>Your Cart: </h2>

@@ -10,6 +10,7 @@ interface ICategory {
 }
 
 type Item = {
+  id: number;
   image: string;
   name: string;
   regularPrice: string;
@@ -49,6 +50,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             className="cart-button"
             onClick={() => {
               cart.push({
+                id: item.sku,
                 name: item.name,
                 image: item.image,
                 price: parseInt(item.regularPrice),
