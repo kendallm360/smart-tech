@@ -1,9 +1,19 @@
 import { fetchCategory } from "./apicalls";
 
-//add jest testing
-// type Categories = "Cellphones" | "Desktops";
+export type TCategories =
+  | "Cellphones"
+  | "Desktops"
+  | "Digital_Cameras"
+  | "Headphones"
+  | "Laptops"
+  | "Refrigerators"
+  | "Tablets"
+  | "TVs"
+  | "Washers_and_Dryers"
+  // only works if i also add the line below
+  | string;
 
-const findCategory = (id: string) => {
+const findCategory = (id: TCategories) => {
   if (id === "Cellphones") {
     return fetchCategory("pcmcat209400050001");
   }
@@ -33,7 +43,6 @@ const findCategory = (id: string) => {
   }
 };
 
-//add jest testing
 const addToCart = (item: object) => {
   let cart = [];
   cart.push(item);
