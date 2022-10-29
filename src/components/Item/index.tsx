@@ -50,6 +50,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <button
             onClick={() => {
               cart.push({
+                id: item.sku,
                 name: name,
                 image: item.image,
                 price: item.regularPrice,

@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 interface ICartItem {
+  id: number;
   name: string;
   image: string;
   price: number;

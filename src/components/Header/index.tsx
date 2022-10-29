@@ -1,9 +1,19 @@
 import logo from "../../images/smartTechLogo.jpg";
-import cart from "../../images/empty-cart.png";
+import cartLogo from "../../images/empty-cart.png";
 import { StyledHeader } from "../styles/Header.styled";
 import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { myContext } from "../..";
 
 const Header = () => {
+  const [cartLength, setCartLength] = useState(0);
+  const { cart } = useContext(myContext);
+  console.log(cart.length);
+
+  useEffect(() => {
+    setCartLength(cart.length);
+  }, []);
+
   return (
     <StyledHeader data-cy="header">
       <Link to="/">
@@ -15,7 +25,14 @@ const Header = () => {
         />
       </Link>
       <Link to="/cart">
-        <img data-cy="cart-logo" className="cart" src={cart} alt="cart emoji" />
+        <img
+          data-cy="cart-logo"
+          className="cart-logo"
+          src={cartLogo}
+          alt="cart emoji"
+        />
+        {/* <span>{cart.length}</span> */}
+        <span>{cartLength}</span>
       </Link>
     </StyledHeader>
   );

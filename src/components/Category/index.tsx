@@ -10,6 +10,7 @@ interface ICategory {
 }
 
 type Item = {
+  id: number;
   image: string;
   name: string;
   regularPrice: string;
@@ -49,13 +50,24 @@ const Category = ({ id }: ICategory): JSX.Element => {
             className="cart-button"
             onClick={() => {
               cart.push({
+                id: item.sku,
                 name: item.name,
                 image: item.image,
                 price: parseInt(item.regularPrice),
                 quantity: 1,
               });
-              console.log(cart);
             }}
+            // console.log(cart, "cart");
+            // console.log(
+            //   cart.includes({
+            //     id: item.sku,
+            //     name: item.name,
+            //     image: item.image,
+            //     price: parseInt(item.regularPrice),
+            //     quantity: 1,
+            //   }),
+            //   "bool"
+            // );
           >
             Add to Cart
           </button>
@@ -99,7 +111,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
     // }
   };
 
-  console.log(cart, "test");
   return (
     <>
       {itemList.length === 0 ? (
