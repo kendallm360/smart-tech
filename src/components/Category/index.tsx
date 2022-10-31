@@ -117,7 +117,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <Error />
       ) : (
         <StyledCategory>
-          <h2 data-cy="category-header">{title.split("_").join(" ")}</h2>
+          <h2 className="header" data-cy="category-header">
+            {title.split("_").join(" ")}
+          </h2>
           <select defaultValue={""} onChange={handleSelect}>
             <option value="">--Sort By Feature--</option>
             <option value="high">Price High to Low</option>
