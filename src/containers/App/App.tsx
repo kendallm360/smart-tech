@@ -5,6 +5,7 @@ import Categories from "../../components/Categories";
 import Category from "../../components/Category";
 import Item from "../../components/Item";
 import Cart from "../../components/Cart";
+import { StyledApp } from "../../components/styles/App.styled";
 // import { ErrorPage } from "../../components/ErrorPage";
 //may not need
 // import { useQuery } from "react-query";
@@ -16,7 +17,7 @@ import Cart from "../../components/Cart";
 
 const App = () => {
   return (
-    <>
+    <StyledApp>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -49,7 +50,7 @@ const App = () => {
           }}
         />
       </Switch>
-    </>
+    </StyledApp>
   );
 };
 
