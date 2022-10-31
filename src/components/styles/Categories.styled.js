@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCategories = styled.section`
-  /* border: solid 1px red; */
   height: 90vh;
   width: 100vw;
   display: flex;
@@ -16,8 +15,9 @@ export const StyledCategories = styled.section`
 
   .categories {
     display: grid;
+    margin: 2%;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+    grid-gap: 0.5em;
   }
 
   .category-images {
