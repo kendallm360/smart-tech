@@ -14,7 +14,6 @@ export const StyledCategory = styled.section`
   }
 
   select {
-    /* align-self: center; */
     align-items: center;
     margin-bottom: 5%;
     margin-left: 25%;

@@ -6,7 +6,9 @@ export const StyledCart = styled.section`
   }
   .cart-item {
     border: solid 1px #df0000;
-    margin-bottom: 5%;
+    border-radius: 1em;
+    margin: 2%;
+    padding: 2%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
