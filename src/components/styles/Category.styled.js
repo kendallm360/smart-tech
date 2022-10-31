@@ -13,6 +13,17 @@ export const StyledCategory = styled.section`
     font-weight: 900;
   }
 
+  select {
+    align-items: center;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    width: 50vw;
+  }
+
+  .header {
+    font-size: 1.5em;
+  }
+
   .item-card {
     border-bottom: solid 1px #df0000;
     margin-bottom: 5%;
