@@ -5,6 +5,7 @@ import Categories from "../../components/Categories";
 import Category from "../../components/Category";
 import Item from "../../components/Item";
 import Cart from "../../components/Cart";
+// import { ErrorPage } from "../../components/ErrorPage";
 //may not need
 // import { useQuery } from "react-query";
 // import Drawer from "@material-ui/core/Drawer";
@@ -27,6 +28,10 @@ const App = () => {
         <Route exact path="/cart">
           <Cart />
         </Route>
+
+        {/* <Route exact path="/error">
+          <ErrorPage />
+        </Route> */}
 
         <Route
           exact

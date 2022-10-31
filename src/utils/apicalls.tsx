@@ -16,7 +16,7 @@ const fetchCategory = async (category: string) => {
   `);
     return response.json();
   } catch (error) {
-    console.error(error);
+    console.error(error, "apierror");
   }
 };
 
