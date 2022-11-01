@@ -26,25 +26,24 @@ export const StyledCategory = styled.section`
 
   .item-card {
     border-bottom: solid 1px #df0000;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     margin-left: 5%;
     width: 90%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .item-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 5%;
+    align-content: center;
   }
 
   .item-image {
     height: 5em;
+    margin-bottom: 2%;
     width: 6em;
-    margin-bottom: 5%;
+  }
+
+  .item-name {
+    align-self: center;
   }
 
   .cart-button {
