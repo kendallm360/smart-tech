@@ -41,7 +41,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
       ) : (
         <StyledItem>
           <h2>{name}</h2>
-          <img src={item.image} alt={name} />
+          <img className="item-image" src={item.image} alt={name} />
           <h3>Product Description:</h3>
           <p>{item.longDescription}</p>
           <p>SKU: {item.sku}</p>

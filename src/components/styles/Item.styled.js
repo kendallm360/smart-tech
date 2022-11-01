@@ -5,11 +5,11 @@ export const StyledItem = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5vh;
+  margin: 3vh;
 
-  img {
-    height: 30vh;
-    width: 80vw;
+  .item-image {
+    height: 20vh;
+    width: 20vw;
   }
 
   h2,
@@ -28,7 +28,7 @@ export const StyledItem = styled.section`
   }
 
   @media screen and (min-width: 1025px) {
-    img {
+    .item-image {
       height: 40vh;
       width: 40vw;
     }
@@ -45,6 +45,13 @@ export const StyledItem = styled.section`
     p {
       margin-bottom: 1%;
       margin-top: 0%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .item-image {
+      height: 30vh;
+      width: 30vw;
     }
   }
 `;
