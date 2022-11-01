@@ -10,6 +10,7 @@ export const StyledItem = styled.section`
 
   h2,
   h3 {
+    font-size: 1.1em;
     text-align: center;
   }
 
