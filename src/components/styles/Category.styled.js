@@ -114,4 +114,64 @@ export const StyledCategory = styled.section`
       align-items: center;
     }
   }
+
+  //Laptops
+  @media screen and (max-width: 1024px) {
+    h2,
+    h3 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      color: #df0000;
+      font-weight: 900;
+    }
+
+    select {
+      border-radius: 0.4em;
+      font-size: medium;
+      height: 3em;
+      margin-left: 30vw;
+      text-align: center;
+      width: 40vw;
+    }
+
+    .cart-button {
+      height: 3em;
+      width: 6em;
+    }
+
+    .header {
+      font-size: 2.5em;
+    }
+
+    .item-image {
+      height: 5em;
+      width: 5em;
+    }
+
+    .item-card {
+      height: 14vh;
+      width: 90vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+    }
+
+    .item-info {
+      display: flex;
+      flex-direction: row;
+      align-items: space-between;
+    }
+
+    .price-cart {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+  }
 `;
