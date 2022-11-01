@@ -1,37 +1,57 @@
 import styled from "styled-components";
 
 export const StyledCategories = styled.section`
-  height: 90vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+  //Mobile
+  @media screen and (max-width: 480px) {
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 
-  h2 {
-    text-align: center;
-  }
+    h3 {
+      margin-bottom: 4vh;
+    }
 
-  .categories {
-    display: grid;
-    margin: 2%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5em;
-  }
+    p {
+      font-size: 1em;
+    }
 
-  .category-images {
-    height: 5em;
-    padding: 0.1em;
-    width: 5em;
-  }
+    .header {
+      font-size: 2em;
+    }
 
-  .category-body {
-    border: solid 0.1em #df0000;
-    border-radius: 100%;
-    padding: 1em;
-  }
+    .sub-header {
+      font-size: 1.1em;
+    }
 
-  .category-label {
-    text-align: center;
-    color: #df0000;
+    .category-body {
+      border: solid 0.1em #df0000;
+      height: 6em;
+      width: 6em;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    .category-images {
+      height: 4em;
+      padding: 0.1em;
+      width: 4em;
+    }
+
+    .categories {
+      display: grid;
+      margin: 1%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+    }
+
+    .category-label {
+      text-align: center;
+      color: #df0000;
+    }
   }
 
   //Desktops
@@ -53,9 +73,9 @@ export const StyledCategories = styled.section`
       margin-top: 0%;
     }
 
-    p {
+    /* p {
       font-size: 1.5em;
-    }
+    } */
 
     .category {
       display: flex;
@@ -65,20 +85,20 @@ export const StyledCategories = styled.section`
       align-content: center;
     }
 
-    .categories {
+    /* .categories {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 0.5em;
       margin-top: -1%;
-    }
+    } */
 
-    .category-images {
+    /* .category-images {
       height: 6em;
       padding: 0.1em;
       width: 6em;
-    }
+    } */
 
-    .category-body {
+    /* .category-body {
       border: solid 0.1em #df0000;
       height: 8em;
       width: 8em;
@@ -87,7 +107,7 @@ export const StyledCategories = styled.section`
       justify-content: center;
       align-items: center;
       align-content: center;
-    }
+    } */
 
     .washers {
       margin-left: 210%;
@@ -109,10 +129,10 @@ export const StyledCategories = styled.section`
       margin-top: 0%;
     }
 
-    p {
+    /* p {
       font-size: 1.3em;
-    }
-    .category-body {
+    } */
+    /* .category-body {
       border: solid 0.1em #df0000;
       height: 8em;
       width: 8em;
@@ -121,13 +141,13 @@ export const StyledCategories = styled.section`
       justify-content: center;
       align-items: center;
       align-content: center;
-    }
+    } */
 
-    .category-images {
+    /* .category-images {
       height: 6em;
       padding: 0.1em;
       width: 6em;
-    }
+    } */
 
     .category {
       display: flex;

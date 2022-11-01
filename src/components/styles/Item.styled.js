@@ -27,10 +27,11 @@ export const StyledItem = styled.section`
     width: 80vw;
   }
 
+  //Desktops
   @media screen and (min-width: 1025px) {
     .item-image {
-      height: 40vh;
-      width: 40vw;
+      height: 30vh;
+      width: 30vw;
     }
 
     h2,
@@ -48,6 +49,7 @@ export const StyledItem = styled.section`
     }
   }
 
+  //Laptops
   @media screen and (max-width: 1024px) {
     .item-image {
       height: 30vh;

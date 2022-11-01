@@ -5,6 +5,10 @@ export const StyledCart = styled.section`
     font-size: 0.9em;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   .cart-item {
     border: solid 1px #df0000;
     border-radius: 1em;

@@ -13,11 +13,11 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <StyledCategories>
-      <h2>Fall Sale</h2>
-      <h3> Shop these deals and more by category:</h3>
+      <h2 className="header">Fall Sale</h2>
+      <h3 className="sub-header"> Shop these deals and more by category:</h3>
       <div data-cy="categories" className="categories">
-        <Link to={`/Cellphones`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Cellphones`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -26,20 +26,20 @@ const Categories = () => {
               />
             </div>
             <p className="category-label">Cell Phones</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Desktops`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Desktops`}>
             <div className="category-body">
               <img className="category-images" src={desktop} alt="Desktop" />
             </div>
             <p className="category-label">Desktops</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Digital_Cameras`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Digital_Cameras`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -48,11 +48,11 @@ const Categories = () => {
               />
             </div>
             <p className="category-label">Digital Cameras</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Headphones`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Headphones`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -61,20 +61,20 @@ const Categories = () => {
               />
             </div>
             <p className="category-label">Headphones</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Laptops`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Laptops`}>
             <div className="category-body">
               <img className="category-images" src={laptop} alt="Laptop" />
             </div>
             <p className="category-label">Laptops</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Refrigerators`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Refrigerators`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -83,29 +83,29 @@ const Categories = () => {
               />
             </div>
             <p className="category-label">Refrigerators</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Tablets`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/Tablets`}>
             <div className="category-body">
               <img className="category-images" src={tablet} alt="Tablet" />
             </div>
             <p className="category-label">Tablets</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/TVs`}>
-          <section data-cy="category" className="category">
+        <section data-cy="category" className="category">
+          <Link to={`/TVs`}>
             <div className="category-body">
               <img className="category-images" src={tv} alt="Flat screen TV" />
             </div>
             <p className="category-label">TVs</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
 
-        <Link to={`/Washers_and_Dryers`}>
-          <section data-cy="category" className="category washers">
+        <section data-cy="category" className="category washers">
+          <Link to={`/Washers_and_Dryers`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -114,8 +114,8 @@ const Categories = () => {
               />
             </div>
             <p className="category-label">Washers/Dryers</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
       </div>
     </StyledCategories>
   );
