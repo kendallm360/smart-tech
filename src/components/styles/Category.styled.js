@@ -55,4 +55,47 @@ export const StyledCategory = styled.section`
     height: 2.5em;
     width: 4em;
   }
+
+  @media screen and (min-width: 1025px) {
+    h2,
+    h3 {
+      font-size: 1.6em;
+    }
+
+    h3 {
+      color: #df0000;
+      font-weight: 900;
+    }
+
+    .header {
+      font-size: 2em;
+    }
+
+    .item-image {
+      height: 11em;
+      width: 9em;
+    }
+
+    .item-card {
+      height: 18vh;
+      width: 90vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+    }
+
+    .item-info {
+      display: flex;
+      flex-direction: row;
+      align-items: space-between;
+    }
+    .price-cart {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+  }
 `;
