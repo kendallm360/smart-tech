@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const StyledItem = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 5vh;
 
   img {
@@ -24,10 +28,6 @@ export const StyledItem = styled.section`
   }
 
   @media screen and (min-width: 1025px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     img {
       height: 40vh;
       width: 40vw;
