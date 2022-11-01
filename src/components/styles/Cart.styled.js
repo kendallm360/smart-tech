@@ -4,6 +4,7 @@ export const StyledCart = styled.section`
     text-align: center;
     font-size: 0.9em;
   }
+
   .cart-item {
     border: solid 1px #df0000;
     border-radius: 1em;
@@ -20,9 +21,9 @@ export const StyledCart = styled.section`
 
   .cart-item-image {
     align-self: center;
-    height: 7em;
+    height: 5em;
     margin-bottom: 5%;
-    width: 7em;
+    width: 5em;
   }
 
   .cart-item-info {
@@ -46,6 +47,32 @@ export const StyledCart = styled.section`
       height: 9em;
       margin: 2%;
       width: 9em;
+    }
+
+    .cart-item {
+      height: 18vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    h2,
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    .cart-item-image {
+      height: 7em;
+      margin: 1.5%;
+      width: 7em;
     }
 
     .cart-item {

@@ -22,7 +22,9 @@ const Cart = () => {
     <StyledCart>
       <h2>Your Cart: </h2>
       {entireCart}
-      <button disabled>Checkout</button>
+      <button className="checkout-button" disabled>
+        Checkout
+      </button>
     </StyledCart>
   );
 };
