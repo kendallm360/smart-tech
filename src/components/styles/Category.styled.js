@@ -55,10 +55,11 @@ export const StyledCategory = styled.section`
     width: 4em;
   }
 
+  //Desktops
   @media screen and (min-width: 1025px) {
     h2,
     h3 {
-      font-size: 1.6em;
+      font-size: 1.8em;
     }
 
     h3 {
@@ -66,8 +67,22 @@ export const StyledCategory = styled.section`
       font-weight: 900;
     }
 
+    select {
+      border-radius: 0.4em;
+      font-size: medium;
+      height: 3em;
+      margin-left: 30vw;
+      text-align: center;
+      width: 40vw;
+    }
+
+    .cart-button {
+      height: 3em;
+      width: 6em;
+    }
+
     .header {
-      font-size: 2em;
+      font-size: 2.5em;
     }
 
     .item-image {
@@ -90,9 +105,11 @@ export const StyledCategory = styled.section`
       flex-direction: row;
       align-items: space-between;
     }
+
     .price-cart {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-content: center;
       align-items: center;
     }
