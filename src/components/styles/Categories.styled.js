@@ -69,13 +69,15 @@ export const StyledCategories = styled.section`
 
     h3 {
       font-size: 1.5em;
+      margin-bottom: 5vh;
       margin-left: 3.5%;
-      margin-top: 0%;
+      margin-top: -2%;
     }
 
-    /* p {
+    p {
       font-size: 1.5em;
-    } */
+      text-align: center;
+    }
 
     .category {
       display: flex;
@@ -85,29 +87,29 @@ export const StyledCategories = styled.section`
       align-content: center;
     }
 
-    /* .categories {
+    .categories {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 0.5em;
       margin-top: -1%;
-    } */
+    }
 
-    /* .category-images {
+    .category-images {
       height: 6em;
       padding: 0.1em;
       width: 6em;
-    } */
+    }
 
-    /* .category-body {
+    .category-body {
       border: solid 0.1em #df0000;
-      height: 8em;
-      width: 8em;
+      height: 10em;
+      width: 10em;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
-    } */
+    }
 
     .washers {
       margin-left: 210%;
