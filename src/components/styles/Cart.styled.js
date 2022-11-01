@@ -31,4 +31,30 @@ export const StyledCart = styled.section`
     align-items: center;
     margin-bottom: 3%;
   }
+
+  @media screen and (min-width: 1025px) {
+    h2,
+    h3 {
+      font-size: 1.6em;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    .cart-item-image {
+      height: 9em;
+      margin: 2%;
+      width: 9em;
+    }
+
+    .cart-item {
+      height: 18vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+    }
+  }
 `;
