@@ -21,4 +21,29 @@ export const StyledItem = styled.section`
     height: 2.5em;
     width: 80vw;
   }
+
+  @media screen and (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 40vh;
+      width: 40vw;
+    }
+
+    h2,
+    h3 {
+      font-size: 1.8em;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    p {
+      margin-bottom: 1%;
+      margin-top: 0%;
+    }
+  }
 `;

@@ -44,6 +44,7 @@ export const StyledHeader = styled.header`
       width: 3.5em;
       vertical-align: 400%;
     }
+
     .logo {
       height: 100%;
       width: 40%;
