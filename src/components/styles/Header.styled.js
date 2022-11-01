@@ -12,18 +12,13 @@ export const StyledHeader = styled.header`
   /* justify-content: space-between; */
   /* align-items: center; */
   span {
-    /* display: flex; */
-    /* align-content: flex-start; */
     background-color: #facb35;
     border: solid 0.1em black;
     border-radius: 100%;
     color: #df0000;
     margin-top: 10%;
     padding: 1%;
-    /* position: relative; */
-    /* top: -2px; */
     vertical-align: 340%;
-    /* horizontal-align: 10%; */
   }
   .logo {
     height: 100%;
@@ -32,10 +27,38 @@ export const StyledHeader = styled.header`
   }
 
   .cart-logo {
-    /* align-self: flex-end; */
-    /* border: solid 1px brown; */
+    align-self: center;
     height: 60%;
     margin-bottom: 3%;
+    margin-left: 5%;
     width: 20%;
+  }
+
+  //Desktops
+  @media screen and (min-width: 1025px) {
+    height: 12vh;
+    justify-content: space-between;
+
+    span {
+      background-color: #facb35;
+      border: solid 0.1em black;
+      border-radius: 50%;
+      color: #df0000;
+      height: 3.5em;
+      padding: 1%;
+      width: 3.5em;
+      vertical-align: 400%;
+    }
+    .logo {
+      height: 100%;
+      width: 40%;
+    }
+
+    .cart-logo {
+      cursor: pointer;
+      height: 60%;
+      margin-bottom: 3%;
+      width: 15%;
+    }
   }
 `;

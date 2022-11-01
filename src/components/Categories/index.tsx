@@ -105,7 +105,7 @@ const Categories = () => {
         </Link>
 
         <Link to={`/Washers_and_Dryers`}>
-          <section data-cy="category" className="category">
+          <section data-cy="category" className="category washers">
             <div className="category-body">
               <img
                 className="category-images"
@@ -113,7 +113,7 @@ const Categories = () => {
                 alt="Side by Side Washer and Dryer combo"
               />
             </div>
-            <p className="category-label">Washer & Dryers</p>
+            <p className="category-label">Washers/Dryers</p>
           </section>
         </Link>
       </div>

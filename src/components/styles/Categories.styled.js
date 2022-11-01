@@ -34,6 +34,7 @@ export const StyledCategories = styled.section`
     color: #df0000;
   }
 
+  //Desktops
   @media screen and (min-width: 1025px) {
     height: 100vh;
     width: 100vw;
@@ -42,12 +43,14 @@ export const StyledCategories = styled.section`
 
     h2 {
       font-size: 3em;
+      margin-top: 1%;
       text-align: center;
     }
 
     h3 {
       font-size: 1.5em;
       margin-left: 3.5%;
+      margin-top: 0%;
     }
 
     p {
@@ -63,29 +66,34 @@ export const StyledCategories = styled.section`
     }
     .categories {
       display: grid;
-      /* margin: 2%; */
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2em;
+      grid-gap: 0.5em;
+      margin-top: -1%;
     }
 
     .category-images {
-      height: 8em;
+      height: 6em;
       padding: 0.1em;
-      width: 8em;
+      width: 6em;
     }
 
     .category-body {
       border: solid 0.1em #df0000;
-      height: 10em;
-      width: 10em;
+      height: 8em;
+      width: 8em;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
-      /* padding: 1em; */
     }
 
+    .washers {
+      /* border: solid 3px pink; */
+      margin-left: 210%;
+      text-align: start;
+      /* align-self: center; */
+    }
     /*
   .category-label {
     text-align: center;
