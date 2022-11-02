@@ -10,3 +10,23 @@ export const StyledApp = styled.section`
 // 769px — 1024px for small screens like laptop
 // 1025px — 1200px for large screens like Desktops
 // 1201px and above for extra large screens like TV.
+
+// Template
+
+//Shared for all
+
+// //Mobile
+// @media screen and (max-width: 480px) {
+// }
+
+// //Tablets
+// @media screen and (max-width: 768px) {
+// }
+
+// //Laptops
+// @media screen and (max-width: 1024px) {
+// }
+
+// //Desktops
+// @media screen and (min-width: 1025px) {
+// }
