@@ -8,9 +8,9 @@ export const StyledCategories = styled.section`
 
   .header {
     text-align: center;
+    margin-top: 1%;
     @media screen and (min-width: 1025px) {
       font-size: 2.8em;
-      margin-top: 1%;
     }
     @media screen and (max-width: 1024px) {
       font-size: 2.8em;
@@ -24,13 +24,12 @@ export const StyledCategories = styled.section`
   }
 
   .sub-header {
+    margin-top: -2%;
     @media screen and (min-width: 1025px) {
       font-size: 1.4em;
-      margin-top: -2%;
     }
     @media screen and (max-width: 1024px) {
       font-size: 1.4em;
-      margin-top: -2%;
     }
     @media screen and (max-width: 768px) {
       font-size: 1.1em;
@@ -38,30 +37,24 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 480px) {
       font-size: 1.1em;
       margin-bottom: 5%;
-      margin-top: -2%;
     }
   }
 
   .categories {
     display: grid;
+    grid-gap: 1em;
+    margin: 1%;
     @media screen and (min-width: 1025px) {
       grid-template-columns: repeat(4, 1fr);
-      margin: 1%;
     }
     @media screen and (max-width: 1024px) {
-      grid-gap: 1em;
       grid-template-columns: repeat(3, 1fr);
-      margin: 1%;
     }
     @media screen and (max-width: 768px) {
-      grid-gap: 1em;
       grid-template-columns: repeat(3, 1fr);
-      margin: 1%;
     }
     @media screen and (max-width: 480px) {
-      grid-gap: 1em;
       grid-template-columns: repeat(3, 1fr);
-      margin: 1%;
     }
   }
 
