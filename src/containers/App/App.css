@@ -9,3 +9,21 @@
     height: 12.5vh;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .App {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    height: 14vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    height: 12.5vh;
+  }
+}
