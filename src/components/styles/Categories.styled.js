@@ -1,22 +1,75 @@
 import styled from "styled-components";
 
 export const StyledCategories = styled.section`
-  //Shared for all
   height: 95vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
 
-  h2 {
+  .header {
     text-align: center;
+    @media screen and (max-width: 480px) {
+      font-size: 2em;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 2.8em;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 2.8em;
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: 2.8em;
+      margin-top: 1%;
+    }
   }
 
-  h3 {
-    margin-top: -2%;
+  .sub-header {
+    @media screen and (max-width: 480px) {
+      font-size: 1.1em;
+      margin-bottom: 5%;
+      margin-top: -2%;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 1.4em;
+      margin-top: -2%;
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: 1.4em;
+      margin-top: -2%;
+    }
   }
 
   .categories {
     display: grid;
+    @media screen and (max-width: 480px) {
+      grid-gap: 1em;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 1%;
+    }
+    @media screen and (max-width: 768px) {
+      grid-gap: 1em;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 1%;
+    }
+    @media screen and (max-width: 1024px) {
+      grid-gap: 1em;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 1%;
+    }
+    @media screen and (min-width: 1025px) {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 1%;
+    }
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .category-body {
@@ -26,178 +79,63 @@ export const StyledCategories = styled.section`
     justify-content: center;
     align-content: center;
     align-items: center;
+    @media screen and (max-width: 480px) {
+      height: 6em;
+      width: 6em;
+    }
+    @media screen and (max-width: 768px) {
+      height: 9em;
+      width: 9em;
+    }
+    @media screen and (max-width: 1024px) {
+      height: 10em;
+      width: 10em;
+    }
+    @media screen and (min-width: 1025px) {
+      height: 11em;
+      width: 11em;
+    }
+  }
+
+  .category-images {
+    @media screen and (max-width: 480px) {
+      height: 4em;
+      width: 4em;
+    }
+    @media screen and (max-width: 768px) {
+      height: 6em;
+      width: 6em;
+    }
+    @media screen and (max-width: 1024px) {
+      height: 7em;
+      width: 7em;
+    }
+    @media screen and (min-width: 1025px) {
+      height: 7.5em;
+      width: 7.5em;
+    }
   }
 
   .category-label {
     color: #df0000;
     text-align: center;
-  }
-
-  //Mobile
-  @media screen and (max-width: 480px) {
-    h2 {
-      font-size: 3em;
-    }
-
-    h3 {
-      margin-bottom: 4vh;
-    }
-
-    p {
+    @media screen and (max-width: 480px) {
       font-size: 1em;
     }
-
-    .header {
-      font-size: 2em;
+    @media screen and (max-width: 768px) {
+      font-size: 1em;
     }
-
-    .sub-header {
-      font-size: 1.1em;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.4em;
     }
-    .categories {
-      grid-gap: 1em;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 1%;
-    }
-
-    .category-body {
-      height: 6em;
-      width: 6em;
-    }
-
-    .category-images {
-      height: 4em;
-      padding: 0.1em;
-      width: 4em;
+    @media screen and (min-width: 1025px) {
+      font-size: 1.4em;
     }
   }
-
-  //Tablets
-  @media screen and (max-width: 768px) {
-  }
-
-  //Laptops
-  @media screen and (max-width: 1024px) {
-  }
-
-  //Desktops
-  @media screen and (min-width: 1025px) {
-  }
-
-  /* } */
-
-  //Desktops
-  /* @media screen and (min-width: 1025px) {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-      font-size: 3em;
-      margin-top: 1%;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 1.5em;
-      margin-bottom: 5vh;
-      margin-left: 3.5%;
-      margin-top: -2%;
-    }
-
-    p {
-      font-size: 1.5em;
-      text-align: center;
-    }
-
-    .category {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 0.5em;
-      margin-top: -1%;
-    }
-
-    .category-images {
-      height: 6em;
-      padding: 0.1em;
-      width: 6em;
-    }
-
-    .category-body {
-      border: solid 0.1em #df0000;
-      height: 10em;
-      width: 10em;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-
-    .washers {
-      margin-left: 210%;
+  .washers {
+    @media screen and (min-width: 1025px) {
+      margin-left: 205%;
       text-align: start;
     }
-  } */
-
-  //Laptops
-  /* @media screen and (max-width: 1024px) {
-     h2 {
-      font-size: 3em;
-      margin-top: 0%;
-      text-align: center;
-    } 
-
-    h3 {
-      font-size: 1.5em;
-      margin-bottom: 6vh;
-      margin-left: 3.5%;
-      margin-top: -2%;
-    }
-
-    p {
-      font-size: 1.5em;
-      text-align: center;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 0.5em;
-      margin-top: -1%;
-    }
-
-    .category-body {
-      border: solid 0.1em #df0000;
-      height: 10em;
-      width: 10em;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-
-    .category-images {
-      height: 7em;
-      width: 7em;
-    }
-
-    .category {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-  } */
+  }
 `;
