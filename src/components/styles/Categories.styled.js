@@ -129,6 +129,7 @@ export const StyledCategories = styled.section`
   .washers {
     @media screen and (min-width: 1025px) {
       margin-left: 205%;
+      margin-top: -10%;
       text-align: start;
     }
   }
