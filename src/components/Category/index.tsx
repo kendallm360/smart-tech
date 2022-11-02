@@ -45,7 +45,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
           </h2>
         </Link>
         <div className="price-cart">
-          <h3 data-cy="price">${parseInt(item.regularPrice).toFixed(2)}</h3>
+          <h3 className="item-price" data-cy="price">
+            ${parseInt(item.regularPrice).toFixed(2)}
+          </h3>
           <button
             className="cart-button"
             onClick={() => {

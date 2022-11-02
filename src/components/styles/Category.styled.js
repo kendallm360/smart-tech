@@ -1,18 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCategory = styled.section`
-  h2,
-  h3 {
-    text-align: center;
-    font-size: 0.7em;
-  }
-
-  h3 {
-    color: #df0000;
-    font-size: 0.8em;
-    font-weight: 900;
-  }
-
   select {
     align-items: center;
     margin-bottom: 5%;
@@ -22,6 +10,7 @@ export const StyledCategory = styled.section`
 
   .header {
     font-size: 1.5em;
+    text-align: center;
   }
 
   .item-card {
@@ -32,8 +21,8 @@ export const StyledCategory = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     align-content: center;
+    align-items: center;
   }
 
   .item-image {
@@ -43,7 +32,15 @@ export const StyledCategory = styled.section`
   }
 
   .item-name {
-    align-self: center;
+    font-size: 0.7em;
+    text-align: center;
+  }
+
+  .item-price {
+    color: #df0000;
+    font-size: 0.9em;
+    font-weight: 900;
+    text-align: center;
   }
 
   .cart-button {
@@ -56,7 +53,7 @@ export const StyledCategory = styled.section`
   }
 
   //Desktops
-  @media screen and (min-width: 1025px) {
+  /* @media screen and (min-width: 1025px) {
     h2,
     h3 {
       font-size: 1.8em;
@@ -113,10 +110,10 @@ export const StyledCategory = styled.section`
       align-content: center;
       align-items: center;
     }
-  }
+  } */
 
   //Laptops
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     h2,
     h3 {
       font-size: 1.3em;
@@ -173,5 +170,5 @@ export const StyledCategory = styled.section`
       align-content: center;
       align-items: center;
     }
-  }
+  } */
 `;

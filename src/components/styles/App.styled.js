@@ -4,15 +4,15 @@ export const StyledApp = styled.section`
   font-family: "impact-regular", sans-serif;
 `;
 // Template
-//Mobile
-// @media screen and (max-width: 480px) {
-// }
-//Tablets
-// @media screen and (max-width: 768px) {
+//Desktops
+// @media screen and (min-width: 1025px) {
 // }
 //Laptops
 // @media screen and (max-width: 1024px) {
 // }
-//Desktops
-// @media screen and (min-width: 1025px) {
+//Tablets
+// @media screen and (max-width: 768px) {
+// }
+//Mobile
+// @media screen and (max-width: 480px) {
 // }
