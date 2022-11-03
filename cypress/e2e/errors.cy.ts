@@ -20,4 +20,5 @@ describe("errors", () => {
   // });
 
   //should show an error page if not more than 10
+  //add test for cart wuantity update
 });
