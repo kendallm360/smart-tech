@@ -8,17 +8,26 @@ interface ICartItem {
   quantity: number;
 }
 
-interface AppContextInterface {
+export interface AppContextInterface {
   cart: ICartItem[];
   //figure how to better declare functions:
   setCart: any;
 }
 
-export const Cart = createContext<AppContextInterface | null>(null);
-const CartContext = ({ children }: any) => {
-  const [cart, setCart] = useState([]);
-
-  return <Cart.Provider value={{ cart, setCart }}>{children}</Cart.Provider>;
+const defaultContext = {
+  cart: [],
+  setCart: () => {},
 };
 
-export default CartContext;
+export const CartContext = createContext<AppContextInterface>(defaultContext);
+const Cart = ({ children }: any) => {
+  const [cart, setCart] = useState([]);
+
+  return (
+    <CartContext.Provider value={{ cart, setCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+export default Cart;
