@@ -82,23 +82,23 @@ export const StyledCategory = styled.section`
     margin-bottom: 2%;
     /* Desktops */
     @media screen and (min-width: 1025px) {
-      height: 11em;
-      width: 9em;
+      height: 10em;
+      width: 10em;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 10em;
-      width: 8em;
+      height: 8.5em;
+      width: 8.5em;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      height: 9em;
+      height: 7em;
       width: 7em;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
       height: 5em;
-      width: 6em;
+      width: 5em;
     }
   }
 
