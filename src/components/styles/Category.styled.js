@@ -1,50 +1,155 @@
 import styled from "styled-components";
 
 export const StyledCategory = styled.section`
-  h2,
-  h3 {
-    text-align: center;
-    font-size: 0.7em;
-  }
-
-  h3 {
-    color: #df0000;
-    font-size: 0.8em;
-    font-weight: 900;
-  }
-
   select {
     align-items: center;
-    margin-bottom: 5%;
-    margin-left: 25%;
-    width: 50vw;
+    border-radius: 0.4em;
+    margin-bottom: 3%;
+    margin-left: 30vw;
+    width: 40vw;
+    text-align: center;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      font-size: 1em;
+      height: 3em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      font-size: 1em;
+      height: 3em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      font-size: 0.9em;
+      height: 2em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      font-size: 0.8em;
+      height: 2em;
+    }
   }
 
   .header {
-    font-size: 1.5em;
+    text-align: center;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      font-size: 2.5em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      font-size: 2.3em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      font-size: 1.8em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      font-size: 1.5em;
+    }
   }
 
   .item-card {
     border-bottom: solid 1px #df0000;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    width: 90%;
+    margin-bottom: 3%;
+    margin-left: 5vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
     align-items: center;
-  }
-
-  .item-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 5%;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      height: 18vh;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      height: 17vh;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      height: 16vh;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      height: 15vh;
+    }
   }
 
   .item-image {
-    height: 5em;
-    width: 6em;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      height: 10em;
+      width: 10em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      height: 8.5em;
+      width: 8.5em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      height: 7em;
+      width: 7em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      height: 5em;
+      width: 5em;
+    }
+  }
+
+  .item-name {
+    text-align: center;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      font-size: 1.7em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.4em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      font-size: 1em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      font-size: 0.7em;
+    }
+  }
+
+  .price-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .item-price {
+    color: #df0000;
+    font-weight: 900;
+    text-align: center;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      font-size: 1.4em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.2em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      font-size: 1.1em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      font-size: 0.9em;
+    }
   }
 
   .cart-button {
@@ -52,7 +157,25 @@ export const StyledCategory = styled.section`
     border: #df0000;
     border-radius: 0.4em;
     font-size: 100%;
-    height: 2.5em;
-    width: 4em;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      height: 3em;
+      width: 6em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      height: 3em;
+      width: 6em;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      height: 2.5em;
+      width: 4em;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      height: 2.5em;
+      width: 4em;
+    }
   }
 `;

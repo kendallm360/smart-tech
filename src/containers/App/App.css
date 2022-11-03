@@ -1,4 +1,27 @@
 .App {
   background-color: rgb(226, 226, 226);
-  height: 14vh;
+}
+
+@media screen and (min-width: 1025px) {
+  .App {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    height: 11vh;
+  }
 }

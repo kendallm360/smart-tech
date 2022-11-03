@@ -38,14 +38,16 @@ const Category = ({ id }: ICategory): JSX.Element => {
         data-cy="item-card"
         className="item-card"
       >
+        <img className="item-image" src={item.image} />
         <Link to={`/${id}/${item.name}`}>
-          <div data-cy="item-info" className="item-info">
-            <img className="item-image" src={item.image} />
-            <h2 data-cy="name">{item.name}</h2>
-          </div>
+          <h2 className="item-name" data-cy="name">
+            {item.name}
+          </h2>
         </Link>
         <div className="price-cart">
-          <h3 data-cy="price">${parseInt(item.regularPrice).toFixed(2)}</h3>
+          <h3 className="item-price" data-cy="price">
+            ${parseInt(item.regularPrice).toFixed(2)}
+          </h3>
           <button
             className="cart-button"
             onClick={() => {

@@ -1,41 +1,83 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  /* border: solid 3px black; */
   background-color: #df0000;
-  cursor: pointer;
-  height: 10vh;
-  /* margin-right: 3%; */
   width: 100vw;
-  /* display: flex;
-  flex-direction: row; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  span {
-    /* display: flex; */
-    /* align-content: flex-start; */
-    background-color: #facb35;
-    border: solid 0.1em black;
-    border-radius: 100%;
-    color: #df0000;
-    margin-top: 10%;
-    padding: 1%;
-    /* position: relative; */
-    /* top: -2px; */
-    vertical-align: 340%;
-    /* horizontal-align: 10%; */
+  display: flex;
+  justify-content: space-between;
+  /* Desktops */
+  @media screen and (min-width: 1025px) {
+    height: 11vh;
   }
+  /* Laptops */
+  @media screen and (max-width: 1024px) {
+    height: 11vh;
+  }
+  /* Tablets */
+  @media screen and (max-width: 768px) {
+    height: 10vh;
+  }
+  /* Mobile */
+  @media screen and (max-width: 480px) {
+    height: 10vh;
+  }
+
   .logo {
-    height: 100%;
-    margin-right: 34%;
-    width: 40%;
+    cursor: pointer;
+    width: 40vw;
+    /* Desktops */
+    @media screen and (min-width: 1025px) {
+      height: 11vh;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      height: 11vh;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      height: 10vh;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      height: 10vh;
+    }
+  }
+
+  .cart-body {
+    width: 20vw;
+    @media screen and (min-width: 1025px) {
+      height: 11vh;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+      height: 11vh;
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+      height: 10vh;
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+      height: 10vh;
+    }
   }
 
   .cart-logo {
-    /* align-self: flex-end; */
-    /* border: solid 1px brown; */
+    align-self: center;
+    cursor: pointer;
     height: 60%;
-    margin-bottom: 3%;
-    width: 20%;
+    margin-top: 15%;
+    position: relative;
+    width: 70%;
+  }
+
+  .cart-quantity {
+    background-color: #facb35;
+    border: solid 0.15em black;
+    border-radius: 50%;
+    color: #df0000;
+    cursor: pointer;
+    padding: 0.5%;
+    position: absolute;
   }
 `;

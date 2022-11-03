@@ -40,14 +40,14 @@ const Item = ({ id, name }: TItem): JSX.Element => {
         <Error />
       ) : (
         <StyledItem>
-          <img src={item.image} alt={name} />
-
-          <h2>{name}</h2>
-          <h3>Product Description</h3>
-          <p>{item.longDescription}</p>
-          <p>SKU: {item.sku}</p>
-          <h3>${item.regularPrice}</h3>
+          <h2 className="item-title">{name}</h2>
+          <img className="item-image" src={item.image} alt={name} />
+          <h3 className="description-header">Product Description:</h3>
+          <p className="description-text">{item.longDescription}</p>
+          <p className="sku">SKU: {item.sku}</p>
+          <h3 className="item-price">${item.regularPrice}</h3>
           <button
+            className="add-to-cart"
             onClick={() => {
               cart.push({
                 id: item.sku,

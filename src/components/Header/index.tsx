@@ -25,14 +25,16 @@ const Header = () => {
         />
       </Link>
       <Link to="/cart">
-        <img
-          data-cy="cart-logo"
-          className="cart-logo"
-          src={cartLogo}
-          alt="cart emoji"
-        />
-        {/* <span>{cart.length}</span> */}
-        <span>{cartLength}</span>
+        <div className="cart-body">
+          <img
+            data-cy="cart-logo"
+            className="cart-logo"
+            src={cartLogo}
+            alt="cart emoji"
+          />
+          {/* <span>{cart.length}</span> */}
+          <span className="cart-quantity">{cartLength}</span>
+        </div>
       </Link>
     </StyledHeader>
   );

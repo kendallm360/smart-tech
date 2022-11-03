@@ -9,10 +9,10 @@ const Cart = () => {
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
         <img className="cart-item-image" src={e.image} alt={e.name}></img>
         <div data-cy="cart-item-info" className="cart-item-info">
-          <h3>{e.name}</h3>
-          <h3>${e.price.toFixed(2)}</h3>
+          <h3 className="item-title">{e.name}</h3>
+          <h3 className="item-price">${e.price.toFixed(2)}</h3>
           <span>{e.quantity}</span>
-          <button>Remove Item</button>
+          <button className="remove-item-button">Remove Item</button>
         </div>
       </div>
     );
@@ -20,9 +20,11 @@ const Cart = () => {
   console.log(entireCart);
   return (
     <StyledCart>
-      <h2>Your Cart: </h2>
+      <h2 className="cart-header">Your Cart: </h2>
       {entireCart}
-      <button disabled>Checkout</button>
+      <button className="checkout-button" disabled>
+        Checkout
+      </button>
     </StyledCart>
   );
 };
