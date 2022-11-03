@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { findCategory } from "../../utils/utils";
 import { StyledItem } from "../styles/Item.styled";
 import Error from "../Error/index";
-import { myContext } from "../..";
+// import { myContext } from "../..";
 
 type TItem = {
   id: string;
@@ -21,7 +21,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     sku: 0,
     regularPrice: 0,
   });
-  const { cart } = useContext(myContext);
+  // const { cart } = useContext(myContext);
 
   useEffect(() => {
     findCategory(id)?.then((data) => {
@@ -48,16 +48,16 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <h3 className="item-price">${item.regularPrice}</h3>
           <button
             className="add-to-cart"
-            onClick={() => {
-              cart.push({
-                id: item.sku,
-                name: name,
-                image: item.image,
-                price: item.regularPrice,
-                quantity: 1,
-              });
-              console.log(cart);
-            }}
+            // onClick={() => {
+            //   cart.push({
+            //     id: item.sku,
+            //     name: name,
+            //     image: item.image,
+            //     price: item.regularPrice,
+            //     quantity: 1,
+            //   });
+            //   console.log(cart);
+            // }}
           >
             Add to Cart
           </button>

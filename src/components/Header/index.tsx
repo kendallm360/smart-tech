@@ -3,16 +3,16 @@ import cartLogo from "../../images/empty-cart.png";
 import { StyledHeader } from "../styles/Header.styled";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { myContext } from "../..";
+// import { myContext } from "../..";
 
 const Header = () => {
   const [cartLength, setCartLength] = useState(0);
-  const { cart } = useContext(myContext);
-  console.log(cart.length);
+  // const { cart } = useContext(myContext);
+  // console.log(cart.length);
 
-  useEffect(() => {
-    setCartLength(cart.length);
-  }, []);
+  // useEffect(() => {
+  //   setCartLength(cart.length);
+  // }, []);
 
   return (
     <StyledHeader data-cy="header">

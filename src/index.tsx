@@ -18,27 +18,29 @@ interface AppContextInterface {
 }
 
 //alterate logic for the line above myContext
-const defaultContext = {
-  cart: [
-    //in the event I wanted cart to have at least 1 object inside with given structure
-    // {
-    //   name: "",
-    //   image: "",
-    //   price: 0,
-    //   quantity: 0,
-    // },
-  ],
-};
+// const defaultContext = {
+//   cart: [
+//     //in the event I wanted cart to have at least 1 object inside with given structure
+//     // {
+//     //   name: "",
+//     //   image: "",
+//     //   price: 0,
+//     //   quantity: 0,
+//     // },
+//   ],
+// };
+//old example:
 // export const myContext = createContext<AppContextInterface | null>(null);
-export const myContext = createContext<AppContextInterface>(defaultContext);
+//current variable in use:
+// export const myContext = createContext<AppContextInterface>(defaultContext);
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <BrowserRouter>
-    <myContext.Provider value={defaultContext}>
-      <App />
-    </myContext.Provider>
+    {/* <myContext.Provider value={defaultContext}> */}
+    <App />
+    {/* </myContext.Provider> */}
   </BrowserRouter>
 );
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
-import { myContext } from "../..";
+// import { myContext } from "../..";
 
 interface ICategory {
   id: string;
@@ -21,7 +21,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
-  const { cart } = useContext(myContext);
+  // const { cart } = useContext(myContext);
 
   useEffect(() => {
     setTitle(id);
@@ -50,15 +50,16 @@ const Category = ({ id }: ICategory): JSX.Element => {
           </h3>
           <button
             className="cart-button"
-            onClick={() => {
-              cart.push({
-                id: item.sku,
-                name: item.name,
-                image: item.image,
-                price: parseInt(item.regularPrice),
-                quantity: 1,
-              });
-            }}
+            // onClick={() => {
+            //   cart.push({
+            //     id: item.sku,
+            //     name: item.name,
+            //     image: item.image,
+            //     price: parseInt(item.regularPrice),
+            //     quantity: 1,
+            //   });
+            // }}
+            //old attempts
             // console.log(cart, "cart");
             // console.log(
             //   cart.includes({
