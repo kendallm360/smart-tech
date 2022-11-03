@@ -38,16 +38,18 @@ const Item = ({ id, name }: TItem): JSX.Element => {
 
   const handleAddToCart = () => {
     setDisabled(true);
-    setCart([
-      ...cart,
-      {
-        id: item.sku,
-        name: name,
-        image: item.image,
-        price: item.regularPrice,
-        quantity: 1,
-      },
-    ]);
+    if (!cart.map((e: any) => e.id).includes(item.sku)) {
+      setCart([
+        ...cart,
+        {
+          id: item.sku,
+          name: name,
+          image: item.image,
+          price: item.regularPrice,
+          quantity: 1,
+        },
+      ]);
+    }
   };
 
   console.log(cart, "cart");
