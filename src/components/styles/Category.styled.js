@@ -156,6 +156,7 @@ export const StyledCategory = styled.section`
     background-color: #df0000;
     border: #df0000;
     border-radius: 0.4em;
+    cursor: pointer;
     font-size: 100%;
     /* Desktops */
     @media screen and (min-width: 1025px) {

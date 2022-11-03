@@ -48,4 +48,5 @@ describe("category", () => {
   // });
   // add testing coverage for fitering once that is implemented
   //add test for cart wuantity update
+  //add test for removal from cart
 });
