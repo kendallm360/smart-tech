@@ -68,7 +68,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
   };
 
   const handleAddToCart = (event: any) => {
-    // console.log(event.target.value, "etv");
+    // let buttonName = event.target.className.split(" ")[1];
     let sku = event.target.value;
     let item = findItemBySku(sku, itemList);
     // console.log(item.sku, "<<<");
@@ -78,18 +78,24 @@ const Category = ({ id }: ICategory): JSX.Element => {
     // console.log(item, "item");
     // setDisabled(true);
     // console.log(item, "item");
-    setCart([
-      ...cart,
-      {
-        id: item.sku,
-        name: item.name,
-        image: item.image,
-        price: parseInt(item.regularPrice),
-        quantity: 1,
-      },
-    ]);
-    console.log(cart);
+    // buttonName === sku && setDisabled(true);
+    if (!cart.map((e: any) => e.id).includes(parseInt(sku))) {
+      setCart([
+        ...cart,
+        {
+          id: item.sku,
+          name: item.name,
+          image: item.image,
+          price: parseInt(item.regularPrice),
+          quantity: 1,
+        },
+      ]);
+    }
+    // setItemList(itemList.filter((e: any) => e.sku !== sku));
+    // setItemList(itemList.filter((e: any) => e.id))
+    // console.log(cart);
   };
+
   let allItems = itemList.map((item: Item) => {
     return (
       <div
@@ -110,7 +116,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           </h3>
           <button
             value={item.sku}
-            className="cart-button"
+            className={`cart-button ${item.sku}`}
             disabled={disabled}
             onClick={handleAddToCart}
             // onClick={() => {
