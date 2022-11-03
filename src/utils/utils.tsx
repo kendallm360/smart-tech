@@ -1,3 +1,4 @@
+import { Item } from "../components/Category";
 import { fetchCategory } from "./apicalls";
 
 export type TCategories =
@@ -12,6 +13,13 @@ export type TCategories =
   | "Washers_and_Dryers"
   // only works if i also add the line below
   | string;
+
+const findItemBySku = (sku: number, itemList: Item[]) => {
+  let item = itemList.filter((item: any) => item.sku == sku);
+  // .find((item: any) => item.sku === sku);
+  // console.log(item[0], "item utils");
+  return item[0];
+};
 
 const findCategory = (id: TCategories) => {
   if (id === "Cellphones") {
@@ -49,4 +57,4 @@ const addToCart = (item: object) => {
   return cart;
 };
 
-export { findCategory, addToCart };
+export { findCategory, addToCart, findItemBySku };

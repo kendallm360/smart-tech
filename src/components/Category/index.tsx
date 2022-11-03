@@ -1,15 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { findCategory } from "../../utils/utils";
+import { findCategory, findItemBySku } from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
-// import { myContext } from "../..";
+import { AppContextInterface, CartContext } from "../../contexts/context";
 
 interface ICategory {
   id: string;
 }
 
-type Item = {
+export type Item = {
   id: number;
   image: string;
   name: string;
@@ -21,7 +21,9 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
-  // const { cart } = useContext(myContext);
+  const [disabled, setDisabled] = useState(false);
+  const [item, setItem] = useState({});
+  const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
     setTitle(id);
@@ -29,55 +31,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
       setItemList(data.products);
     });
   }, []);
-
-  let allItems = itemList.map((item: Item) => {
-    return (
-      <div
-        key={item.sku}
-        id={item.regularPrice}
-        data-cy="item-card"
-        className="item-card"
-      >
-        <img className="item-image" src={item.image} />
-        <Link to={`/${id}/${item.name}`}>
-          <h2 className="item-name" data-cy="name">
-            {item.name}
-          </h2>
-        </Link>
-        <div className="price-cart">
-          <h3 className="item-price" data-cy="price">
-            ${parseInt(item.regularPrice).toFixed(2)}
-          </h3>
-          <button
-            className="cart-button"
-            // onClick={() => {
-            //   cart.push({
-            //     id: item.sku,
-            //     name: item.name,
-            //     image: item.image,
-            //     price: parseInt(item.regularPrice),
-            //     quantity: 1,
-            //   });
-            // }}
-            //old attempts
-            // console.log(cart, "cart");
-            // console.log(
-            //   cart.includes({
-            //     id: item.sku,
-            //     name: item.name,
-            //     image: item.image,
-            //     price: parseInt(item.regularPrice),
-            //     quantity: 1,
-            //   }),
-            //   "bool"
-            // );
-          >
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    );
-  });
 
   //convert from any below
   const handleSelect = (event: any) => {
@@ -113,6 +66,81 @@ const Category = ({ id }: ICategory): JSX.Element => {
     //   );
     // }
   };
+
+  const handleAddToCart = (event: any) => {
+    // console.log(event.target.value, "etv");
+    let sku = event.target.value;
+    let item = findItemBySku(sku, itemList);
+    // console.log(item.sku, "<<<");
+    // let value = event?.target.value;
+    // setItem(findItemBySku(value, itemList));
+    // console.log(findItemBySku(value, itemList), "<<<");
+    // console.log(item, "item");
+    // setDisabled(true);
+    // console.log(item, "item");
+    setCart([
+      ...cart,
+      {
+        id: item.sku,
+        name: item.name,
+        image: item.image,
+        price: parseInt(item.regularPrice),
+        quantity: 1,
+      },
+    ]);
+    console.log(cart);
+  };
+  let allItems = itemList.map((item: Item) => {
+    return (
+      <div
+        key={item.sku}
+        id={item.regularPrice}
+        data-cy="item-card"
+        className="item-card"
+      >
+        <img className="item-image" src={item.image} />
+        <Link to={`/${id}/${item.name}`}>
+          <h2 className="item-name" data-cy="name">
+            {item.name}
+          </h2>
+        </Link>
+        <div className="price-cart">
+          <h3 className="item-price" data-cy="price">
+            ${parseInt(item.regularPrice).toFixed(2)}
+          </h3>
+          <button
+            value={item.sku}
+            className="cart-button"
+            disabled={disabled}
+            onClick={handleAddToCart}
+            // onClick={() => {
+            //   cart.push({
+            //     id: item.sku,
+            //     name: item.name,
+            //     image: item.image,
+            //     price: parseInt(item.regularPrice),
+            //     quantity: 1,
+            //   });
+            // }}
+            //old attempts
+            // console.log(cart, "cart");
+            // console.log(
+            //   cart.includes({
+            //     id: item.sku,
+            //     name: item.name,
+            //     image: item.image,
+            //     price: parseInt(item.regularPrice),
+            //     quantity: 1,
+            //   }),
+            //   "bool"
+            // );
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <>
