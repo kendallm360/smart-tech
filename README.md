@@ -44,10 +44,10 @@ Upon loading the application, you will see a list of.....
 
 ## Organizational/Planning Resources
  - [Project Board](https://github.com/users/kendallm360/projects/4/views/1)
- - [Figma] (https://www.figma.com/file/UsOAE3rAptWu0q4lLhCgI2/Smart-Tech?node-id=1%3A2)
- - [MVP] (https://docs.google.com/document/d/1Bn9kGBiyN8qaxEYMc9hHdi1dHYXkHljyGGNz2hM-8-E/edit)
- - [Design Inspiration] (https://docs.google.com/document/d/1xrrGQmP0zfN4CnbYPE0Yxk9pusbF6VpRsp-M2Zv6TS4/edit)
- - [User Personas] ()
+ - [Figma](https://www.figma.com/file/UsOAE3rAptWu0q4lLhCgI2/Smart-Tech?node-id=1%3A2)
+ - [MVP](https://docs.google.com/document/d/1Bn9kGBiyN8qaxEYMc9hHdi1dHYXkHljyGGNz2hM-8-E/edit)
+ - [Design Inspiration](https://docs.google.com/document/d/1xrrGQmP0zfN4CnbYPE0Yxk9pusbF6VpRsp-M2Zv6TS4/edit)
+ - [User Personas]()
 
 
 ## Future Additions
