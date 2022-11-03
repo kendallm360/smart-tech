@@ -1,11 +1,8 @@
 import { useContext } from "react";
-// import { myContext } from "../..";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 const Cart = () => {
-  const { cart, setCart } = useContext<AppContextInterface>(CartContext);
-
-  // const { cart } = useContext(myContext);
+  const { cart } = useContext<AppContextInterface>(CartContext);
 
   let entireCart = cart.map((e: any) => {
     return (
@@ -20,8 +17,7 @@ const Cart = () => {
       </div>
     );
   });
-  // console.log(entireCart);
-  console.log(cart);
+
   return (
     <StyledCart>
       <h2 className="cart-header">Your Cart: </h2>
