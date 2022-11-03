@@ -21,7 +21,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
-  const [disabled, setDisabled] = useState(false);
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
@@ -104,7 +103,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
           <button
             value={item.sku}
             className={`cart-button ${item.sku}`}
-            disabled={disabled}
             onClick={handleAddToCart}
           >
             Add to Cart

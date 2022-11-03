@@ -3,7 +3,6 @@ import { findCategory } from "../../utils/utils";
 import { StyledItem } from "../styles/Item.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
-// import { myContext } from "../..";
 
 type TItem = {
   id: string;
@@ -68,23 +67,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
             className="add-to-cart"
             disabled={disabled}
             onClick={handleAddToCart}
-            // setCart({
-            //   id: item.sku,
-            //   name: name,
-            //   image: item.image,
-            //   price: item.regularPrice,
-            //   quantity: 1,
-            // })
-            // onClick={() => {
-            //   cart.push({
-            //     id: item.sku,
-            //     name: name,
-            //     image: item.image,
-            //     price: item.regularPrice,
-            //     quantity: 1,
-            //   });
-            //   console.log(cart);
-            // }}
           >
             Add to Cart
           </button>
