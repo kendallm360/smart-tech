@@ -22,6 +22,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     sku: 0,
     regularPrice: 0,
   });
+  const [disabled, setDisabled] = useState(false);
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
@@ -36,8 +37,21 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     // });
   }, []);
 
+  const handleAddToCart = () => {
+    setDisabled(true);
+    setCart([
+      ...cart,
+      {
+        id: item.sku,
+        name: name,
+        image: item.image,
+        price: item.regularPrice,
+        quantity: 1,
+      },
+    ]);
+  };
+
   console.log(cart, "cart");
-  // console.log(setCart, "setCart");
   return (
     <>
       {item.regularPrice === 0 ? (
@@ -52,15 +66,15 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <h3 className="item-price">${item.regularPrice}</h3>
           <button
             className="add-to-cart"
-            onClick={() =>
-              setCart({
-                id: item.sku,
-                name: name,
-                image: item.image,
-                price: item.regularPrice,
-                quantity: 1,
-              })
-            }
+            disabled={disabled}
+            onClick={handleAddToCart}
+            // setCart({
+            //   id: item.sku,
+            //   name: name,
+            //   image: item.image,
+            //   price: item.regularPrice,
+            //   quantity: 1,
+            // })
             // onClick={() => {
             //   cart.push({
             //     id: item.sku,
