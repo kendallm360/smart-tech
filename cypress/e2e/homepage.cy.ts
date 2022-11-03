@@ -40,4 +40,6 @@ describe("homepage", () => {
   //   cy.go("forward");
   //   cy.url().should("equal", "http://localhost:3000/Cellphones");
   // });
+
+  //add test for cart wuantity update
 });

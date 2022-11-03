@@ -1,8 +1,13 @@
 import { useContext } from "react";
-import { myContext } from "../..";
+import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 const Cart = () => {
-  const { cart } = useContext(myContext);
+  const { cart, setCart } = useContext<AppContextInterface>(CartContext);
+
+  const handleRemoveFromCart = (event: any) => {
+    let sku = event.target.value;
+    setCart(cart.filter((item: any) => item.id !== parseInt(sku)));
+  };
 
   let entireCart = cart.map((e: any) => {
     return (
@@ -12,12 +17,18 @@ const Cart = () => {
           <h3 className="item-title">{e.name}</h3>
           <h3 className="item-price">${e.price.toFixed(2)}</h3>
           <span>{e.quantity}</span>
-          <button className="remove-item-button">Remove Item</button>
+          <button
+            value={e.id}
+            className="remove-item-button"
+            onClick={handleRemoveFromCart}
+          >
+            Remove Item
+          </button>
         </div>
       </div>
     );
   });
-  console.log(entireCart);
+
   return (
     <StyledCart>
       <h2 className="cart-header">Your Cart: </h2>

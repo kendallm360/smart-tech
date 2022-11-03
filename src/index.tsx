@@ -1,44 +1,17 @@
-import { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./containers/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
-interface ICartItem {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  quantity: number;
-}
-
-interface AppContextInterface {
-  cart: ICartItem[];
-}
-
-//alterate logic for the line above myContext
-const defaultContext = {
-  cart: [
-    //in the event I wanted cart to have at least 1 object inside with given structure
-    // {
-    //   name: "",
-    //   image: "",
-    //   price: 0,
-    //   quantity: 0,
-    // },
-  ],
-};
-// export const myContext = createContext<AppContextInterface | null>(null);
-export const myContext = createContext<AppContextInterface>(defaultContext);
+import CartContext from "./contexts/context";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <BrowserRouter>
-    <myContext.Provider value={defaultContext}>
+    <CartContext>
       <App />
-    </myContext.Provider>
+    </CartContext>
   </BrowserRouter>
 );
 
