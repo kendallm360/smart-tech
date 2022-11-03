@@ -22,7 +22,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [select, setSelect] = useState("high" || "low");
   const [sorted, setSorted] = useState([]);
   const [disabled, setDisabled] = useState(false);
-  const [item, setItem] = useState({});
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
@@ -68,17 +67,8 @@ const Category = ({ id }: ICategory): JSX.Element => {
   };
 
   const handleAddToCart = (event: any) => {
-    // let buttonName = event.target.className.split(" ")[1];
     let sku = event.target.value;
     let item = findItemBySku(sku, itemList);
-    // console.log(item.sku, "<<<");
-    // let value = event?.target.value;
-    // setItem(findItemBySku(value, itemList));
-    // console.log(findItemBySku(value, itemList), "<<<");
-    // console.log(item, "item");
-    // setDisabled(true);
-    // console.log(item, "item");
-    // buttonName === sku && setDisabled(true);
     if (!cart.map((e: any) => e.id).includes(parseInt(sku))) {
       setCart([
         ...cart,
@@ -91,9 +81,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
         },
       ]);
     }
-    // setItemList(itemList.filter((e: any) => e.sku !== sku));
-    // setItemList(itemList.filter((e: any) => e.id))
-    // console.log(cart);
   };
 
   let allItems = itemList.map((item: Item) => {
@@ -119,27 +106,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
             className={`cart-button ${item.sku}`}
             disabled={disabled}
             onClick={handleAddToCart}
-            // onClick={() => {
-            //   cart.push({
-            //     id: item.sku,
-            //     name: item.name,
-            //     image: item.image,
-            //     price: parseInt(item.regularPrice),
-            //     quantity: 1,
-            //   });
-            // }}
-            //old attempts
-            // console.log(cart, "cart");
-            // console.log(
-            //   cart.includes({
-            //     id: item.sku,
-            //     name: item.name,
-            //     image: item.image,
-            //     price: parseInt(item.regularPrice),
-            //     quantity: 1,
-            //   }),
-            //   "bool"
-            // );
           >
             Add to Cart
           </button>
