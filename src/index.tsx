@@ -4,18 +4,19 @@ import "./index.css";
 import App from "./containers/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import CartContext from "./contexts/context";
 
-interface ICartItem {
-  id: number;
-  name: string;
-  image: string;
-  price: number;
-  quantity: number;
-}
+// interface ICartItem {
+//   id: number;
+//   name: string;
+//   image: string;
+//   price: number;
+//   quantity: number;
+// }
 
-interface AppContextInterface {
-  cart: ICartItem[];
-}
+// interface AppContextInterface {
+//   cart: ICartItem[];
+// }
 
 //alterate logic for the line above myContext
 // const defaultContext = {
@@ -38,9 +39,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    {/* <myContext.Provider value={defaultContext}> */}
-    <App />
-    {/* </myContext.Provider> */}
+    <CartContext>
+      {/* <myContext.Provider value={defaultContext}> */}
+      <App />
+      {/* </myContext.Provider> */}
+    </CartContext>
   </BrowserRouter>
 );
 
