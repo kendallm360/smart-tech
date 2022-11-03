@@ -3,8 +3,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-challenge">About the Project/a></li>
-    <li><a href="#about-the-challenge">User Stories/a></li>
+    <li><a href="#about-the-challenge">About the Project/<a></li>
+    <li><a href="#about-the-challenge">User Stories/<a></li>
     <li><a href="#application-in-action">Application in Action</a></li>
     <li><a href="#technologies-used">Technologies Used</a></li>
     <li><a href="#organizational-resources">Organizational/Planning Resources</a></li>
