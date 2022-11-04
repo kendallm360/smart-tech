@@ -30,7 +30,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from lowest price to highest", () => {
-    cy.get('[data-cy="sort-dropdown"]').select("low");
+    cy.get("select").select("low");
     cy.get('[data-cy="item-name"]')
       .eq(2)
       .contains(
