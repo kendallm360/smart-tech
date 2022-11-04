@@ -18,6 +18,7 @@ const Cart = () => {
           <h3 className="item-price">${e.price.toFixed(2)}</h3>
           <span>{e.quantity}</span>
           <button
+            data-cy="remove-item-button"
             value={e.id}
             className="remove-item-button"
             onClick={handleRemoveFromCart}
@@ -31,7 +32,9 @@ const Cart = () => {
 
   return (
     <StyledCart>
-      <h2 className="cart-header">Your Cart: </h2>
+      <h2 data-cy="cart-header" className="cart-header">
+        Your Cart:{" "}
+      </h2>
       {entireCart}
       <button className="checkout-button" disabled>
         Checkout
