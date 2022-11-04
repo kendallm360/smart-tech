@@ -30,7 +30,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from lowest price to highest", () => {
-    cy.get("select").select("low");
+    cy.get('[data-cy="sort-dropdown"]').select("low");
     cy.get('[data-cy="name"]')
       .eq(0)
       .contains(
@@ -40,7 +40,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from highest price to lowest", () => {
-    cy.get("select").select("high");
+    cy.get('[data-cy="sort-dropdown"]').select("high");
     cy.get('[data-cy="name"]')
       .eq(0)
       .contains("Alienware - AREA-51 2.8GHz Notebook");
