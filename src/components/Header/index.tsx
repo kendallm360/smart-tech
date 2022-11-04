@@ -25,7 +25,9 @@ const Header = () => {
             src={cartLogo}
             alt="cart emoji"
           />
-          <span className="cart-quantity">{cart.length}</span>
+          <span data-cy="cart-quantity" className="cart-quantity">
+            {cart.length}
+          </span>
         </div>
       </Link>
     </StyledHeader>

@@ -1,3 +1,5 @@
+// import cypress from "cypress";
+
 import cypress from "cypress";
 
 describe("homepage", () => {
@@ -39,7 +41,7 @@ describe("homepage", () => {
     cy.url().should("equal", "http://localhost:3000/Cellphones");
   });
 
-  it.only("Should allow the user to go back to use the back and forward arrows", () => {
+  it("Should allow the user to go back to use the back and forward arrows", () => {
     cy.get('[data-cy="category"]').eq(0).click();
     cy.url().should("equal", "http://localhost:3000/Cellphones");
     cy.go("back");
@@ -48,5 +50,11 @@ describe("homepage", () => {
     cy.url().should("equal", "http://localhost:3000/Cellphones");
   });
 
-  //add test for cart wuantity update
+  it("Should show the correct quantity amount when items are added to cart", () => {
+    cy.get('[data-cy="category"]').eq(2).click();
+    cy.get('[data-cy="add-to-cart-button"]').eq(0).click();
+    cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
+    cy.go("back");
+    cy.get('[data-cy="cart-quantity"]').should("contain", 2);
+  });
 });

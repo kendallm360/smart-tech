@@ -101,6 +101,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             ${parseInt(item.regularPrice).toFixed(2)}
           </h3>
           <button
+            data-cy="add-to-cart-button"
             value={item.sku}
             className={`cart-button ${item.sku}`}
             onClick={handleAddToCart}
