@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
+import cartLogo from "../../images/empty-cart.png";
+
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
@@ -33,9 +35,22 @@ const Cart = () => {
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">
-        Your Cart:{" "}
+        Your Cart's Total:{" "}
       </h2>
-      {entireCart}
+      {cart.length !== 0 ? (
+        entireCart
+      ) : (
+        <>
+          <img src={cartLogo} alt="Empty cart logo" />
+          <h2 data-cy="empty-cart-header" className="empty-cart-header">
+            Your Cart is Currently empty
+          </h2>
+          <h3 data-cy="empty-cart-message" className="empty-cart-message">
+            Before you are able to "checkout" you must add some products to your
+            shopping cart.
+          </h3>
+        </>
+      )}
       <button className="checkout-button" disabled>
         Checkout
       </button>
