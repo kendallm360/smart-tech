@@ -23,29 +23,29 @@ describe("category", () => {
     cy.get('[data-cy="item-card"]').eq(0).click();
   });
 
-  // it("Should have back and forward functionality through Router", () => {
-  //   cy.go("back").url().should("equal", "http://localhost:3000/");
-  //   cy.go("forward");
-  //   cy.url().should("equal", "http://localhost:3000/Laptops");
-  // });
+  it("Should have back and forward functionality through Router", () => {
+    cy.go("back").url().should("equal", "http://localhost:3000/");
+    cy.go("forward");
+    cy.url().should("equal", "http://localhost:3000/Laptops");
+  });
 
-  // it("Should be able to sort items from lowest price to highest", () => {
-  //   cy.get("select").select("low");
-  //   cy.get('[data-cy="name"]')
-  //     .eq(0)
-  //     .contains(
-  //       "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
-  //     );
-  //   cy.get('[data-cy="price"]').eq(0).contains(199.0);
-  // });
+  it("Should be able to sort items from lowest price to highest", () => {
+    cy.get("select").select("low");
+    cy.get('[data-cy="name"]')
+      .eq(0)
+      .contains(
+        "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
+      );
+    cy.get('[data-cy="price"]').eq(0).contains(199.0);
+  });
 
-  // it("Should be able to sort items from highest price to lowest", () => {
-  //   cy.get("select").select("high");
-  //   cy.get('[data-cy="name"]')
-  //     .eq(0)
-  //     .contains("Alienware - AREA-51 2.8GHz Notebook");
-  //   cy.get('[data-cy="price"]').eq(0).contains(2529.0);
-  // });
+  it("Should be able to sort items from highest price to lowest", () => {
+    cy.get("select").select("high");
+    cy.get('[data-cy="name"]')
+      .eq(0)
+      .contains("Alienware - AREA-51 2.8GHz Notebook");
+    cy.get('[data-cy="price"]').eq(0).contains(2529.0);
+  });
   // add testing coverage for fitering once that is implemented
   //add test for cart wuantity update
   //add test for removal from cart
