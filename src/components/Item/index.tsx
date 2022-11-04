@@ -59,7 +59,9 @@ const Item = ({ id, name }: TItem): JSX.Element => {
         <Error />
       ) : (
         <StyledItem>
-          <h2 className="item-title">{name}</h2>
+          <h2 data-cy="item-title" className="item-title">
+            {name}
+          </h2>
           <img className="item-image" src={item.image} alt={name} />
           <h3 className="description-header">Product Description:</h3>
           <p className="description-text">{item.longDescription}</p>
