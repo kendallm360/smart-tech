@@ -24,4 +24,10 @@ describe("item", () => {
     cy.get(".add-to-cart").click();
     cy.get('[data-cy="cart-quantity"]').should("contain", 1);
   });
+
+  it("Should only allow the user to add the item to the cart once", () => {
+    cy.get(".add-to-cart").click();
+    cy.get(".add-to-cart").should("be.disabled");
+    cy.get('[data-cy="cart-quantity"]').should("contain", 1);
+  });
 });
