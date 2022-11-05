@@ -46,7 +46,7 @@ const Cart = () => {
             Your Cart is Currently empty
           </h2>
           <h3 data-cy="empty-cart-message" className="empty-cart-message">
-            Before you are able to "checkout" you must add some products to your
+            Before you are able to 'checkout' you must add some products to your
             shopping cart.
           </h3>
         </>

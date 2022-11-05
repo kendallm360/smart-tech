@@ -62,5 +62,4 @@ describe("category", () => {
     cy.get('[data-cy="cart-quantity"]').should("contain", 2);
   });
   // add testing coverage for fitering once that is implemented
-  //add test for removal from cart
 });

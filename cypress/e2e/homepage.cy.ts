@@ -1,5 +1,3 @@
-// import cypress from "cypress";
-
 import cypress from "cypress";
 
 describe("homepage", () => {

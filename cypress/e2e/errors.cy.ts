@@ -12,13 +12,4 @@ describe("errors", () => {
   it("Should show a loading page while category data is being fetched", () => {
     cy.get('[data-cy="loading"]').should("exist");
   });
-
-  //move this test to Item spec once created
-  // it("Should show a loading page while item data is being fetched", () => {
-  //   cy.get('[data-cy="item-info"]').eq(0).click();
-  //   cy.get('[data-cy="loading"]').should("exist");
-  // });
-
-  //should show an error page if not more than 10
-  //add test for cart wuantity update
 });

@@ -20,6 +20,7 @@ describe("cart", () => {
 
   it("Should have 2 elements in cart ", () => {
     cy.get('[data-cy="cart-item"]').should("have.length", 2);
+    cy.get('[data-cy="cart-quantity"]').should("contain", 2);
   });
 
   it("Should allow the user to delete items from the cart", () => {
@@ -31,8 +32,17 @@ describe("cart", () => {
     cy.get(".checkout-button").should("be.disabled");
   });
 
-  // it.only("Should show an error message if the cart is empty", () => {
-  //   cy.get('[data-cy="remove-item-button"]').eq(0).click();
-  //   cy.get('[data-cy="remove-item-button"]').eq(0).click();
-  // });
+  it("Should show an error message if the cart is empty", () => {
+    cy.get('[data-cy="remove-item-button"]').eq(0).click();
+    cy.get('[data-cy="remove-item-button"]').eq(0).click();
+    cy.get('[data-cy="empty-cart-header"]').should(
+      "contain",
+      "Your Cart is Currently empty"
+    );
+    cy.get('[data-cy="cart-quantity"]').should("contain", 0);
+    cy.get('[data-cy="empty-cart-message"]').should(
+      "contain",
+      "Before you are able to 'checkout' you must add some products to your shopping cart"
+    );
+  });
 });
