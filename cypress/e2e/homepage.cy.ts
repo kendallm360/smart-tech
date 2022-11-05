@@ -53,6 +53,7 @@ describe("homepage", () => {
     cy.get('[data-cy="add-to-cart-button"]').eq(0).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
     cy.go("back");
+    cy.wait(3000);
     cy.get('[data-cy="cart-quantity"]').should("contain", 2);
   });
 });

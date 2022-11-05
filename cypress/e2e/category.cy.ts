@@ -6,7 +6,8 @@ describe("category", () => {
       { fixture: "categories" }
     );
     cy.visit("http://localhost:3000/");
-    cy.get('[data-cy="category"]').eq(4).click().wait(4000);
+    cy.get('[data-cy="category"]').eq(4).click();
+    cy.wait(4000);
   });
 
   it("Should have a header", () => {
