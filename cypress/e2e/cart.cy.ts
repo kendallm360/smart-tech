@@ -9,6 +9,7 @@ describe("cart", () => {
     );
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="category"]').eq(4).click();
+    cy.wait(2000);
     cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(5).click();
     cy.get('[data-cy="cart-logo"]').click();
