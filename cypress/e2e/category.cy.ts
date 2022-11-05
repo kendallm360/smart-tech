@@ -9,7 +9,7 @@ describe("category", () => {
     cy.get('[data-cy="category"]').eq(4).click().wait(4000);
   });
 
-  it("Should have a header that says laptops", () => {
+  it("Should have a header", () => {
     cy.get('[data-cy="category-header"]').contains("Laptops");
   });
 
@@ -30,7 +30,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from lowest price to highest", () => {
-    cy.get("select").select("low");
+    cy.get('[data-cy="sort-dropdown"]').select("low");
     cy.get('[data-cy="item-name"]')
       .eq(2)
       .contains(

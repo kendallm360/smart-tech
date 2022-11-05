@@ -8,8 +8,10 @@ describe("item", () => {
       { fixture: "categories" }
     );
     cy.visit("http://localhost:3000/");
-    cy.get('[data-cy="category"]').eq(7).click().wait(2000);
-    cy.get('[data-cy="item-name"]').eq(2).click().wait(2000);
+    cy.get('[data-cy="category"]').eq(7).click();
+    cy.wait(4000);
+    cy.get('[data-cy="item-name"]').eq(2).click();
+    cy.wait(3000);
   });
 
   it("Should have all of the item's information on screen", () => {
