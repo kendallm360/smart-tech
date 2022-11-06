@@ -46,4 +46,9 @@ describe("cart", () => {
       "Before you are able to 'checkout' you must add some products to your shopping cart"
     );
   });
+
+  it("Should allow user to update a single item's quantity", () => {
+    cy.get('[data-cy="quantity-dropdown"]').eq(0).select(3);
+    cy.get('[data-cy="quantity-dropdown"]').eq(0).should("have.value", 4);
+  });
 });
