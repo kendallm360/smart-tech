@@ -7,7 +7,7 @@ describe("category", () => {
     );
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="category"]').eq(4).click();
-    cy.wait(4000);
+    cy.wait(6000);
   });
 
   it("Should have a header", () => {

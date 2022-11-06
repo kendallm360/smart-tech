@@ -11,7 +11,7 @@ describe("item", () => {
     cy.get('[data-cy="category"]').eq(7).click();
     cy.wait(4000);
     cy.get('[data-cy="item-name"]').eq(2).click();
-    cy.wait(3000);
+    cy.wait(6000);
   });
 
   it("Should have all of the item's information on screen", () => {
