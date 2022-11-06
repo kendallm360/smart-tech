@@ -92,7 +92,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
       >
         <img className="item-image" src={item.image} />
         <Link to={`/${id}/${item.name}`}>
-          <h2 className="item-name" data-cy="name">
+          <h2 className="item-name" data-cy="item-name">
             {item.name}
           </h2>
         </Link>
@@ -101,6 +101,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             ${parseInt(item.regularPrice).toFixed(2)}
           </h3>
           <button
+            data-cy="add-to-cart-button"
             value={item.sku}
             className={`cart-button ${item.sku}`}
             onClick={handleAddToCart}
@@ -121,7 +122,11 @@ const Category = ({ id }: ICategory): JSX.Element => {
           <h2 className="header" data-cy="category-header">
             {title.split("_").join(" ")}
           </h2>
-          <select defaultValue={""} onChange={handleSelect}>
+          <select
+            data-cy="sort-dropdown"
+            defaultValue={""}
+            onChange={handleSelect}
+          >
             <option value="">--Sort By Feature--</option>
             <option value="high">Price High to Low</option>
             <option value="low">Price Low to High</option>
