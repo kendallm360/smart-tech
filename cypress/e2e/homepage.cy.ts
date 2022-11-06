@@ -50,7 +50,7 @@ describe("homepage", () => {
 
   it("Should show the correct quantity amount when items are added to cart", () => {
     cy.get('[data-cy="category"]').eq(2).click();
-    cy.wait(3000);
+    cy.wait(5000);
     cy.get('[data-cy="add-to-cart-button"]').eq(0).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
     cy.go("back");

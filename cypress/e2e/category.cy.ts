@@ -7,7 +7,6 @@ describe("category", () => {
     );
     cy.visit("http://localhost:3000/");
     cy.get('[data-cy="category"]').eq(4).click();
-    cy.wait(4000);
   });
 
   it("Should have a header", () => {
@@ -31,6 +30,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from lowest price to highest", () => {
+    cy.wait(4000);
     cy.get('[data-cy="sort-dropdown"]').select("low");
     cy.get('[data-cy="item-name"]')
       .eq(2)
@@ -41,6 +41,7 @@ describe("category", () => {
   });
 
   it("Should be able to sort items from highest price to lowest", () => {
+    cy.wait(4000);
     cy.get('[data-cy="sort-dropdown"]').select("high");
     cy.get('[data-cy="item-name"]')
       .eq(0)
