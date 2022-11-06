@@ -13,6 +13,7 @@ describe("cart", () => {
     cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(5).click();
     cy.get('[data-cy="cart-logo"]').click();
+    cy.wait(3000);
   });
 
   it("Should show cart's header", () => {
