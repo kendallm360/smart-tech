@@ -126,7 +126,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <Error />
       ) : (
         <StyledCategory>
-          <Scrollbar />
+          {/* <Scrollbar /> */}
           <h2 className="header" data-cy="category-header">
             {title.split("_").join(" ")}
           </h2>
