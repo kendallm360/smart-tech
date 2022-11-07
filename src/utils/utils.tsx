@@ -2,7 +2,7 @@ import { Item } from "../components/Category";
 import { fetchCategory } from "./apicalls";
 
 export type TCategories =
-  | "Cellphones"
+  | "Home_Audio"
   | "Desktops"
   | "Digital_Cameras"
   | "Headphones"
@@ -22,8 +22,8 @@ const findItemBySku = (sku: number, itemList: Item[]) => {
 };
 
 const findCategory = (id: TCategories) => {
-  if (id === "Cellphones") {
-    return fetchCategory("pcmcat209400050001");
+  if (id === "Home_Audio") {
+    return fetchCategory("pcmcat241600050001");
   }
   if (id === "Desktops") {
     return fetchCategory("abcat0501000");

@@ -114,22 +114,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
       </div>
     );
   });
-
-  // console.log(
-  //   itemList
-  //     .sort(
-  //       (a: any, b: any) =>
-  //         parseInt(a.startDate.split("-").join("")) -
-  //         parseInt(b.startDate.split("-").join(""))
-  //     )
-  //     .splice(0, 10)
-  //     .map((e: any) => e.releaseDate),
-  //   "list"
-  // );
-  console.log(
-    sorted.map((e: any) => e.startDate),
-    "sorted"
-  );
+  console.log(itemList, "list");
   return (
     <>
       {itemList.length === 0 ? (

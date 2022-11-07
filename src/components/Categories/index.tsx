@@ -1,12 +1,12 @@
 import { StyledCategories } from "../styles/Categories.styled";
-import cellphone from "../../images/iphone.jpeg";
+import homeAudio from "../../images/stereo.jpeg";
 import desktop from "../../images/desktop1.jpeg";
 import digital_camera from "../../images/digital_camera.jpeg";
 import headphones from "../../images/headphones.jpeg";
-import laptop from "../../images/laptop.jpeg";
+import laptop from "../../images/newLaptop.jpeg";
 import refrigerator from "../../images/refrigerator.jpeg";
-import tablet from "../../images/tablet.jpeg";
-import tv from "../../images/tv.jpeg";
+import tablet from "../../images/newTablet.jpeg";
+import tv from "../../images/newTv.jpeg";
 import washers from "../../images/washers.jpeg";
 import { Link } from "react-router-dom";
 
@@ -17,15 +17,15 @@ const Categories = () => {
       <h3 className="sub-header"> Shop these deals and more by category:</h3>
       <div data-cy="categories" className="categories">
         <section data-cy="category" className="category">
-          <Link to={`/Cellphones`}>
+          <Link to={`/Home_Audio`}>
             <div className="category-body">
               <img
                 className="category-images"
-                src={cellphone}
-                alt="Cell Phone"
+                src={homeAudio}
+                alt="Home Audio"
               />
             </div>
-            <p className="category-label">Cell Phones</p>
+            <p className="category-label">Home Audio</p>
           </Link>
         </section>
 
