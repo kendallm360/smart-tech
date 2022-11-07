@@ -1,6 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { findCategory, findItemBySku } from "../../utils/utils";
+import {
+  currencyFormatter,
+  findCategory,
+  findItemBySku,
+} from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
@@ -100,7 +104,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         </Link>
         <div className="price-cart">
           <h3 className="item-price" data-cy="price">
-            ${parseInt(item.regularPrice).toFixed(2)}
+            {currencyFormatter.format(parseInt(item.regularPrice))}
           </h3>
           <button
             data-cy="add-to-cart-button"
@@ -114,7 +118,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
       </div>
     );
   });
-  console.log(itemList, "list");
+
   return (
     <>
       {itemList.length === 0 ? (
