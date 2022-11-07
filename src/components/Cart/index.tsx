@@ -3,6 +3,7 @@ import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
 import { Link } from "react-router-dom";
+import { currencyFormatter } from "../../utils/utils";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -36,7 +37,7 @@ const Cart = () => {
           <Link to={`/${e.category}/${e.name}`}>
             <h3 className="item-title">{e.name}</h3>
           </Link>
-          <h3 className="item-price">${e.price.toFixed(2)}</h3>
+          <h3 className="item-price">{currencyFormatter.format(e.price)}</h3>
           <select
             data-cy="quantity-dropdown"
             className="quantity-dropdown"
@@ -75,7 +76,7 @@ const Cart = () => {
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">
-        Your Cart's Total: ${entireCartTotal}
+        Your Cart's Total: {currencyFormatter.format(entireCartTotal)}
       </h2>
       {cart.length !== 0 ? (
         entireCart

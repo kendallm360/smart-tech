@@ -21,6 +21,11 @@ const findItemBySku = (sku: number, itemList: Item[]) => {
   return item[0];
 };
 
+const currencyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
+
 const findCategory = (id: TCategories) => {
   if (id === "Home_Audio") {
     return fetchCategory("pcmcat241600050001");
@@ -57,4 +62,4 @@ const addToCart = (item: object) => {
   return cart;
 };
 
-export { findCategory, addToCart, findItemBySku };
+export { findCategory, addToCart, findItemBySku, currencyFormatter };
