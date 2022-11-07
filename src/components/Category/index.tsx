@@ -91,7 +91,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         data-cy="item-card"
         className="item-card"
       >
-        <img className="item-image" src={item.image} />
+        <img className="item-image" src={item.image} alt={item.name} />
         <Link to={`/${id}/${item.name}`}>
           <h2 className="item-name" data-cy="item-name">
             {item.name}
