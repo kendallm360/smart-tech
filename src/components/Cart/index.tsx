@@ -67,10 +67,15 @@ const Cart = () => {
     );
   });
 
+  let entireCartTotal = cart.reduce((acc, item) => {
+    acc += item.price * item.quantity;
+    return acc;
+  }, 0);
+
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">
-        Your Cart's Total:{" "}
+        Your Cart's Total: ${entireCartTotal}
       </h2>
       {cart.length !== 0 ? (
         entireCart
