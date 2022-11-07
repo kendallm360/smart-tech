@@ -77,6 +77,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           image: item.image,
           price: parseInt(item.regularPrice),
           quantity: 1,
+          category: id,
         },
       ]);
     }

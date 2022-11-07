@@ -47,6 +47,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           image: item.image,
           price: item.regularPrice,
           quantity: 1,
+          category: id,
         },
       ]);
     }

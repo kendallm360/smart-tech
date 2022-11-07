@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -32,7 +33,9 @@ const Cart = () => {
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
         <img className="cart-item-image" src={e.image} alt={e.name}></img>
         <div data-cy="cart-item-info" className="cart-item-info">
-          <h3 className="item-title">{e.name}</h3>
+          <Link to={`/${e.category}/${e.name}`}>
+            <h3 className="item-title">{e.name}</h3>
+          </Link>
           <h3 className="item-price">${e.price.toFixed(2)}</h3>
           <select
             data-cy="quantity-dropdown"
