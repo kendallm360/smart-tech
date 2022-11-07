@@ -55,14 +55,15 @@ const Category = ({ id }: ICategory): JSX.Element => {
         )
       );
     }
-    //no worky for some reason
-    // if (target.value === "new") {
-    //   setSorted(
-    //     itemList
-    //       .sort((a: any, b: any) => b.startDate - a.startDate)
-    //       .splice(0, 10)
-    //   );
-    // }
+    if (target.value === "new") {
+      setSorted(
+        itemList.sort(
+          (a: any, b: any) =>
+            parseInt(b.startDate.split("-").join("")) -
+            parseInt(a.startDate.split("-").join(""))
+        )
+      );
+    }
   };
 
   const handleAddToCart = (event: any) => {
@@ -114,6 +115,21 @@ const Category = ({ id }: ICategory): JSX.Element => {
     );
   });
 
+  // console.log(
+  //   itemList
+  //     .sort(
+  //       (a: any, b: any) =>
+  //         parseInt(a.startDate.split("-").join("")) -
+  //         parseInt(b.startDate.split("-").join(""))
+  //     )
+  //     .splice(0, 10)
+  //     .map((e: any) => e.releaseDate),
+  //   "list"
+  // );
+  console.log(
+    sorted.map((e: any) => e.startDate),
+    "sorted"
+  );
   return (
     <>
       {itemList.length === 0 ? (
@@ -131,7 +147,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             <option value="">--Sort By Feature--</option>
             <option value="high">Price High to Low</option>
             <option value="low">Price Low to High</option>
-            {/* <option value="new">New Arrivals</option> */}
+            <option value="new">New Arrivals</option>
           </select>
           {allItems}
         </StyledCategory>
