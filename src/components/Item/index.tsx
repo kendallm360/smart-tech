@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { findCategory } from "../../utils/utils";
+import { currencyFormatter, findCategory } from "../../utils/utils";
 import { StyledItem } from "../styles/Item.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
@@ -53,7 +53,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     }
   };
 
-  console.log(cart, "cart");
   return (
     <>
       {item.regularPrice === 0 ? (
@@ -77,7 +76,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
             SKU: {item.sku}
           </p>
           <h3 data-cy="item-price" className="item-price">
-            ${item.regularPrice}
+            {currencyFormatter.format(item.regularPrice)}
           </h3>
           <button
             className="add-to-cart"
