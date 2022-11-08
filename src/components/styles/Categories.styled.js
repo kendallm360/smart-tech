@@ -24,10 +24,11 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 768px) {
       font-size: 36px;
     }
-    /*
+
     @media screen and (max-width: 480px) {
-      font-size: 2em;
-    } */
+      font-size: 28px;
+      margin-top: 5%;
+    }
   }
 
   .header-span {
@@ -45,10 +46,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 768px) {
       font-size: 20px;
     }
-    /*
+
     @media screen and (max-width: 480px) {
-      font-size: 2em;
-    } */
+      font-size: 16px;
+    }
   }
 
   .sub-header {
@@ -70,17 +71,15 @@ export const StyledCategories = styled.section`
       font-size: 1em;
       margin-top: -2%;
     }
-    /* 
+
     @media screen and (max-width: 480px) {
-      font-size: 1.1em;
+      font-size: 0.9em;
       margin-bottom: 5%;
-    } */
+    }
   }
 
   .categories {
     display: grid;
-    /* grid-gap: 0.1em; */
-    /* margin: 0.5%; */
     @media screen and (min-width: 1350px) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -93,10 +92,11 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
     }
-    /* 
+
     @media screen and (max-width: 480px) {
       grid-template-columns: repeat(3, 1fr);
-    } */
+      margin: 3%;
+    }
   }
 
   .category {
@@ -111,7 +111,6 @@ export const StyledCategories = styled.section`
     border: solid 0.3em #fff200;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -132,11 +131,12 @@ export const StyledCategories = styled.section`
       height: 7.5em;
       width: 7.5em;
     }
-    /*
+
     @media screen and (max-width: 480px) {
       height: 6em;
+      margin-top: 10%;
       width: 6em;
-    } */
+    }
   }
 
   .category:hover {
@@ -160,11 +160,11 @@ export const StyledCategories = styled.section`
       height: 5.5em;
       width: 5.5em;
     }
-    /* 
+
     @media screen and (max-width: 480px) {
-      height: 4em;
-      width: 4em;
-    } */
+      height: 4.5em;
+      width: 4.5em;
+    }
   }
 
   .category-label {
@@ -183,10 +183,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 768px) {
       font-size: 1em;
     }
-    /*
+
     @media screen and (max-width: 480px) {
-      font-size: 1em;
-    } */
+      font-size: 0.9em;
+    }
   }
   .washers {
     @media screen and (min-width: 1025px) {
