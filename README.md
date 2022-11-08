@@ -30,11 +30,21 @@ More importantly Smart Tech is an application that I built in my free time to sh
 - As a user I should be able to sort items by multiple criteria
 - As a user I should be able to add items from a shopping cart
 - As a user I should be able to delete items from a shopping cart
-- User should be able to see a page with all smart tech team members
 
 ## Application in Action
 
-Upon loading the application, you will see a list of.....
+Choosing a category of devices from the options populated on page load:
+<iframe src="https://giphy.com/embed/LwwFk8FeVzh40Y1vBt" width="480" height="454" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/LwwFk8FeVzh40Y1vBt">via GIPHY</a></p>
+
+Sorting items by price both directions or with the newest arrivals first:
+<iframe src="https://giphy.com/embed/6D2IDxbU4jK2eADoCi" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6D2IDxbU4jK2eADoCi">via GIPHY</a></p>
+
+Adding items to the cart:
+<iframe src="https://giphy.com/embed/Rh14RVV17xSgGV1wtq" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Rh14RVV17xSgGV1wtq">via GIPHY</a></p>
+
+Removing items from cart and adjusting the quantity of items:
+<iframe src="https://giphy.com/embed/dFS5x3LLYisowP52r1" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dFS5x3LLYisowP52r1">via GIPHY</a></p>
+
 
 ## Technologies Used
 
@@ -74,21 +84,17 @@ Upon loading the application, you will see a list of.....
 - Jest testing for all util functions
 - Give users the ability to leave reviews about the items
 - Give users the ability to rate items
+- Give users the ability to see a page with all smart tech team members
+
 
 To see which features I am currently working on check out my [Github Project Board](https://github.com/users/kendallm360/projects/4/views/1)
 
 
 ## Contributor
   Kendall McGree
-  <p>
-    <a href="https://github.com/kendallm360/github-readme-stats"><img src="https://img.shields.io/badge/github-181717.svg?style=for-the-    badge&logo=github&logoColor=white" /></a>
-  </p>
+  <p><a href="https://github.com/kendallm360/"><img src="https://img.shields.io/badge/github-181717.svg?style=for-the-    badge&logo=github&logoColor=white" /></a></p>
   
-  <p>
-      <a href="https://www.linkedin.com/in/kendall-mcgree/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"></a>
-  </p>
+  <p><a href="https://www.linkedin.com/in/kendall-mcgree/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"></a></p>
   
-  <p>
-      <a href="mailto:mcgreekendall@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge"></a>
-  </p>
+  <p><a href="mailto:mcgreekendall@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge"></a></p>
 
