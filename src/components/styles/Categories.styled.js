@@ -21,10 +21,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1024px) {
       font-size: 56px;
     }
-    /*
     @media screen and (max-width: 768px) {
-      font-size: 2.8em;
+      font-size: 36px;
     }
+    /*
     @media screen and (max-width: 480px) {
       font-size: 2em;
     } */
@@ -42,10 +42,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1024px) {
       font-size: 32px;
     }
-    /*
     @media screen and (max-width: 768px) {
-      font-size: 2.8em;
+      font-size: 20px;
     }
+    /*
     @media screen and (max-width: 480px) {
       font-size: 2em;
     } */
@@ -66,10 +66,11 @@ export const StyledCategories = styled.section`
       font-size: 1.2em;
       margin-top: -2%;
     }
-    /* 
     @media screen and (max-width: 768px) {
-      font-size: 1.1em;
+      font-size: 1em;
+      margin-top: -2%;
     }
+    /* 
     @media screen and (max-width: 480px) {
       font-size: 1.1em;
       margin-bottom: 5%;
@@ -89,10 +90,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
-    /* 
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
     }
+    /* 
     @media screen and (max-width: 480px) {
       grid-template-columns: repeat(3, 1fr);
     } */
@@ -110,6 +111,7 @@ export const StyledCategories = styled.section`
     border: solid 0.3em #fff200;
     border-radius: 50%;
     cursor: pointer;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -126,11 +128,11 @@ export const StyledCategories = styled.section`
       height: 11.5em;
       width: 11.5em;
     }
-    /*
     @media screen and (max-width: 768px) {
-      height: 9em;
-      width: 9em;
+      height: 7.5em;
+      width: 7.5em;
     }
+    /*
     @media screen and (max-width: 480px) {
       height: 6em;
       width: 6em;
@@ -154,11 +156,11 @@ export const StyledCategories = styled.section`
       height: 8em;
       width: 8em;
     }
-    /* 
     @media screen and (max-width: 768px) {
-      height: 6em;
-      width: 6em;
+      height: 5.5em;
+      width: 5.5em;
     }
+    /* 
     @media screen and (max-width: 480px) {
       height: 4em;
       width: 4em;
@@ -178,10 +180,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1024px) {
       font-size: 1.2em;
     }
-    /*
     @media screen and (max-width: 768px) {
       font-size: 1em;
     }
+    /*
     @media screen and (max-width: 480px) {
       font-size: 1em;
     } */
