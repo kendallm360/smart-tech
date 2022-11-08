@@ -43,7 +43,7 @@ Adding items to the cart:
 <iframe src="https://giphy.com/embed/Rh14RVV17xSgGV1wtq" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Rh14RVV17xSgGV1wtq">via GIPHY</a></p>
 
 Removing items from cart and adjusting the quantity of items:
-<iframe src="https://giphy.com/embed/dFS5x3LLYisowP52r1" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dFS5x3LLYisowP52r1">via GIPHY</a></p>
+https://media.giphy.com/media/dFS5x3LLYisowP52r1/giphy.gif
 
 
 ## Technologies Used
