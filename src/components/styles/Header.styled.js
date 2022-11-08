@@ -29,7 +29,7 @@ export const StyledHeader = styled.header`
   }
 
   .cart-quantity {
-    background-color: #facb35;
+    background-color: #fff200;
     border: solid 0.15em black;
     border-radius: 50%;
     color: #df0000;

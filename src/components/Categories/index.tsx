@@ -10,6 +10,10 @@ import tv from "../../images/newTv.jpeg";
 import washers from "../../images/washers.jpeg";
 import { Link } from "react-router-dom";
 
+const linkStyle = {
+  textDecoration: "none",
+};
+
 const Categories = () => {
   return (
     <StyledCategories>
@@ -19,7 +23,7 @@ const Categories = () => {
       <h3 className="sub-header"> Shop deals by category:</h3>
       <div data-cy="categories" className="categories">
         <section data-cy="category" className="category">
-          <Link to={`/Desktops`}>
+          <Link style={linkStyle} to={`/Desktops`}>
             <div className="category-body">
               <img className="category-images" src={desktop} alt="Desktop" />
             </div>
@@ -27,7 +31,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Digital_Cameras`}>
+          <Link style={linkStyle} to={`/Digital_Cameras`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -39,7 +43,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Headphones`}>
+          <Link style={linkStyle} to={`/Headphones`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -51,7 +55,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Home_Audio`}>
+          <Link style={linkStyle} to={`/Home_Audio`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -63,7 +67,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Laptops`}>
+          <Link style={linkStyle} to={`/Laptops`}>
             <div className="category-body">
               <img className="category-images" src={laptop} alt="Laptop" />
             </div>
@@ -71,7 +75,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Refrigerators`}>
+          <Link style={linkStyle} to={`/Refrigerators`}>
             <div className="category-body">
               <img
                 className="category-images"
@@ -83,7 +87,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/Tablets`}>
+          <Link style={linkStyle} to={`/Tablets`}>
             <div className="category-body">
               <img className="category-images" src={tablet} alt="Tablet" />
             </div>
@@ -91,7 +95,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link to={`/TVs`}>
+          <Link style={linkStyle} to={`/TVs`}>
             <div className="category-body">
               <img className="category-images" src={tv} alt="Flat screen TV" />
             </div>
@@ -99,7 +103,7 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category washers">
-          <Link to={`/Washers_and_Dryers`}>
+          <Link style={linkStyle} to={`/Washers_and_Dryers`}>
             <div className="category-body">
               <img
                 className="category-images"
