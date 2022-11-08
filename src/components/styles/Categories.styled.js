@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCategories = styled.section`
+  /* background-color: #df0000; */
   height: 95vh;
   width: 100vw;
   display: flex;
