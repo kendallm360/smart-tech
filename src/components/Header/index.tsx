@@ -7,6 +7,18 @@ import { AppContextInterface, CartContext } from "../../contexts/context";
 
 const Header = () => {
   const { cart } = useContext<AppContextInterface>(CartContext);
+  // console.log(
+  //   cart.reduce((acc, e) => {
+  //     acc += e.quantity;
+  //     return acc;
+  //   }, 0),
+  //   "testStudy"
+  // );
+  let totalCartQuantity = cart.reduce((acc, e) => {
+    acc += e.quantity;
+    return acc;
+  }, 0);
+
   return (
     <StyledHeader data-cy="header">
       <Link to="/">
@@ -26,7 +38,7 @@ const Header = () => {
             alt="cart emoji"
           />
           <span data-cy="cart-quantity" className="cart-quantity">
-            {cart.length}
+            {totalCartQuantity}
           </span>
         </div>
       </Link>

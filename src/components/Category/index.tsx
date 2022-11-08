@@ -1,9 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { findCategory, findItemBySku } from "../../utils/utils";
+import {
+  currencyFormatter,
+  findCategory,
+  findItemBySku,
+} from "../../utils/utils";
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
+import Scrollbar from "../Scrollbar";
 
 interface ICategory {
   id: string;
@@ -55,14 +60,15 @@ const Category = ({ id }: ICategory): JSX.Element => {
         )
       );
     }
-    //no worky for some reason
-    // if (target.value === "new") {
-    //   setSorted(
-    //     itemList
-    //       .sort((a: any, b: any) => b.startDate - a.startDate)
-    //       .splice(0, 10)
-    //   );
-    // }
+    if (target.value === "new") {
+      setSorted(
+        itemList.sort(
+          (a: any, b: any) =>
+            parseInt(b.startDate.split("-").join("")) -
+            parseInt(a.startDate.split("-").join(""))
+        )
+      );
+    }
   };
 
   const handleAddToCart = (event: any) => {
@@ -77,6 +83,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           image: item.image,
           price: parseInt(item.regularPrice),
           quantity: 1,
+          category: id,
         },
       ]);
     }
@@ -90,7 +97,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         data-cy="item-card"
         className="item-card"
       >
-        <img className="item-image" src={item.image} />
+        <img className="item-image" src={item.image} alt={item.name} />
         <Link to={`/${id}/${item.name}`}>
           <h2 className="item-name" data-cy="item-name">
             {item.name}
@@ -98,7 +105,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         </Link>
         <div className="price-cart">
           <h3 className="item-price" data-cy="price">
-            ${parseInt(item.regularPrice).toFixed(2)}
+            {currencyFormatter.format(parseInt(item.regularPrice))}
           </h3>
           <button
             data-cy="add-to-cart-button"
@@ -119,6 +126,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <Error />
       ) : (
         <StyledCategory>
+          {/* <Scrollbar /> */}
           <h2 className="header" data-cy="category-header">
             {title.split("_").join(" ")}
           </h2>
@@ -130,7 +138,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             <option value="">--Sort By Feature--</option>
             <option value="high">Price High to Low</option>
             <option value="low">Price Low to High</option>
-            {/* <option value="new">New Arrivals</option> */}
+            <option value="new">New Arrivals</option>
           </select>
           {allItems}
         </StyledCategory>

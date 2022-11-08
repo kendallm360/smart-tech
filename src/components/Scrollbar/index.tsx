@@ -1,4 +1,3 @@
-import { StyledCategories } from "../styles/Categories.styled";
 import homeAudio from "../../images/stereo.jpeg";
 import desktop from "../../images/desktop1.jpeg";
 import digital_camera from "../../images/digital_camera.jpeg";
@@ -9,45 +8,12 @@ import tablet from "../../images/newTablet.jpeg";
 import tv from "../../images/newTv.jpeg";
 import washers from "../../images/washers.jpeg";
 import { Link } from "react-router-dom";
+import { StyledScrollbar } from "../styles/Scrollbar.styled";
 
-const Categories = () => {
+const Scrollbar = () => {
   return (
-    <StyledCategories>
-      <h2 className="header">Fall Sale</h2>
-      <h3 className="sub-header"> Shop these deals and more by category:</h3>
+    <StyledScrollbar>
       <div data-cy="categories" className="categories">
-        <section data-cy="category" className="category">
-          <Link to={`/Desktops`}>
-            <div className="category-body">
-              <img className="category-images" src={desktop} alt="Desktop" />
-            </div>
-            <p className="category-label">Desktops</p>
-          </Link>
-        </section>
-        <section data-cy="category" className="category">
-          <Link to={`/Digital_Cameras`}>
-            <div className="category-body">
-              <img
-                className="category-images"
-                src={digital_camera}
-                alt="Digital Camera"
-              />
-            </div>
-            <p className="category-label">Digital Cameras</p>
-          </Link>
-        </section>
-        <section data-cy="category" className="category">
-          <Link to={`/Headphones`}>
-            <div className="category-body">
-              <img
-                className="category-images"
-                src={headphones}
-                alt="Headphones"
-              />
-            </div>
-            <p className="category-label">Headphones</p>
-          </Link>
-        </section>
         <section data-cy="category" className="category">
           <Link to={`/Home_Audio`}>
             <div className="category-body">
@@ -60,6 +26,42 @@ const Categories = () => {
             <p className="category-label">Home Audio</p>
           </Link>
         </section>
+
+        <section data-cy="category" className="category">
+          <Link to={`/Desktops`}>
+            <div className="category-body">
+              <img className="category-images" src={desktop} alt="Desktop" />
+            </div>
+            <p className="category-label">Desktops</p>
+          </Link>
+        </section>
+
+        <section data-cy="category" className="category">
+          <Link to={`/Digital_Cameras`}>
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={digital_camera}
+                alt="Digital Camera"
+              />
+            </div>
+            <p className="category-label">Digital Cameras</p>
+          </Link>
+        </section>
+
+        <section data-cy="category" className="category">
+          <Link to={`/Headphones`}>
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={headphones}
+                alt="Headphones"
+              />
+            </div>
+            <p className="category-label">Headphones</p>
+          </Link>
+        </section>
+
         <section data-cy="category" className="category">
           <Link to={`/Laptops`}>
             <div className="category-body">
@@ -68,6 +70,7 @@ const Categories = () => {
             <p className="category-label">Laptops</p>
           </Link>
         </section>
+
         <section data-cy="category" className="category">
           <Link to={`/Refrigerators`}>
             <div className="category-body">
@@ -80,6 +83,7 @@ const Categories = () => {
             <p className="category-label">Refrigerators</p>
           </Link>
         </section>
+
         <section data-cy="category" className="category">
           <Link to={`/Tablets`}>
             <div className="category-body">
@@ -88,6 +92,7 @@ const Categories = () => {
             <p className="category-label">Tablets</p>
           </Link>
         </section>
+
         <section data-cy="category" className="category">
           <Link to={`/TVs`}>
             <div className="category-body">
@@ -96,6 +101,7 @@ const Categories = () => {
             <p className="category-label">TVs</p>
           </Link>
         </section>
+
         <section data-cy="category" className="category washers">
           <Link to={`/Washers_and_Dryers`}>
             <div className="category-body">
@@ -109,7 +115,7 @@ const Categories = () => {
           </Link>
         </section>
       </div>
-    </StyledCategories>
+    </StyledScrollbar>
   );
 };
-export default Categories;
+export default Scrollbar;

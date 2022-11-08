@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
+import { Link } from "react-router-dom";
+import { currencyFormatter } from "../../utils/utils";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -32,8 +34,10 @@ const Cart = () => {
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
         <img className="cart-item-image" src={e.image} alt={e.name}></img>
         <div data-cy="cart-item-info" className="cart-item-info">
-          <h3 className="item-title">{e.name}</h3>
-          <h3 className="item-price">${e.price.toFixed(2)}</h3>
+          <Link to={`/${e.category}/${e.name}`}>
+            <h3 className="item-title">{e.name}</h3>
+          </Link>
+          <h3 className="item-price">{currencyFormatter.format(e.price)}</h3>
           <select
             data-cy="quantity-dropdown"
             className="quantity-dropdown"
@@ -64,10 +68,15 @@ const Cart = () => {
     );
   });
 
+  let entireCartTotal = cart.reduce((acc, item) => {
+    acc += item.price * item.quantity;
+    return acc;
+  }, 0);
+
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">
-        Your Cart's Total:{" "}
+        Your Cart's Total: {currencyFormatter.format(entireCartTotal)}
       </h2>
       {cart.length !== 0 ? (
         entireCart
