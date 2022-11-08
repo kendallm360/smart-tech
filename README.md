@@ -36,16 +36,16 @@ More importantly Smart Tech is an application that I built in my free time to sh
 
 ## Application in Action
 
-Choosing a category of devices from the options populated on page load:
+### Choosing a category of devices from the options populated on page load:
 ![Demo1](https://media.giphy.com/media/LwwFk8FeVzh40Y1vBt/giphy.gif)
 
-Sorting items by price both directions or with the newest arrivals first:
+### Sorting items by price both directions or with the newest arrivals first:
 ![Demo2](https://media.giphy.com/media/6D2IDxbU4jK2eADoCi/giphy.gif)
 
-Adding items to the cart:
+### Adding items to the cart:
 ![Demo3](https://media.giphy.com/media/Rh14RVV17xSgGV1wtq/giphy.gif)
 
-Removing items from cart and adjusting the quantity of items:
+### Removing items from cart and adjusting the quantity of items:
 ![Demo4](https://media.giphy.com/media/dFS5x3LLYisowP52r1/giphy.gif)
 
 
