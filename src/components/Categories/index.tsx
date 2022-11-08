@@ -13,8 +13,10 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <StyledCategories>
-      <h2 className="header">Fall Sale</h2>
-      <h3 className="sub-header"> Shop these deals and more by category:</h3>
+      <h2 className="header">
+        Black Friday Deals <span className="header-span">right now</span>
+      </h2>
+      <h3 className="sub-header"> Shop deals by category:</h3>
       <div data-cy="categories" className="categories">
         <section data-cy="category" className="category">
           <Link to={`/Desktops`}>

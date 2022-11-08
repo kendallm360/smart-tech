@@ -7,13 +7,6 @@ import Item from "../../components/Item";
 import Cart from "../../components/Cart";
 import { StyledApp } from "../../components/styles/App.styled";
 // import { ErrorPage } from "../../components/ErrorPage";
-//may not need
-// import { useQuery } from "react-query";
-// import Drawer from "@material-ui/core/Drawer";
-// import LinearProgress from "@material-ui/core/LinearProgress";
-// import Grid from "@material-ui/core/Grid";
-// import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart"
-// import Badge from "@material-ui/core/Badge"
 
 const App = () => {
   return (
@@ -21,9 +14,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/">
-          <div className="App">
-            <Categories />
-          </div>
+          <Categories />
         </Route>
 
         <Route exact path="/cart">
