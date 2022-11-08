@@ -17,19 +17,6 @@ const Categories = () => {
       <h3 className="sub-header"> Shop these deals and more by category:</h3>
       <div data-cy="categories" className="categories">
         <section data-cy="category" className="category">
-          <Link to={`/Home_Audio`}>
-            <div className="category-body">
-              <img
-                className="category-images"
-                src={homeAudio}
-                alt="Home Audio"
-              />
-            </div>
-            <p className="category-label">Home Audio</p>
-          </Link>
-        </section>
-
-        <section data-cy="category" className="category">
           <Link to={`/Desktops`}>
             <div className="category-body">
               <img className="category-images" src={desktop} alt="Desktop" />
@@ -37,7 +24,6 @@ const Categories = () => {
             <p className="category-label">Desktops</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category">
           <Link to={`/Digital_Cameras`}>
             <div className="category-body">
@@ -50,7 +36,6 @@ const Categories = () => {
             <p className="category-label">Digital Cameras</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category">
           <Link to={`/Headphones`}>
             <div className="category-body">
@@ -63,7 +48,18 @@ const Categories = () => {
             <p className="category-label">Headphones</p>
           </Link>
         </section>
-
+        <section data-cy="category" className="category">
+          <Link to={`/Home_Audio`}>
+            <div className="category-body">
+              <img
+                className="category-images"
+                src={homeAudio}
+                alt="Home Audio"
+              />
+            </div>
+            <p className="category-label">Home Audio</p>
+          </Link>
+        </section>
         <section data-cy="category" className="category">
           <Link to={`/Laptops`}>
             <div className="category-body">
@@ -72,7 +68,6 @@ const Categories = () => {
             <p className="category-label">Laptops</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category">
           <Link to={`/Refrigerators`}>
             <div className="category-body">
@@ -85,7 +80,6 @@ const Categories = () => {
             <p className="category-label">Refrigerators</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category">
           <Link to={`/Tablets`}>
             <div className="category-body">
@@ -94,7 +88,6 @@ const Categories = () => {
             <p className="category-label">Tablets</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category">
           <Link to={`/TVs`}>
             <div className="category-body">
@@ -103,7 +96,6 @@ const Categories = () => {
             <p className="category-label">TVs</p>
           </Link>
         </section>
-
         <section data-cy="category" className="category washers">
           <Link to={`/Washers_and_Dryers`}>
             <div className="category-body">
