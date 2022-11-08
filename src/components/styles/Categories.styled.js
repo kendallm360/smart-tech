@@ -18,9 +18,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1349px) {
       font-size: 68px;
     }
-    /* @media screen and (max-width: 1024px) {
-      font-size: 2.8em;
+    @media screen and (max-width: 1024px) {
+      font-size: 56px;
     }
+    /*
     @media screen and (max-width: 768px) {
       font-size: 2.8em;
     }
@@ -38,12 +39,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1349px) {
       font-size: 40px;
     }
-    /* @media screen and (max-width: 1349px) {
-      font-size: 2.8em;
-    }
     @media screen and (max-width: 1024px) {
-      font-size: 2.8em;
+      font-size: 32px;
     }
+    /*
     @media screen and (max-width: 768px) {
       font-size: 2.8em;
     }
@@ -63,9 +62,11 @@ export const StyledCategories = styled.section`
       font-size: 1.4em;
       margin-top: -3%;
     }
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1.4em;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.2em;
+      margin-top: -2%;
     }
+    /* 
     @media screen and (max-width: 768px) {
       font-size: 1.1em;
     }
@@ -85,9 +86,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1349px) {
       grid-template-columns: repeat(4, 1fr);
     }
-    /* @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
+    /* 
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -120,10 +122,11 @@ export const StyledCategories = styled.section`
       height: 11.5em;
       width: 11.5em;
     }
-    /* @media screen and (max-width: 1024px) {
-      height: 10em;
-      width: 10em;
+    @media screen and (max-width: 1024px) {
+      height: 11.5em;
+      width: 11.5em;
     }
+    /*
     @media screen and (max-width: 768px) {
       height: 9em;
       width: 9em;
@@ -147,10 +150,11 @@ export const StyledCategories = styled.section`
       height: 8em;
       width: 8em;
     }
-    /* @media screen and (max-width: 1024px) {
-      height: 7em;
-      width: 7em;
+    @media screen and (max-width: 1024px) {
+      height: 8em;
+      width: 8em;
     }
+    /* 
     @media screen and (max-width: 768px) {
       height: 6em;
       width: 6em;
@@ -171,9 +175,10 @@ export const StyledCategories = styled.section`
     @media screen and (max-width: 1349px) {
       font-size: 1.4em;
     }
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1.4em;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.2em;
     }
+    /*
     @media screen and (max-width: 768px) {
       font-size: 1em;
     }
