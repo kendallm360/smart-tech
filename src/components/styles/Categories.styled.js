@@ -15,10 +15,10 @@ export const StyledCategories = styled.section`
     @media screen and (min-width: 1350px) {
       font-size: 72px;
     }
-    /* @media screen and (max-width: 1349px) {
-      font-size: 2.8em;
+    @media screen and (max-width: 1349px) {
+      font-size: 68px;
     }
-    @media screen and (max-width: 1024px) {
+    /* @media screen and (max-width: 1024px) {
       font-size: 2.8em;
     }
     @media screen and (max-width: 768px) {
@@ -35,9 +35,9 @@ export const StyledCategories = styled.section`
     @media screen and (min-width: 1350px) {
       font-size: 48px;
     }
-    /* @media screen and (max-width: 1349px) {
-      font-size: 48px;
-    } */
+    @media screen and (max-width: 1349px) {
+      font-size: 40px;
+    }
     /* @media screen and (max-width: 1349px) {
       font-size: 2.8em;
     }
@@ -55,13 +55,14 @@ export const StyledCategories = styled.section`
   .sub-header {
     color: white;
     margin-left: 5%;
-    margin-top: -4%;
     @media screen and (min-width: 1350px) {
       font-size: 1.4em;
+      margin-top: -4%;
     }
-    /* @media screen and (max-width: 1349px) {
+    @media screen and (max-width: 1349px) {
       font-size: 1.4em;
-    } */
+      margin-top: -3%;
+    }
     /* @media screen and (max-width: 1024px) {
       font-size: 1.4em;
     }
@@ -81,9 +82,9 @@ export const StyledCategories = styled.section`
     @media screen and (min-width: 1350px) {
       grid-template-columns: repeat(4, 1fr);
     }
-    /* @media screen and (max-width: 1349px) {
+    @media screen and (max-width: 1349px) {
       grid-template-columns: repeat(4, 1fr);
-    } */
+    }
     /* @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -115,10 +116,10 @@ export const StyledCategories = styled.section`
       height: 12.5em;
       width: 12.5em;
     }
-    /* @media screen and (max-width: 1349px) {
-      height: 11em;
-      width: 11em;
-    } */
+    @media screen and (max-width: 1349px) {
+      height: 11.5em;
+      width: 11.5em;
+    }
     /* @media screen and (max-width: 1024px) {
       height: 10em;
       width: 10em;
@@ -142,10 +143,10 @@ export const StyledCategories = styled.section`
       height: 9em;
       width: 9em;
     }
-    /* @media screen and (max-width: 1349px) {
-      height: 7.5em;
-      width: 7.5em;
-    } */
+    @media screen and (max-width: 1349px) {
+      height: 8em;
+      width: 8em;
+    }
     /* @media screen and (max-width: 1024px) {
       height: 7em;
       width: 7em;
@@ -162,15 +163,14 @@ export const StyledCategories = styled.section`
 
   .category-label {
     color: #fff200;
-    /* font-weight: 50; */
     margin-top: 2%;
     text-align: center;
     @media screen and (min-width: 1350px) {
       font-size: 1.4em;
     }
-    /* @media screen and (max-width: 1349px) {
+    @media screen and (max-width: 1349px) {
       font-size: 1.4em;
-    } */
+    }
     /* @media screen and (max-width: 1024px) {
       font-size: 1.4em;
     }
@@ -182,15 +182,10 @@ export const StyledCategories = styled.section`
     } */
   }
   .washers {
-    @media screen and (min-width: 1350px) {
+    @media screen and (min-width: 1025px) {
       margin-left: 205%;
       margin-top: -10%;
       text-align: start;
     }
-    /* @media screen and (max-width: 1349px) {
-      margin-left: 205%;
-      margin-top: -10%;
-      text-align: start;
-    } */
   }
 `;
