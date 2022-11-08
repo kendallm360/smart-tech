@@ -3,10 +3,13 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-challenge">About the Project</a></li>
-    <li><a href="#about-the-challenge">User Stories</a></li>
+    <li><a href="#about-the-project">About the Project</a></li>
+    <li><a href="#deployed-application">Deployed Application</a></li>
+    <li><a href="#user-stories">User Stories</a></li>
     <li><a href="#application-in-action">Application in Action</a></li>
     <li><a href="#technologies-used">Technologies Used</a></li>
+    <li><a href="#tools-used">Tools Used</a></li>
+    <li><a href="#accessibility">Accessibility</a></li>
     <li><a href="#organizational-resources">Organizational/Planning Resources</a></li>
     <li><a href="#future-additions">Future Additions</a></li>
     <li><a href="#contributor">Contributor</a></li>
@@ -34,16 +37,16 @@ More importantly Smart Tech is an application that I built in my free time to sh
 ## Application in Action
 
 Choosing a category of devices from the options populated on page load:
-<iframe src="https://giphy.com/embed/LwwFk8FeVzh40Y1vBt" width="480" height="454" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/LwwFk8FeVzh40Y1vBt">via GIPHY</a></p>
+![Demo1](https://media.giphy.com/media/LwwFk8FeVzh40Y1vBt/giphy.gif)
 
 Sorting items by price both directions or with the newest arrivals first:
-<iframe src="https://giphy.com/embed/6D2IDxbU4jK2eADoCi" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6D2IDxbU4jK2eADoCi">via GIPHY</a></p>
+![Demo2](https://media.giphy.com/media/6D2IDxbU4jK2eADoCi/giphy.gif)
 
 Adding items to the cart:
-<iframe src="https://giphy.com/embed/Rh14RVV17xSgGV1wtq" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Rh14RVV17xSgGV1wtq">via GIPHY</a></p>
+![Demo3](https://media.giphy.com/media/Rh14RVV17xSgGV1wtq/giphy.gif)
 
 Removing items from cart and adjusting the quantity of items:
-https://media.giphy.com/media/dFS5x3LLYisowP52r1/giphy.gif
+![Demo4](https://media.giphy.com/media/dFS5x3LLYisowP52r1/giphy.gif)
 
 
 ## Technologies Used
