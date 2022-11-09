@@ -21,9 +21,10 @@ export const StyledItem = styled.section`
       margin-top: 2%;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1.8em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+      margin-top: 10%;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 1.6em;
@@ -52,6 +53,7 @@ export const StyledItem = styled.section`
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
+      margin-top: 0%;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
@@ -73,9 +75,9 @@ export const StyledItem = styled.section`
       font-size: 1.3em;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 0.9em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.1em;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 0.8em;
@@ -98,9 +100,9 @@ export const StyledItem = styled.section`
       font-size: 0.8em;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 0.7em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 0.8em;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 0.65em;
@@ -120,15 +122,17 @@ export const StyledItem = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 35vh;
+      height: 30vh;
       margin-bottom: 0%;
-      width: 35vw;
+      width: 45vw;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      height: 20vh;
-      width: 40vw;
-    } */
+    @media screen and (max-width: 1024px) {
+      height: 25vh;
+      margin-bottom: 0%;
+      margin-top: 5%;
+      width: 50vw;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       height: 20vh;
@@ -153,9 +157,10 @@ export const StyledItem = styled.section`
       margin-top: 0%;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 0.7em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.1em;
+      margin-top: 0%;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 0.65em;
@@ -178,9 +183,9 @@ export const StyledItem = styled.section`
       font-size: 1.6em;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1.5em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.4em;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 1.3em;
@@ -209,9 +214,10 @@ export const StyledItem = styled.section`
       margin-top: -1.5%;
     }
     /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1.8em;
-    } */
+    @media screen and (max-width: 1024px) {
+      font-size: 1.5em;
+      margin-top: -1.5%;
+    }
     /* Tablets */
     /* @media screen and (max-width: 768px) {
       font-size: 1.7em;
