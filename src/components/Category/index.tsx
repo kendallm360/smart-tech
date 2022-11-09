@@ -22,6 +22,7 @@ export type Item = {
   name: string;
   regularPrice: string;
   sku: number;
+  // startDate: string;
 };
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
@@ -116,6 +117,12 @@ const Category = ({ id }: ICategory): JSX.Element => {
                 Model:<span className="item-span"> {item.modelNumber}</span>{" "}
               </h3>
             </Link>
+            {/* <Link to={`/${id}/${item.name}`} style={linkStyle}>
+              <h3 className="item-label">
+                Release Date:
+                <span className="item-span"> {item.startDate}</span>{" "}
+              </h3>
+            </Link> */}
             <Link to={`/${id}/${item.name}`} style={linkStyle}>
               <h3 className="item-label">
                 SKU:<span className="item-span"> {item.sku}</span>{" "}
