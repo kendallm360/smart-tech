@@ -8,7 +8,7 @@ export const StyledCategories = styled.section`
   flex-direction: column;
 
   .header {
-    color: white;
+    color: black;
     text-align: center;
     margin-top: 1%;
     /* Large Screens */
@@ -60,7 +60,7 @@ export const StyledCategories = styled.section`
   }
 
   .sub-header {
-    color: white;
+    color: black;
     margin-left: 5%;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
