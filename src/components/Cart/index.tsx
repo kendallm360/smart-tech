@@ -4,6 +4,7 @@ import { StyledCart } from "../styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
 import { Link } from "react-router-dom";
 import { currencyFormatter } from "../../utils/utils";
+import { linkStyle } from "../Categories";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -32,9 +33,11 @@ const Cart = () => {
   let entireCart = cart.map((e: any) => {
     return (
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
-        <img className="cart-item-image" src={e.image} alt={e.name}></img>
+        <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
+          <img className="cart-item-image" src={e.image} alt={e.name}></img>
+        </Link>
         <div data-cy="cart-item-info" className="cart-item-info">
-          <Link to={`/${e.category}/${e.name}`}>
+          <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
             <h3 className="item-title">{e.name}</h3>
           </Link>
           <h3 className="item-price">{currencyFormatter.format(e.price)}</h3>
