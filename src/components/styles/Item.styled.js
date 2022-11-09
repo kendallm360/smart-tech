@@ -26,9 +26,10 @@ export const StyledItem = styled.section`
       margin-top: 10%;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 1.6em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      margin-top: 10%;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 1.1em;
@@ -57,6 +58,7 @@ export const StyledItem = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
+      margin-top: 0%;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
@@ -79,9 +81,9 @@ export const StyledItem = styled.section`
       font-size: 1.1em;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.8em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 1em;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.7em;
@@ -104,9 +106,9 @@ export const StyledItem = styled.section`
       font-size: 0.8em;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.65em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 0.8em;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.65em;
@@ -134,10 +136,12 @@ export const StyledItem = styled.section`
       width: 50vw;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      height: 20vh;
-      width: 40vw;
-    } */
+    @media screen and (max-width: 768px) {
+      height: 25vh;
+      margin-bottom: 2%;
+      margin-top: 5%;
+      width: 50vw;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       height: 30vh;
@@ -162,9 +166,10 @@ export const StyledItem = styled.section`
       margin-top: 0%;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.65em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 1.1em;
+      margin-top: 0%;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.65em;
@@ -187,9 +192,9 @@ export const StyledItem = styled.section`
       font-size: 1.4em;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       font-size: 1.3em;
-    } */
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 1em;
@@ -202,26 +207,24 @@ export const StyledItem = styled.section`
     border-radius: 0.4em;
     color: black;
     cursor: pointer;
+    margin-top: -1.5%;
     width: 70vw;
     /* Large */
     @media screen and (min-width: 1350px) {
       font-size: 1.7em;
-      margin-top: -1.5%;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
       font-size: 1.5em;
-      margin-top: -1.5%;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
       font-size: 1.5em;
-      margin-top: -1.5%;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 1.7em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 1.5em;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 1.5em;
