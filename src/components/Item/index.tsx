@@ -13,13 +13,15 @@ const Item = ({ id, name }: TItem): JSX.Element => {
   const [item, setItem] = useState<{
     image: string;
     longDescription: string;
-    sku: number;
+    modelNumber: string;
     regularPrice: number;
+    sku: number;
   }>({
     image: "",
     longDescription: "",
-    sku: 0,
+    modelNumber: "",
     regularPrice: 0,
+    sku: 0,
   });
   const [disabled, setDisabled] = useState(false);
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -62,6 +64,14 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <h2 data-cy="item-title" className="item-title">
             {name}
           </h2>
+          <div className="additional-item-info">
+            <h3 className="item-label">
+              Model: <span className="item-span">{item.modelNumber}</span>
+            </h3>
+            <h3 data-cy="item-sku" className="item-label">
+              SKU: <span className="item-span">{item.sku}</span>
+            </h3>
+          </div>
           <img
             data-cy="item-image"
             className="item-image"
@@ -71,9 +81,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           <h3 className="description-header">Product Description:</h3>
           <p data-cy="item-description" className="description-text">
             {item.longDescription}
-          </p>
-          <p data-cy="item-sku" className="sku">
-            SKU: {item.sku}
           </p>
           <h3 data-cy="item-price" className="item-price">
             {currencyFormatter.format(item.regularPrice)}
