@@ -27,7 +27,7 @@ export const StyledItem = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 10%;
     }
     /* Mobile */
@@ -84,7 +84,7 @@ export const StyledItem = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1em;
+      font-size: 1.1em;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
