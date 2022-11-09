@@ -8,7 +8,8 @@ import {
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
-import Scrollbar from "../Scrollbar";
+// import Scrollbar from "../Scrollbar";
+import { linkStyle } from "../Categories";
 
 interface ICategory {
   id: string;
@@ -98,7 +99,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         className="item-card"
       >
         <img className="item-image" src={item.image} alt={item.name} />
-        <Link to={`/${id}/${item.name}`}>
+        <Link to={`/${id}/${item.name}`} style={linkStyle}>
           <h2 className="item-name" data-cy="item-name">
             {item.name}
           </h2>

@@ -10,7 +10,7 @@ import tv from "../../images/newTv.jpeg";
 import washers from "../../images/washers.jpeg";
 import { Link } from "react-router-dom";
 
-const linkStyle = {
+export const linkStyle = {
   textDecoration: "none",
 };
 

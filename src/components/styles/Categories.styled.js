@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledCategories = styled.section`
   background-color: #df0000;
-  /* background-image: linear-gradient(to bottom right, #df0000, black); */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -12,19 +11,23 @@ export const StyledCategories = styled.section`
     color: white;
     text-align: center;
     margin-top: 1%;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       font-size: 72px;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       font-size: 68px;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       font-size: 56px;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       font-size: 36px;
     }
-
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       font-size: 28px;
       margin-top: 5%;
@@ -34,19 +37,23 @@ export const StyledCategories = styled.section`
   .header-span {
     color: #fff200;
     font-weight: 800;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       font-size: 48px;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       font-size: 40px;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       font-size: 32px;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       font-size: 20px;
     }
-
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       font-size: 16px;
     }
@@ -55,23 +62,27 @@ export const StyledCategories = styled.section`
   .sub-header {
     color: white;
     margin-left: 5%;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       font-size: 1.4em;
       margin-top: -4%;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       font-size: 1.4em;
       margin-top: -3%;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       font-size: 1.2em;
       margin-top: -2%;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       font-size: 1em;
       margin-top: -2%;
     }
-
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       font-size: 0.9em;
       margin-bottom: 5%;
@@ -80,19 +91,23 @@ export const StyledCategories = styled.section`
 
   .categories {
     display: grid;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       grid-template-columns: repeat(4, 1fr);
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       grid-template-columns: repeat(4, 1fr);
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
     }
-
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       grid-template-columns: repeat(3, 1fr);
       margin: 3%;
@@ -115,23 +130,27 @@ export const StyledCategories = styled.section`
     justify-content: center;
     align-content: center;
     align-items: center;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       height: 12.5em;
       width: 12.5em;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       height: 11.5em;
       width: 11.5em;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       height: 11.5em;
       width: 11.5em;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       height: 7.5em;
       width: 7.5em;
     }
-
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       height: 6em;
       margin-top: 10%;
@@ -144,23 +163,28 @@ export const StyledCategories = styled.section`
   }
 
   .category-images {
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       height: 9em;
       width: 9em;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       height: 8em;
       width: 8em;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       height: 8em;
       width: 8em;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       height: 5.5em;
       width: 5.5em;
     }
 
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       height: 4.5em;
       width: 4.5em;
@@ -171,24 +195,30 @@ export const StyledCategories = styled.section`
     color: #fff200;
     margin-top: 2%;
     text-align: center;
+    /* Large Screens */
     @media screen and (min-width: 1350px) {
       font-size: 1.4em;
     }
+    /* Desktops */
     @media screen and (max-width: 1349px) {
       font-size: 1.4em;
     }
+    /* Laptops */
     @media screen and (max-width: 1024px) {
       font-size: 1.2em;
     }
+    /* Tablets */
     @media screen and (max-width: 768px) {
       font-size: 1em;
     }
 
+    /* Cellphones */
     @media screen and (max-width: 480px) {
       font-size: 0.9em;
     }
   }
   .washers {
+    /* Larger Screens */
     @media screen and (min-width: 1025px) {
       margin-left: 205%;
       margin-top: -10%;
