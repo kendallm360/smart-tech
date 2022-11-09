@@ -17,6 +17,9 @@ export const StyledHeader = styled.header`
   .cart-body {
     width: 15vw;
     height: 10vh;
+    @media screen and (max-width: 600px) {
+      width: 20vw;
+    }
   }
 
   .cart-logo {
@@ -26,6 +29,10 @@ export const StyledHeader = styled.header`
     margin-top: 2.5vh;
     position: relative;
     width: 50%;
+    @media screen and (max-width: 600px) {
+      height: 50%;
+      width: 60%;
+    }
   }
 
   .cart-quantity {
