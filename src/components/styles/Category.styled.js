@@ -23,9 +23,9 @@ export const StyledCategory = styled.section`
       font-size: 48px;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 1.8em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 1.5em;
@@ -60,9 +60,11 @@ export const StyledCategory = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
+      font-size: 0.7em;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
+      font-size: 0.6em;
     }
   }
 
@@ -80,13 +82,14 @@ export const StyledCategory = styled.section`
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.7em;
+      font-size: 0.85em;
+      width: 19vw;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.9em;
-      height: 2em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 0.75em;
+      width: 25vw;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.8em;
@@ -113,9 +116,9 @@ export const StyledCategory = styled.section`
       height: 18vh;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       height: 16vh;
-    } */
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       height: 15vh;
@@ -154,10 +157,11 @@ export const StyledCategory = styled.section`
       width: 90%;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      height: 7em;
-      width: 7em;
-    } */
+    @media screen and (max-width: 768px) {
+      height: 12.5vh;
+      margin-left: 5%;
+      width: 90%;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       height: 5em;
@@ -189,9 +193,9 @@ export const StyledCategory = styled.section`
       font-size: 1.2em;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 1em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 0.9em;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.7em;
@@ -226,6 +230,7 @@ export const StyledCategory = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
+      font-size: 0.8em;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
@@ -248,6 +253,7 @@ export const StyledCategory = styled.section`
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
+      font-size: 0.65em;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
@@ -279,9 +285,9 @@ export const StyledCategory = styled.section`
       font-size: 22px;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 1.1em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 17px;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       font-size: 0.9em;
@@ -306,10 +312,9 @@ export const StyledCategory = styled.section`
       font-size: 17px;
     }
     /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      height: 2.5em;
-      width: 4em;
-    } */
+    @media screen and (max-width: 768px) {
+      font-size: 13.5px;
+    }
     /* Mobile */
     /* @media screen and (max-width: 480px) {
       height: 2.5em;
