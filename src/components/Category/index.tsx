@@ -153,6 +153,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             <h3 className="item-total">{itemList.length} items</h3>
             <select
               data-cy="sort-dropdown"
+              className="sort-dropdown"
               defaultValue={""}
               onChange={handleSelect}
             >

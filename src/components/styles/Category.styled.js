@@ -7,36 +7,6 @@ export const StyledCategory = styled.section`
   flex-direction: column;
   align-items: center;
 
-  select {
-    border-radius: 0.4em;
-    width: 15vw;
-    text-align: center;
-    /* Large Screens */
-    @media screen and (min-width: 1350px) {
-      font-size: 1.2em;
-    }
-    /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      font-size: 1em;
-      height: 3em;
-    } */
-    /* Laptops */
-    /* @media screen and (max-width: 1024px) {
-      font-size: 1em;
-      height: 3em;
-    } */
-    /* Tablets */
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.9em;
-      height: 2em;
-    } */
-    /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      font-size: 0.8em;
-      height: 2em;
-    } */
-  }
-
   .header {
     margin-top: 1%;
     text-align: center;
@@ -45,9 +15,9 @@ export const StyledCategory = styled.section`
       font-size: 72px;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      font-size: 2.5em;
-    } */
+    @media screen and (max-width: 1349px) {
+      font-size: 60px;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       font-size: 2.3em;
@@ -76,7 +46,52 @@ export const StyledCategory = styled.section`
   }
 
   .item-total {
-    font-size: 1em;
+    /* Large */
+    @media screen and (min-width: 1350px) {
+      font-size: 1em;
+    }
+    /* Desktops */
+    @media screen and (max-width: 1349px) {
+      font-size: 0.9em;
+    }
+    /* Laptops */
+    @media screen and (max-width: 1024px) {
+    }
+    /* Tablets */
+    @media screen and (max-width: 768px) {
+    }
+    /* Mobile */
+    @media screen and (max-width: 480px) {
+    }
+  }
+
+  .sort-dropdown {
+    border-radius: 0.4em;
+    width: 15vw;
+    text-align: center;
+    /* Large Screens */
+    @media screen and (min-width: 1350px) {
+      font-size: 1.2em;
+    }
+    /* Desktops */
+    @media screen and (max-width: 1349px) {
+      font-size: 0.95em;
+    }
+    /* Laptops */
+    /* @media screen and (max-width: 1024px) {
+      font-size: 1em;
+      height: 3em;
+    } */
+    /* Tablets */
+    /* @media screen and (max-width: 768px) {
+      font-size: 0.9em;
+      height: 2em;
+    } */
+    /* Mobile */
+    /* @media screen and (max-width: 480px) {
+      font-size: 0.8em;
+      height: 2em;
+    } */
   }
 
   .item-card {
@@ -90,9 +105,9 @@ export const StyledCategory = styled.section`
       height: 25vh;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      height: 18vh;
-    } */
+    @media screen and (max-width: 1349px) {
+      height: 22.5vh;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       height: 17vh;
@@ -109,23 +124,29 @@ export const StyledCategory = styled.section`
 
   .image-third {
     background-color: white;
+    border: solid 0.2em #fff200;
     border-radius: 0.3em;
     margin-bottom: 0.5%;
-    width: 25%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .item-image {
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      height: 90%;
-      margin: 4%;
+      height: 21vh;
+      margin-left: 5%;
       width: 90%;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      height: 10em;
-      width: 10em;
-    } */
+    @media screen and (max-width: 1349px) {
+      height: 17vh;
+      margin-left: 5%;
+      width: 90%;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       height: 8.5em;
@@ -145,8 +166,8 @@ export const StyledCategory = styled.section`
 
   .item-info {
     margin: 1%;
-    width: 50%;
     text-align: center;
+    width: 50%;
     display: flex;
     flex-direction: column;
   }
@@ -159,9 +180,9 @@ export const StyledCategory = styled.section`
       font-size: 1.5em;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      font-size: 1.7em;
-    } */
+    @media screen and (max-width: 1349px) {
+      font-size: 1.4em;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       font-size: 1.4em;
@@ -196,6 +217,7 @@ export const StyledCategory = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
+      font-size: 1em;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
@@ -216,6 +238,7 @@ export const StyledCategory = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
+      font-size: 0.8em;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
@@ -229,7 +252,7 @@ export const StyledCategory = styled.section`
   }
 
   .price-cart {
-    width: 25%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,9 +268,9 @@ export const StyledCategory = styled.section`
       font-size: 32px;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      font-size: 1.4em;
-    } */
+    @media screen and (max-width: 1349px) {
+      font-size: 26px;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       font-size: 1.2em;
@@ -272,10 +295,9 @@ export const StyledCategory = styled.section`
       font-size: 24px;
     }
     /* Desktops */
-    /* @media screen and (max-width: 1349px) {
-      height: 3em;
-      width: 6em;
-    } */
+    @media screen and (max-width: 1349px) {
+      font-size: 18px;
+    }
     /* Laptops */
     /* @media screen and (max-width: 1024px) {
       height: 3em;
