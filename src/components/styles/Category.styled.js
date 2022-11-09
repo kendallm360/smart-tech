@@ -27,9 +27,9 @@ export const StyledCategory = styled.section`
       font-size: 32px;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      font-size: 1.5em;
-    } */
+    @media screen and (max-width: 480px) {
+      font-size: 26px;
+    }
   }
 
   .category-info {
@@ -64,7 +64,7 @@ export const StyledCategory = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.6em;
+      font-size: 0.7em;
     }
   }
 
@@ -91,10 +91,10 @@ export const StyledCategory = styled.section`
       width: 25vw;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      font-size: 0.8em;
-      height: 2em;
-    } */
+    @media screen and (max-width: 480px) {
+      font-size: 0.7em;
+      width: 30vw;
+    }
   }
 
   .item-card {
@@ -120,9 +120,9 @@ export const StyledCategory = styled.section`
       height: 16vh;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      height: 15vh;
-    } */
+    @media screen and (max-width: 480px) {
+      height: 13.5vh;
+    }
   }
 
   .image-third {
@@ -163,10 +163,11 @@ export const StyledCategory = styled.section`
       width: 90%;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      height: 5em;
-      width: 5em;
-    } */
+    @media screen and (max-width: 480px) {
+      height: 9.5vh;
+      margin-left: 5%;
+      width: 90%;
+    }
   }
 
   .item-info {
@@ -197,9 +198,9 @@ export const StyledCategory = styled.section`
       font-size: 0.9em;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) {
       font-size: 0.7em;
-    } */
+    }
   }
 
   .item-name:hover {
@@ -234,6 +235,8 @@ export const StyledCategory = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
+      font-size: 0.7em;
+      margin-top: -1%;
     }
   }
 
@@ -257,6 +260,7 @@ export const StyledCategory = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
+      font-size: 0.65em;
     }
   }
 
@@ -289,9 +293,9 @@ export const StyledCategory = styled.section`
       font-size: 17px;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      font-size: 0.9em;
-    } */
+    @media screen and (max-width: 480px) {
+      font-size: 15.5px;
+    }
   }
 
   .cart-button {
@@ -316,10 +320,9 @@ export const StyledCategory = styled.section`
       font-size: 13.5px;
     }
     /* Mobile */
-    /* @media screen and (max-width: 480px) {
-      height: 2.5em;
-      width: 4em;
-    } */
+    @media screen and (max-width: 480px) {
+      font-size: 11.5px;
+    }
   }
 
   .cart-button:hover {
