@@ -70,6 +70,7 @@ export const StyledCategory = styled.section`
 
   .sort-dropdown {
     border-radius: 0.4em;
+    cursor: pointer;
     width: 15vw;
     text-align: center;
     /* Large Screens */
@@ -129,12 +130,17 @@ export const StyledCategory = styled.section`
     background-color: white;
     border: solid 0.2em #fff200;
     border-radius: 0.3em;
+    cursor: pointer;
     margin-bottom: 0.5%;
     width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+  }
+
+  .item-image:hover {
+    transform: scale(1.15);
   }
 
   .item-image {
