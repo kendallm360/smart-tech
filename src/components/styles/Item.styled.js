@@ -226,4 +226,10 @@ export const StyledItem = styled.section`
   .add-to-cart:hover {
     transform: scale(1.15);
   }
+
+  .add-to-cart:disabled {
+    color: dimgray;
+    cursor: none;
+    transform: scale(1);
+  }
 `;

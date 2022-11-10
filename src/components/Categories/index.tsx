@@ -18,7 +18,7 @@ const Categories = () => {
   return (
     <StyledCategories>
       <h2 className="header">
-        Black Friday Deals <span className="header-span">right now</span>
+        Black Friday Deals<span className="header-span"> right now</span>
       </h2>
       <h3 className="sub-header"> Shop deals by category:</h3>
       <div data-cy="categories" className="categories">
