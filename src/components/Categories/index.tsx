@@ -1,12 +1,12 @@
 import { StyledCategories } from "../styles/Categories.styled";
 import homeSecurity from "../../images/home_security.jpeg";
-import desktop from "../../images/desktop1.jpeg";
+import desktop from "../../images/newDesktop.jpeg";
 import digital_camera from "../../images/digital_camera.jpeg";
 import headphones from "../../images/headphones.jpeg";
-import laptop from "../../images/newLaptop.jpeg";
+import laptop from "../../images/newLaptop1.jpeg";
 import refrigerator from "../../images/refrigerator.jpeg";
-import tablet from "../../images/newTablet.jpeg";
-import tv from "../../images/newTv.jpeg";
+import tablet from "../../images/newTablet1.jpeg";
+import tv from "../../images/newTV1.jpeg";
 import washers from "../../images/washers.jpeg";
 import { Link } from "react-router-dom";
 
