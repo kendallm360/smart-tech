@@ -5,6 +5,7 @@ import cartLogo from "../../images/empty-cart.png";
 import { Link } from "react-router-dom";
 import { currencyFormatter } from "../../utils/utils";
 import { linkStyle } from "../Categories";
+import Item from "../Item";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
@@ -63,6 +64,7 @@ const Cart = () => {
             className="quantity-dropdown"
             id={e.id}
             onChange={handleItemQuantity}
+            defaultValue={e.quantity}
           >
             <option value="1">1</option>
             <option value="2">2</option>
@@ -93,7 +95,6 @@ const Cart = () => {
     return acc;
   }, 0);
 
-  console.log(cart);
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">
@@ -102,8 +103,12 @@ const Cart = () => {
       {cart.length !== 0 ? (
         entireCart
       ) : (
-        <>
-          <img src={cartLogo} alt="Empty cart logo" />
+        <div className="empty-cart">
+          <img
+            className="empty-cart-logo"
+            src={cartLogo}
+            alt="Empty cart logo"
+          />
           <h2 data-cy="empty-cart-header" className="empty-cart-header">
             Your Cart is Currently empty
           </h2>
@@ -111,7 +116,7 @@ const Cart = () => {
             Before you are able to 'checkout' you must add some products to your
             shopping cart.
           </h3>
-        </>
+        </div>
       )}
       <button className="checkout-button" disabled>
         Checkout
