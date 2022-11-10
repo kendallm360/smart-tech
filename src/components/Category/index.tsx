@@ -8,7 +8,8 @@ import {
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
-import Scrollbar from "../Scrollbar";
+// import Scrollbar from "../Scrollbar";
+import { linkStyle } from "../Categories";
 
 interface ICategory {
   id: string;
@@ -17,9 +18,11 @@ interface ICategory {
 export type Item = {
   id: number;
   image: string;
+  modelNumber: string;
   name: string;
   regularPrice: string;
   sku: number;
+  // startDate: string;
 };
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
@@ -84,6 +87,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           price: parseInt(item.regularPrice),
           quantity: 1,
           category: id,
+          modelNumber: item.modelNumber,
         },
       ]);
     }
@@ -97,12 +101,36 @@ const Category = ({ id }: ICategory): JSX.Element => {
         data-cy="item-card"
         className="item-card"
       >
-        <img className="item-image" src={item.image} alt={item.name} />
-        <Link to={`/${id}/${item.name}`}>
-          <h2 className="item-name" data-cy="item-name">
-            {item.name}
-          </h2>
-        </Link>
+        <div className="image-third">
+          <Link to={`/${id}/${item.name}`} style={linkStyle}>
+            <img className="item-image" src={item.image} alt={item.name} />
+          </Link>
+        </div>
+        <div className="item-info">
+          <Link to={`/${id}/${item.name}`} style={linkStyle}>
+            <h2 className="item-name" data-cy="item-name">
+              {item.name}
+            </h2>
+          </Link>
+          <div className="additional-item-info">
+            <Link to={`/${id}/${item.name}`} style={linkStyle}>
+              <h3 className="item-label">
+                Model:<span className="item-span"> {item.modelNumber}</span>{" "}
+              </h3>
+            </Link>
+            {/* <Link to={`/${id}/${item.name}`} style={linkStyle}>
+              <h3 className="item-label">
+                Release Date:
+                <span className="item-span"> {item.startDate}</span>{" "}
+              </h3>
+            </Link> */}
+            <Link to={`/${id}/${item.name}`} style={linkStyle}>
+              <h3 className="item-label">
+                SKU:<span className="item-span"> {item.sku}</span>{" "}
+              </h3>
+            </Link>
+          </div>
+        </div>
         <div className="price-cart">
           <h3 className="item-price" data-cy="price">
             {currencyFormatter.format(parseInt(item.regularPrice))}
@@ -119,7 +147,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
       </div>
     );
   });
-
   return (
     <>
       {itemList.length === 0 ? (
@@ -130,16 +157,20 @@ const Category = ({ id }: ICategory): JSX.Element => {
           <h2 className="header" data-cy="category-header">
             {title.split("_").join(" ")}
           </h2>
-          <select
-            data-cy="sort-dropdown"
-            defaultValue={""}
-            onChange={handleSelect}
-          >
-            <option value="">--Sort By Feature--</option>
-            <option value="high">Price High to Low</option>
-            <option value="low">Price Low to High</option>
-            <option value="new">New Arrivals</option>
-          </select>
+          <div className="category-info">
+            <h3 className="item-total">{itemList.length} items</h3>
+            <select
+              data-cy="sort-dropdown"
+              className="sort-dropdown"
+              defaultValue={""}
+              onChange={handleSelect}
+            >
+              <option value="">--Sort By Feature--</option>
+              <option value="high">Price High to Low</option>
+              <option value="low">Price Low to High</option>
+              <option value="new">New Arrivals</option>
+            </select>
+          </div>
           {allItems}
         </StyledCategory>
       )}
