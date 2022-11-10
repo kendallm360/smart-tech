@@ -23,8 +23,7 @@ More importantly Smart Tech is an application that I built in my free time to sh
 
 
 ## Deployed Application
-[Smart Tech](https://smart-tech-79s7wqmem-kendallm360.vercel.app/)
-
+[Smart Tech](https://smart-tech-j9me32nmo-kendallm360.vercel.app)
 
 ## User Stories
 - As a user I should be able to see a list of different categories to choose from
