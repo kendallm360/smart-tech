@@ -1,5 +1,5 @@
 import { StyledCategories } from "../styles/Categories.styled";
-import homeAudio from "../../images/stereo.jpeg";
+import homeSecurity from "../../images/home_security.jpeg";
 import desktop from "../../images/desktop1.jpeg";
 import digital_camera from "../../images/digital_camera.jpeg";
 import headphones from "../../images/headphones.jpeg";
@@ -55,15 +55,15 @@ const Categories = () => {
           </Link>
         </section>
         <section data-cy="category" className="category">
-          <Link style={linkStyle} to={`/Home_Audio`}>
+          <Link style={linkStyle} to={`/Home_Security`}>
             <div className="category-body">
               <img
                 className="category-images"
-                src={homeAudio}
-                alt="Home Audio"
+                src={homeSecurity}
+                alt="Home Security"
               />
             </div>
-            <p className="category-label">Home Audio</p>
+            <p className="category-label">Home Security</p>
           </Link>
         </section>
         <section data-cy="category" className="category">

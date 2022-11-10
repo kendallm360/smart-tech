@@ -27,8 +27,8 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
 });
 
 const findCategory = (id: TCategories) => {
-  if (id === "Home_Audio") {
-    return fetchCategory("pcmcat241600050001");
+  if (id === "Home_Security") {
+    return fetchCategory("pcmcat254000050002");
   }
   if (id === "Desktops") {
     return fetchCategory("abcat0501000");
