@@ -186,8 +186,8 @@ export const StyledCategories = styled.section`
 
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      height: 4.5em;
-      width: 4.5em;
+      height: 3.8em;
+      width: 3.8em;
     }
   }
 
