@@ -97,7 +97,7 @@ export const StyledCategories = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
@@ -219,7 +219,7 @@ export const StyledCategories = styled.section`
   }
   .washers {
     /* Larger Screens */
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1350px) {
       margin-left: 205%;
       margin-top: -10%;
       text-align: start;
