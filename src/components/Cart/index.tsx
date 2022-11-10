@@ -33,13 +33,30 @@ const Cart = () => {
   let entireCart = cart.map((e: any) => {
     return (
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
-        <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
-          <img className="cart-item-image" src={e.image} alt={e.name}></img>
-        </Link>
+        <div className="image-third">
+          <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
+            <img className="cart-item-image" src={e.image} alt={e.name}></img>
+          </Link>
+        </div>
         <div data-cy="cart-item-info" className="cart-item-info">
           <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
-            <h3 className="item-title">{e.name}</h3>
+            <h3 className="cart-item-name">{e.name}</h3>
           </Link>
+          <div className="additional-cart-item-info">
+            <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
+              <h3 className="cart-item-label">
+                Model:<span className="cart-item-span"> {e.modelNumber}</span>
+              </h3>
+            </Link>
+            <Link to={`/${e.category}/${e.name}`} style={linkStyle}>
+              <h3 className="cart-item-label">
+                SKU:<span className="cart-item-span"> {e.id}</span>
+              </h3>
+            </Link>
+          </div>
+        </div>
+        {/* cj */}
+        <div className="price-cart">
           <h3 className="item-price">{currencyFormatter.format(e.price)}</h3>
           <select
             data-cy="quantity-dropdown"
@@ -76,6 +93,7 @@ const Cart = () => {
     return acc;
   }, 0);
 
+  console.log(cart);
   return (
     <StyledCart>
       <h2 data-cy="cart-header" className="cart-header">

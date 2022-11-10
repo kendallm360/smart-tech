@@ -87,6 +87,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
           price: parseInt(item.regularPrice),
           quantity: 1,
           category: id,
+          modelNumber: item.modelNumber,
         },
       ]);
     }

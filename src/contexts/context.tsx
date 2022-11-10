@@ -7,6 +7,7 @@ interface ICartItem {
   price: number;
   quantity: number;
   category: string;
+  modelNumber?: string;
 }
 
 export interface AppContextInterface {

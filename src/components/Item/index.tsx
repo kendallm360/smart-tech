@@ -50,6 +50,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           price: item.regularPrice,
           quantity: 1,
           category: id,
+          modelNumber: item.modelNumber,
         },
       ]);
     }
