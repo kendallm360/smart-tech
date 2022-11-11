@@ -23,7 +23,7 @@ More importantly Smart Tech is an application that I built in my free time to sh
 
 
 ## Deployed Application
-[Smart Tech](https://smart-tech-j9me32nmo-kendallm360.vercel.app)
+[Smart Tech](smart-tech-4hy7o3nn0-kendallm360.vercel.app)
 
 ## User Stories
 - As a user I should be able to see a list of different categories to choose from
@@ -94,7 +94,6 @@ To see which features I am currently working on check out my [Github Project Boa
 
 ## Contributor
   Kendall McGree
-  <p><a href="https://github.com/kendallm360/"><img src="https://img.shields.io/badge/github-181717.svg?style=for-the-    badge&logo=github&logoColor=white" /></a></p>
   
   <p><a href="https://www.linkedin.com/in/kendall-mcgree/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"></a></p>
   
