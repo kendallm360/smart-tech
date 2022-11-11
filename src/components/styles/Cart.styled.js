@@ -233,7 +233,7 @@ export const StyledCart = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 13px;
+      font-size: 9px;
     }
   }
 
@@ -264,7 +264,7 @@ export const StyledCart = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 10px;
+      font-size: 9px;
     }
   }
 

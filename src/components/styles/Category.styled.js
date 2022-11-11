@@ -130,7 +130,6 @@ export const StyledCategory = styled.section`
     background-color: white;
     border: solid 0.2em #fff200;
     border-radius: 0.3em;
-    cursor: pointer;
     margin-bottom: 0.5%;
     width: 35%;
     display: flex;
@@ -300,7 +299,7 @@ export const StyledCategory = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 15.5px;
+      font-size: 11px;
     }
   }
 
@@ -308,6 +307,7 @@ export const StyledCategory = styled.section`
     background-color: #fff200;
     border: #df0000;
     border-radius: 0.3em;
+    color: black;
     cursor: pointer;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
@@ -327,7 +327,7 @@ export const StyledCategory = styled.section`
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 11.5px;
+      font-size: 10px;
     }
   }
 

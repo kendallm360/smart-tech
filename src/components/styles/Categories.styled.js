@@ -97,7 +97,7 @@ export const StyledCategories = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
@@ -186,8 +186,8 @@ export const StyledCategories = styled.section`
 
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      height: 4.5em;
-      width: 4.5em;
+      height: 3.8em;
+      width: 3.8em;
     }
   }
 
@@ -219,7 +219,7 @@ export const StyledCategories = styled.section`
   }
   .washers {
     /* Larger Screens */
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1350px) {
       margin-left: 205%;
       margin-top: -10%;
       text-align: start;
