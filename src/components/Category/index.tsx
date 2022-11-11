@@ -160,7 +160,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
             {title.split("_").join(" ")}
           </h2>
           <div className="category-info">
-            <h3 className="item-total">{itemList.length} items</h3>
+            <h3 className="item-total">{allItems.length} items</h3>
             <select
               data-cy="sort-dropdown"
               className="sort-dropdown"
