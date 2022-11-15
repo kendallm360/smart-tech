@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCategories = styled.section`
   background-color: #df0000;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -91,25 +91,9 @@ export const StyledCategories = styled.section`
 
   .categories {
     display: grid;
-    /* Large Screens */
-    @media screen and (min-width: 1350px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    /* Desktops */
-    @media screen and (max-width: 1349px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    /* Laptops */
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    /* Tablets */
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(3, 1fr);
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      grid-template-columns: repeat(3, 1fr);
       margin: 3%;
     }
   }
@@ -217,12 +201,12 @@ export const StyledCategories = styled.section`
       font-size: 0.9em;
     }
   }
-  .washers {
-    /* Larger Screens */
+  /* .washers {
+    Larger Screens
     @media screen and (min-width: 1350px) {
       margin-left: 205%;
       margin-top: -10%;
       text-align: start;
     }
-  }
+  } */
 `;
