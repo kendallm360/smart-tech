@@ -70,6 +70,7 @@ export const StyledCategory = styled.section`
 
   .sort-dropdown {
     border-radius: 0.4em;
+    color: black;
     cursor: pointer;
     width: 15vw;
     text-align: center;
