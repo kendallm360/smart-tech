@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledCategory = styled.section`
   background-color: #df0000;
   color: black;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
