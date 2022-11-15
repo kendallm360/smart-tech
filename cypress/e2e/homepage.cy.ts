@@ -48,7 +48,7 @@ describe("homepage", () => {
     cy.url().should("equal", "http://localhost:3000/Desktops");
   });
 
-  it.only("Should show the correct quantity amount when items are added to cart", () => {
+  it("Should show the correct quantity amount when items are added to cart", () => {
     cy.get('[data-cy="category"]').eq(5).click().wait(7000);
     cy.get('[data-cy="add-to-cart-button"]').eq(0).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(1).click();
