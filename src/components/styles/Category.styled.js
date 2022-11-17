@@ -147,19 +147,19 @@ export const StyledCategory = styled.section`
   .item-image {
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      height: 21vh;
+      height: 20vh;
       margin-left: 5%;
       width: 90%;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 17vh;
+      height: 16.5vh;
       margin-left: 5%;
       width: 90%;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 14.5vh;
+      height: 13.5vh;
       margin-left: 5%;
       width: 90%;
     }
