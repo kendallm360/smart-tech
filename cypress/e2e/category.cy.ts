@@ -29,16 +29,16 @@ describe("category", () => {
     cy.url().should("equal", "http://localhost:3000/Laptops");
   });
 
-  it("Should be able to sort items from lowest price to highest", () => {
-    cy.wait(4000);
-    cy.get('[data-cy="sort-dropdown"]').select("low");
-    cy.get('[data-cy="item-name"]')
-      .eq(2)
-      .contains(
-        "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
-      );
-    cy.get('[data-cy="price"]').eq(2).contains(199.0);
-  });
+  // it("Should be able to sort items from lowest price to highest", () => {
+  //   cy.wait(4000);
+  //   cy.get('[data-cy="sort-dropdown"]').select("low");
+  //   cy.get('[data-cy="item-name"]')
+  //     .eq(2)
+  //     .contains(
+  //       "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
+  //     );
+  //   cy.get('[data-cy="price"]').eq(2).contains(199.0);
+  // });
 
   it("Should be able to sort items from highest price to lowest", () => {
     cy.get('[data-cy="sort-dropdown"]').select("high");
