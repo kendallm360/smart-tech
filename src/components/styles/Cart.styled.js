@@ -238,6 +238,7 @@ export const StyledCart = styled.section`
   }
 
   .quantity-dropdown {
+    color: black;
     cursor: pointer;
   }
 
@@ -245,6 +246,7 @@ export const StyledCart = styled.section`
     background-color: #df0000;
     border: #df0000;
     border-radius: 0.3em;
+    color: black;
     cursor: pointer;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
