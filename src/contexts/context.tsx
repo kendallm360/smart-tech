@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-interface ICartItem {
+export interface ICartItem {
   id: number;
   name: string;
   image: string;
