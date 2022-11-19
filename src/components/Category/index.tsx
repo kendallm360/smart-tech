@@ -73,7 +73,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const handleAddToCart = (event: any) => {
     const sku = event.target.value;
     const item = findItemBySku(sku, itemList);
-    if (!cart.map((e: any) => e.id).includes(parseInt(sku))) {
+    !cart.map((e: any) => e.id).includes(parseInt(sku)) &&
       setCart([
         ...cart,
         {
@@ -86,7 +86,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
           modelNumber: item.modelNumber,
         },
       ]);
-    }
   };
 
   const allItems = itemList
