@@ -8,33 +8,33 @@ export const StyledCart = styled.section`
   .empty-cart-header {
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 2.1em;
+      font-size: 2.1rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 2em;
+      font-size: 2rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.8em;
+      font-size: 1.8rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1.7em;
+      font-size: 1.7rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 1.7em;
+      font-size: 1.7rem;
     }
   }
 
   .cart-item {
-    border: solid 1px #df0000;
-    border-radius: 1em;
-    margin-bottom: 3%;
-    width: 75vw;
     display: flex;
     flex-direction: row;
+    border: solid 1px #df0000;
+    border-radius: 1rem;
+    margin-bottom: 3%;
+    width: 75vw;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
       height: 25vh;
@@ -58,13 +58,13 @@ export const StyledCart = styled.section`
   }
 
   .image-third {
-    background-color: white;
-    margin: 1%;
-    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    background-color: white;
+    margin: 1%;
+    width: 35%;
     /* Tablets */
     @media screen and (max-width: 768px) {
       margin: 2%;
@@ -132,23 +132,23 @@ export const StyledCart = styled.section`
     font-weight: 800;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       margin-top: -1%;
     }
   }
@@ -157,23 +157,23 @@ export const StyledCart = styled.section`
     font-weight: 500;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.65em;
+      font-size: 0.65rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.65em;
+      font-size: 0.65rem;
     }
   }
 
@@ -182,33 +182,33 @@ export const StyledCart = styled.section`
     text-align: center;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.6em;
+      font-size: 0.6rem;
     }
   }
 
   .price-cart {
-    margin: 2%;
-    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
+    margin: 2%;
+    width: 15%;
   }
 
   .item-price {
@@ -245,7 +245,7 @@ export const StyledCart = styled.section`
   .remove-item-button {
     background-color: #df0000;
     border: #df0000;
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     color: black;
     cursor: pointer;
     /* Large Screens */
@@ -276,7 +276,7 @@ export const StyledCart = styled.section`
 
   .checkout-button {
     border: #df0000;
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
     width: 70vw;
   }
 
@@ -294,31 +294,16 @@ export const StyledCart = styled.section`
     margin-top: 5%;
     height: 50%;
     width: 50%;
-    /* Large */
-    @media screen and (min-width: 1350px) {
-    }
-    /* Desktops */
-    @media screen and (max-width: 1349px) {
-    }
-    /* Laptops */
-    @media screen and (max-width: 1024px) {
-    }
-    /* Tablets */
-    @media screen and (max-width: 768px) {
-    }
-    /* Mobile */
-    @media screen and (max-width: 480px) {
-    }
   }
 
   .empty-cart-header {
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
 
@@ -326,23 +311,23 @@ export const StyledCart = styled.section`
     text-align: center;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 2.1em;
+      font-size: 2.1rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.8em;
+      font-size: 1.8rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.6em;
+      font-size: 1.6rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
   }
 `;
