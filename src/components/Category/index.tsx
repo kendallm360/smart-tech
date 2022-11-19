@@ -40,35 +40,33 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const handleSelect = (event: any) => {
     const target = event.target as HTMLInputElement;
     setSelect(target.value);
-    if (target.value === "") {
-      return allItems;
-    }
-    if (target.value === "low") {
-      setSorted(
-        itemList.sort(
-          (a: any, b: any) =>
-            parseInt(a.regularPrice.toFixed(2)) -
-            parseInt(b.regularPrice.toFixed(2))
-        )
-      );
-    }
-    if (target.value === "high") {
-      setSorted(
-        itemList.sort(
-          (a: any, b: any) =>
-            parseInt(b.regularPrice.toFixed(2)) -
-            parseInt(a.regularPrice.toFixed(2))
-        )
-      );
-    }
-    if (target.value === "new") {
-      setSorted(
-        itemList.sort(
-          (a: any, b: any) =>
-            parseInt(b.startDate.split("-").join("")) -
-            parseInt(a.startDate.split("-").join(""))
-        )
-      );
+    switch (target.value) {
+      case "":
+        return allItems;
+      case "low":
+        return setSorted(
+          itemList.sort(
+            (a: any, b: any) =>
+              parseInt(a.regularPrice.toFixed(2)) -
+              parseInt(b.regularPrice.toFixed(2))
+          )
+        );
+      case "high":
+        return setSorted(
+          itemList.sort(
+            (a: any, b: any) =>
+              parseInt(b.regularPrice.toFixed(2)) -
+              parseInt(a.regularPrice.toFixed(2))
+          )
+        );
+      case "new":
+        return setSorted(
+          itemList.sort(
+            (a: any, b: any) =>
+              parseInt(b.startDate.split("-").join("")) -
+              parseInt(a.startDate.split("-").join(""))
+          )
+        );
     }
   };
 
