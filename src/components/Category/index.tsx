@@ -8,7 +8,6 @@ import {
 import { StyledCategory } from "../styles/Category.styled";
 import Error from "../Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
-// import Scrollbar from "../Scrollbar";
 import { linkStyle } from "../Categories";
 
 interface ICategory {
@@ -22,8 +21,8 @@ export type Item = {
   name: string;
   regularPrice: string;
   sku: number;
-  // startDate: string;
 };
+
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
@@ -38,7 +37,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
     });
   }, []);
 
-  //convert from any below
   const handleSelect = (event: any) => {
     const target = event.target as HTMLInputElement;
     setSelect(target.value);
@@ -120,12 +118,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
                   Model:<span className="item-span"> {item.modelNumber}</span>{" "}
                 </h3>
               </Link>
-              {/* <Link to={`/${id}/${item.name}`} style={linkStyle}>
-              <h3 className="item-label">
-                Release Date:
-                <span className="item-span"> {item.startDate}</span>{" "}
-              </h3>
-            </Link> */}
               <Link to={`/${id}/${item.name}`} style={linkStyle}>
                 <h3 className="item-label">
                   SKU:<span className="item-span"> {item.sku}</span>{" "}
@@ -155,7 +147,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
         <Error />
       ) : (
         <StyledCategory>
-          {/* <Scrollbar /> */}
           <h2 className="header" data-cy="category-header">
             {title.split("_").join(" ")}
           </h2>
