@@ -30,3 +30,8 @@ export const StyledApp = styled.section`
 //   const linkElement = screen.getByText(/learn react/i);
 //   expect(linkElement).toBeInTheDocument();
 // });
+
+//deleted Types.ts file
+// export type test = {
+//   id: null;
+// };
