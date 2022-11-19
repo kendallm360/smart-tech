@@ -1,4 +1,4 @@
-import { Item } from "../components/Category";
+import { Item } from "../containers/Category";
 import { fetchCategory } from "./apicalls";
 
 export type TCategories =

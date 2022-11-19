@@ -5,11 +5,11 @@ import {
   findCategory,
   // findItemBySku,
 } from "../../utils/utils";
-import { StyledCategory } from "../styles/Category.styled";
-import Error from "../Error/index";
+import { StyledCategory } from "../../components/styles/Category.styled";
+import Error from "../../components/Error/index";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 // import { linkStyle } from "../Categories";
-import CategoryElement from "../CategoryElement";
+import CategoryElement from "../../components/CategoryElement";
 
 interface ICategory {
   id: string;
