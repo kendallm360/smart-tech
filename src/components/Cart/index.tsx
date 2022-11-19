@@ -1,9 +1,5 @@
 import { useContext } from "react";
-import {
-  AppContextInterface,
-  CartContext,
-  ICartItem,
-} from "../../contexts/context";
+import { AppContextInterface, CartContext } from "../../contexts/context";
 import { StyledCart } from "../styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
 import { Link } from "react-router-dom";
@@ -12,15 +8,14 @@ import { linkStyle } from "../Categories";
 
 const Cart = () => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
-
   const handleRemoveFromCart = (event: any) => {
-    let sku = event.target.value;
+    const sku = event.target.value;
     setCart(cart.filter((item: any) => item.id !== parseInt(sku)));
   };
 
   const handleItemQuantity = (event: any) => {
-    let value = parseInt(event.target.value);
-    let targetItemId = parseInt(event.target.id);
+    const value = parseInt(event.target.value);
+    const targetItemId = parseInt(event.target.id);
     const newCart = cart.map((item) => {
       if (item.id === targetItemId) {
         const updatedItem = {
@@ -33,8 +28,8 @@ const Cart = () => {
     });
     setCart(newCart);
   };
-  //ICArtITEM below
-  let entireCart = cart.map((e: any) => {
+
+  const entireCart = cart.map((e: any) => {
     return (
       <div key={e.id + Date.now} className="cart-item" data-cy="cart-item">
         <div className="image-third">
@@ -59,7 +54,6 @@ const Cart = () => {
             </Link>
           </div>
         </div>
-        {/* cj */}
         <div className="price-cart">
           <h3 className="item-price">{currencyFormatter.format(e.price)}</h3>
           <select
@@ -93,7 +87,7 @@ const Cart = () => {
     );
   });
 
-  let entireCartTotal = cart.reduce((acc, item) => {
+  const entireCartTotal = cart.reduce((acc, item) => {
     acc += item.price * item.quantity;
     return acc;
   }, 0);
