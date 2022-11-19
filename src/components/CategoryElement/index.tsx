@@ -9,7 +9,6 @@ const CategoryElement = ({ item, id }: any): JSX.Element => {
 
   const handleAddToCart = (event: any) => {
     const sku = event.target.value;
-    // const item = findItemBySku(sku, itemList);
     !cart.map((e: any) => e.id).includes(parseInt(sku)) &&
       setCart([
         ...cart,
@@ -24,7 +23,6 @@ const CategoryElement = ({ item, id }: any): JSX.Element => {
         },
       ]);
   };
-  //   console.log(itemList, "item");
   return (
     <>
       <div
