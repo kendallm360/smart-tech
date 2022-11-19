@@ -30,12 +30,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
     findCategory(id)?.then((data) => {
       setItem(data.products.find((product: TItem) => product.name === name));
     });
-    //attempt at async await
-    // ?.finally((data) => {
-    //   setItem(
-    //     data.products.find((product: ICategory) => product.name === name)
-    //   );
-    // });
   }, []);
 
   const handleAddToCart = () => {
