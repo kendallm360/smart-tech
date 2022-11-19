@@ -40,7 +40,7 @@ const Item = ({ id, name }: TItem): JSX.Element => {
 
   const handleAddToCart = () => {
     setDisabled(true);
-    if (!cart.map((e: any) => e.id).includes(item.sku)) {
+    !cart.map((e: any) => e.id).includes(item.sku) &&
       setCart([
         ...cart,
         {
@@ -53,7 +53,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           modelNumber: item.modelNumber,
         },
       ]);
-    }
   };
 
   return (
