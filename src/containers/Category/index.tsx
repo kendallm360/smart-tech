@@ -1,14 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-import {
-  // currencyFormatter,
-  findCategory,
-  // findItemBySku,
-} from "../../utils/utils";
+import { useEffect, useState } from "react";
+import { findCategory } from "../../utils/utils";
 import { StyledCategory } from "../../components/styles/Category.styled";
 import Error from "../../components/Error/index";
-import { AppContextInterface, CartContext } from "../../contexts/context";
-// import { linkStyle } from "../Categories";
 import CategoryElement from "../../components/CategoryElement";
 
 interface ICategory {
@@ -29,7 +22,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
   const [itemList, setItemList] = useState([]);
   const [select, setSelect] = useState("high" || "low" || "new");
   const [sorted, setSorted] = useState([]);
-  const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
     setTitle(id);
@@ -70,24 +62,6 @@ const Category = ({ id }: ICategory): JSX.Element => {
         );
     }
   };
-
-  // const handleAddToCart = (event: any) => {
-  //   const sku = event.target.value;
-  //   const item = findItemBySku(sku, itemList);
-  // /  !cart.map((e: any) => e.id).includes(parseInt(sku)) &&
-  //     setCart([
-  //       ...cart,
-  //       {
-  //         id: item.sku,
-  //         name: item.name,
-  //         image: item.image,
-  //         price: parseInt(item.regularPrice),
-  //         quantity: 1,
-  //         category: id,
-  //         modelNumber: item.modelNumber,
-  //       },
-  //     ]);
-  // };
 
   const allItems = itemList
     .filter((item: Item) => !item.name.includes("/"))
