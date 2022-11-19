@@ -26,7 +26,7 @@ export type Item = {
 const Category = ({ id }: ICategory): JSX.Element => {
   const [title, setTitle] = useState("");
   const [itemList, setItemList] = useState([]);
-  const [select, setSelect] = useState("high" || "low");
+  const [select, setSelect] = useState("high" || "low" || "new");
   const [sorted, setSorted] = useState([]);
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
@@ -71,8 +71,8 @@ const Category = ({ id }: ICategory): JSX.Element => {
   };
 
   const handleAddToCart = (event: any) => {
-    let sku = event.target.value;
-    let item = findItemBySku(sku, itemList);
+    const sku = event.target.value;
+    const item = findItemBySku(sku, itemList);
     if (!cart.map((e: any) => e.id).includes(parseInt(sku))) {
       setCart([
         ...cart,
@@ -89,7 +89,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
     }
   };
 
-  let allItems = itemList
+  const allItems = itemList
     .filter((item: Item) => !item.name.includes("/"))
     .map((item: Item) => {
       return (
@@ -139,6 +139,7 @@ const Category = ({ id }: ICategory): JSX.Element => {
         </div>
       );
     });
+
   return (
     <>
       {itemList.length === 0 ? (
