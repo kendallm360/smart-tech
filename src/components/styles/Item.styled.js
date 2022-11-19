@@ -228,8 +228,6 @@ export const StyledItem = styled.section`
   }
 
   .add-to-cart:disabled {
-    color: dimgray;
-    cursor: none;
-    transform: scale(1);
+    display: none;
   }
 `;
