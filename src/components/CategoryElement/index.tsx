@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AppContextInterface, CartContext } from "../../contexts/context";
 import { currencyFormatter } from "../../utils/utils";
 import { linkStyle } from "../Categories";
 
 const CategoryElement = ({ item, id }: any): JSX.Element => {
+  const [disabled, setDisabled] = useState(false);
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   const handleAddToCart = (event: any) => {
+    setDisabled(true);
     const sku = event.target.value;
     !cart.map((e: any) => e.id).includes(parseInt(sku)) &&
       setCart([
@@ -63,6 +65,7 @@ const CategoryElement = ({ item, id }: any): JSX.Element => {
             data-cy="add-to-cart-button"
             value={item.sku}
             className={`cart-button ${item.sku}`}
+            disabled={disabled}
             onClick={handleAddToCart}
           >
             Add to Cart

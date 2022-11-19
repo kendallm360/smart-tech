@@ -336,4 +336,8 @@ export const StyledCategory = styled.section`
   .cart-button:hover {
     transform: scale(1.15);
   }
+
+  .cart-button:disabled {
+    display: none;
+  }
 `;
