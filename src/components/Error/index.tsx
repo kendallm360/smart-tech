@@ -6,7 +6,6 @@ const Error = () => {
       <h2 data-cy="loading" className="loading">
         Loading...
       </h2>
-      {/* add graphic here */}
     </StyledError>
   );
 };
