@@ -30,12 +30,7 @@ const CartElement = ({ cartElement }: any) => {
 
   return (
     <>
-      <div
-        // key={cartElement.id + Date.now}
-        key={cartElement.sku}
-        className="cart-item"
-        data-cy="cart-item"
-      >
+      <div className="cart-item" data-cy="cart-item">
         <div className="image-third">
           <Link
             to={`/${cartElement.category}/${cartElement.name}`}
