@@ -25,14 +25,10 @@ const CategoryElement = ({ item, id }: any): JSX.Element => {
         },
       ]);
   };
+
   return (
     <>
-      <div
-        key={item.sku}
-        id={item.regularPrice}
-        data-cy="item-card"
-        className="item-card"
-      >
+      <div data-cy="item-card" className="item-card">
         <div className="image-third">
           <Link to={`/${id}/${item.name}`} style={linkStyle}>
             <img className="item-image" src={item.image} alt={item.name} />
