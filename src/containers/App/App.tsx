@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Categories from "../../components/Categories";
 import Category from "../Category";
 import Item from "../../components/Item";
-import Cart from "../../components/Cart";
+import Cart from "../Cart";
 import { StyledApp } from "../../components/styles/App.styled";
 
 const App = () => {

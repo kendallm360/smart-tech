@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { AppContextInterface, CartContext } from "../../contexts/context";
-import { StyledCart } from "../styles/Cart.styled";
+import { StyledCart } from "../../components/styles/Cart.styled";
 import cartLogo from "../../images/empty-cart.png";
 import { currencyFormatter } from "../../utils/utils";
-import CartElement from "../CartElement";
+import CartElement from "../../components/CartElement";
 
 const Cart = () => {
   const { cart } = useContext<AppContextInterface>(CartContext);
