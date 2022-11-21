@@ -29,17 +29,6 @@ describe("category", () => {
     cy.url().should("equal", "http://localhost:3000/Laptops");
   });
 
-  // it("Should be able to sort items from lowest price to highest", () => {
-  //   cy.wait(4000);
-  //   cy.get('[data-cy="sort-dropdown"]').select("low");
-  //   cy.get('[data-cy="item-name"]')
-  //     .eq(2)
-  //     .contains(
-  //       "Super Sonic - 10.1” Touch 2in1 Intel CherryTrail Z8350 2GB 32GB - Silver tablet with Black case and keyboard"
-  //     );
-  //   cy.get('[data-cy="price"]').eq(2).contains(199.0);
-  // });
-
   it("Should be able to sort items from highest price to lowest", () => {
     cy.get('[data-cy="sort-dropdown"]').select("high");
     cy.get('[data-cy="item-name"]')
@@ -51,7 +40,6 @@ describe("category", () => {
   it("Should be able to sort with the newest items first", () => {
     cy.get('[data-cy="sort-dropdown"]').select("new");
     cy.get('[data-cy="item-name"]').eq(0).contains("Super Sonic");
-    //change to date below once implemented
     cy.get('[data-cy="price"]').eq(0).contains("199");
   });
 
@@ -64,10 +52,9 @@ describe("category", () => {
 
   it("Should prevent the user from adding the same item to the cart multiple times", () => {
     cy.get('[data-cy="add-to-cart-button"]').eq(2).click();
-    cy.get('[data-cy="add-to-cart-button"]').eq(2).click();
     cy.get('[data-cy="add-to-cart-button"]').eq(5).click();
-    cy.get('[data-cy="add-to-cart-button"]').eq(2).click();
+    cy.get('[data-cy="add-to-cart-button"]').eq(2).should("be.disabled");
+    cy.get('[data-cy="add-to-cart-button"]').eq(5).should("be.disabled");
     cy.get('[data-cy="cart-quantity"]').should("contain", 2);
   });
-  // add testing coverage for fitering once that is implemented
 });
