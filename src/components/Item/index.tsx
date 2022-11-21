@@ -27,9 +27,11 @@ const Item = ({ id, name }: TItem): JSX.Element => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
-    findCategory(id)?.then((data) => {
+    const fetchItem = async () => {
+      const data = await findCategory(id);
       setItem(data.products.find((product: TItem) => product.name === name));
-    });
+    };
+    fetchItem();
   }, []);
 
   const handleAddToCart = () => {
