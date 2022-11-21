@@ -19,19 +19,3 @@ export const StyledApp = styled.section`
 //Mobile
 // @media screen and (max-width: 480px) {
 // }
-
-//Deleted test file
-// import React from "react";
-// import { render, screen } from "@testing-library/react";
-// import App from "./containers/App/App";
-
-// test("renders learn react link", () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
-//deleted Types.ts file
-// export type test = {
-//   id: null;
-// };
