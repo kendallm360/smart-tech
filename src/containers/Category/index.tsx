@@ -25,9 +25,11 @@ const Category = ({ id }: ICategory): JSX.Element => {
 
   useEffect(() => {
     setTitle(id);
-    findCategory(id)?.then((data) => {
+    const fetchData = async () => {
+      const data = await findCategory(id);
       setItemList(data.products);
-    });
+    };
+    fetchData();
   }, []);
 
   const handleSelect = (event: any) => {
