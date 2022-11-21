@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const StyledCategories = styled.section`
-  background-color: #df0000;
-  height: 100%;
-  width: 100vw;
   display: flex;
   flex-direction: column;
+  background-color: #df0000;
+  height: 100%;
 
   .header {
     color: black;
-    text-align: center;
     margin-top: 1%;
+    text-align: center;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
       font-size: 72px;
@@ -64,27 +63,27 @@ export const StyledCategories = styled.section`
     margin-left: 5%;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
       margin-top: -4%;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
       margin-top: -3%;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
       margin-top: -2%;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1em;
+      font-size: 1rem;
       margin-top: -2%;
     }
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
       margin-bottom: 5%;
     }
   }
@@ -106,39 +105,39 @@ export const StyledCategories = styled.section`
   }
 
   .category-body {
-    background-color: white;
-    border: solid 0.3em #fff200;
-    border-radius: 50%;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
+    background-color: white;
+    border: solid 0.3rem #fff200;
+    border-radius: 50%;
+    cursor: pointer;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      height: 12.5em;
-      width: 12.5em;
+      height: 12.5rem;
+      width: 12.5rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 11.5em;
-      width: 11.5em;
+      height: 11.5rem;
+      width: 11.5rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 11.5em;
-      width: 11.5em;
+      height: 11.5rem;
+      width: 11.5rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      height: 7.5em;
-      width: 7.5em;
+      height: 7.5rem;
+      width: 7.5rem;
     }
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      height: 6em;
+      height: 6rem;
       margin-top: 10%;
-      width: 6em;
+      width: 6rem;
     }
   }
 
@@ -149,29 +148,28 @@ export const StyledCategories = styled.section`
   .category-images {
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      height: 9em;
-      width: 9em;
+      height: 9rem;
+      width: 9rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 8em;
-      width: 8em;
+      height: 8rem;
+      width: 8rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 8em;
-      width: 8em;
+      height: 8rem;
+      width: 8rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      height: 5.5em;
-      width: 5.5em;
+      height: 5.5rem;
+      width: 5.5rem;
     }
-
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      height: 3.8em;
-      width: 3.8em;
+      height: 3.8rem;
+      width: 3.8rem;
     }
   }
 
@@ -181,32 +179,23 @@ export const StyledCategories = styled.section`
     text-align: center;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
-
     /* Cellphones */
     @media screen and (max-width: 480px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
   }
-  /* .washers {
-    Larger Screens
-    @media screen and (min-width: 1350px) {
-      margin-left: 205%;
-      margin-top: -10%;
-      text-align: start;
-    }
-  } */
 `;

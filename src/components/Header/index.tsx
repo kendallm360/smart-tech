@@ -7,14 +7,8 @@ import { AppContextInterface, CartContext } from "../../contexts/context";
 
 const Header = () => {
   const { cart } = useContext<AppContextInterface>(CartContext);
-  // console.log(
-  //   cart.reduce((acc, e) => {
-  //     acc += e.quantity;
-  //     return acc;
-  //   }, 0),
-  //   "testStudy"
-  // );
-  let totalCartQuantity = cart.reduce((acc, e) => {
+
+  const totalCartQuantity = cart.reduce((acc, e) => {
     acc += e.quantity;
     return acc;
   }, 0);

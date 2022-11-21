@@ -27,20 +27,16 @@ const Item = ({ id, name }: TItem): JSX.Element => {
   const { cart, setCart } = useContext<AppContextInterface>(CartContext);
 
   useEffect(() => {
-    findCategory(id)?.then((data) => {
+    const fetchItem = async () => {
+      const data = await findCategory(id);
       setItem(data.products.find((product: TItem) => product.name === name));
-    });
-    //attempt at async await
-    // ?.finally((data) => {
-    //   setItem(
-    //     data.products.find((product: ICategory) => product.name === name)
-    //   );
-    // });
+    };
+    fetchItem();
   }, []);
 
   const handleAddToCart = () => {
     setDisabled(true);
-    if (!cart.map((e: any) => e.id).includes(item.sku)) {
+    !cart.map((e: any) => e.id).includes(item.sku) &&
       setCart([
         ...cart,
         {
@@ -53,7 +49,6 @@ const Item = ({ id, name }: TItem): JSX.Element => {
           modelNumber: item.modelNumber,
         },
       ]);
-    }
   };
 
   return (

@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-interface ICartItem {
+export interface ICartItem {
   id: number;
   name: string;
   image: string;
@@ -12,8 +12,7 @@ interface ICartItem {
 
 export interface AppContextInterface {
   cart: ICartItem[];
-  //figure how to better declare functions:
-  setCart: any;
+  setCart: Function;
 }
 
 const defaultContext = {

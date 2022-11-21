@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const StyledApp = styled.section`
+  height: 100vh;
+  width: 99.2vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
   font-family: "impact-regular", sans-serif;
 `;
 // Template
@@ -19,14 +24,3 @@ export const StyledApp = styled.section`
 //Mobile
 // @media screen and (max-width: 480px) {
 // }
-
-//Deleted test file
-// import React from "react";
-// import { render, screen } from "@testing-library/react";
-// import App from "./containers/App/App";
-
-// test("renders learn react link", () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });

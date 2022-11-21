@@ -52,5 +52,4 @@ describe("cart", () => {
     cy.get('[data-cy="quantity-dropdown"]').eq(0).select(3);
     cy.get('[data-cy="quantity-dropdown"]').eq(0).should("have.value", 4);
   });
-  // test for router functionality as well
 });

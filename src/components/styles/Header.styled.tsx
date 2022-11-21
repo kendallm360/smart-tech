@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
   background-color: #df0000;
   border-bottom: solid 1px white;
   height: 10vh;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
 
   .logo {
     cursor: pointer;
-    width: 20vw;
     height: 100%;
+    width: 20vw;
   }
 
   .cart-body {
-    width: 15vw;
     height: 10vh;
+    width: 15vw;
     @media screen and (max-width: 600px) {
       width: 20vw;
     }

@@ -1,11 +1,10 @@
 import Header from "../../components/Header";
 import { Route, Switch } from "react-router-dom";
 import Categories from "../../components/Categories";
-import Category from "../../components/Category";
+import Category from "../Category";
 import Item from "../../components/Item";
-import Cart from "../../components/Cart";
+import Cart from "../Cart";
 import { StyledApp } from "../../components/styles/App.styled";
-// import { ErrorPage } from "../../components/ErrorPage";
 
 const App = () => {
   return (
@@ -15,15 +14,9 @@ const App = () => {
         <Route exact path="/">
           <Categories />
         </Route>
-
         <Route exact path="/cart">
           <Cart />
         </Route>
-
-        {/* <Route exact path="/error">
-          <ErrorPage />
-        </Route> */}
-
         <Route
           exact
           path="/:id"
@@ -31,7 +24,6 @@ const App = () => {
             return <Category id={match.params.id} />;
           }}
         />
-
         <Route
           exact
           path="/:id/:name"

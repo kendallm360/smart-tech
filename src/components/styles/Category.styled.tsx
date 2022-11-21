@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const StyledCategory = styled.section`
-  background-color: #df0000;
-  color: black;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #df0000;
+  color: black;
 
   .header {
     margin-top: 1%;
@@ -34,78 +33,78 @@ export const StyledCategory = styled.section`
   }
 
   .category-info {
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-    margin-top: -2%;
-    margin-bottom: 3%;
-    width: 90vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    margin-bottom: 3%;
+    margin-top: -2%;
+    width: 90vw;
   }
 
   .item-total {
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
     }
   }
 
   .sort-dropdown {
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
     color: black;
     cursor: pointer;
     width: 15vw;
     text-align: center;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 0.95em;
+      font-size: 0.95rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.85em;
+      font-size: 0.85rem;
       width: 19vw;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.75em;
+      font-size: 0.75rem;
       width: 25vw;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       width: 30vw;
     }
   }
 
   .item-card {
+    display: flex;
+    flex-direction: row;
     border-bottom: solid 1px white;
     margin-bottom: 3%;
     width: 90vw;
-    display: flex;
-    flex-direction: row;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
       height: 25vh;
@@ -129,15 +128,15 @@ export const StyledCategory = styled.section`
   }
 
   .image-third {
-    background-color: white;
-    border: solid 0.2em #fff200;
-    border-radius: 0.3em;
-    margin-bottom: 0.5%;
-    width: 35%;
     display: flex;
     justify-content: center;
-    align-items: center;
     align-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid 0.2rem #fff200;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5%;
+    width: 35%;
   }
 
   .item-image:hover {
@@ -178,11 +177,11 @@ export const StyledCategory = styled.section`
   }
 
   .item-info {
+    display: flex;
+    flex-direction: column;
     margin: 1%;
     text-align: center;
     width: 50%;
-    display: flex;
-    flex-direction: column;
   }
 
   .item-name {
@@ -190,23 +189,23 @@ export const StyledCategory = styled.section`
     text-align: center;
     /* Large Screens */
     @media screen and (min-width: 1350px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
     }
   }
 
@@ -215,10 +214,10 @@ export const StyledCategory = styled.section`
   }
 
   .additional-item-info {
-    color: #fff200;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: #fff200;
   }
 
   .item-label {
@@ -226,23 +225,23 @@ export const StyledCategory = styled.section`
     font-weight: 800;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
       margin-top: -1%;
     }
   }
@@ -251,32 +250,32 @@ export const StyledCategory = styled.section`
     font-weight: 500;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 0.7em;
+      font-size: 0.7rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.65em;
+      font-size: 0.65rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.65em;
+      font-size: 0.65rem;
     }
   }
 
   .price-cart {
-    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    width: 15%;
   }
 
   .item-price {
@@ -308,7 +307,7 @@ export const StyledCategory = styled.section`
   .cart-button {
     background-color: #fff200;
     border: #df0000;
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     color: black;
     cursor: pointer;
     /* Large Screens */
@@ -335,5 +334,9 @@ export const StyledCategory = styled.section`
 
   .cart-button:hover {
     transform: scale(1.15);
+  }
+
+  .cart-button:disabled {
+    display: none;
   }
 `;

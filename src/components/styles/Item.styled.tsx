@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledItem = styled.section`
-  margin-left: 20vw;
-  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 20vw;
+  width: 60vw;
 
   .item-title {
     text-align: center;
@@ -38,10 +38,10 @@ export const StyledItem = styled.section`
   }
 
   .additional-item-info {
-    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 90%;
   }
 
   .item-label {
@@ -72,32 +72,32 @@ export const StyledItem = styled.section`
     font-weight: 800;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
   }
 
   .item-span {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: 500;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
   }
 
@@ -140,7 +140,7 @@ export const StyledItem = styled.section`
   .description-header {
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 1em;
+      font-size: 1rem;
     }
   }
 
@@ -148,23 +148,23 @@ export const StyledItem = styled.section`
     margin-top: 0%;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.25em;
+      font-size: 1.25rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 0.95em;
+      font-size: 0.95rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
   }
 
@@ -173,53 +173,53 @@ export const StyledItem = styled.section`
     text-align: center;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.8em;
+      font-size: 1.8rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.6em;
+      font-size: 1.6rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
   }
 
   .add-to-cart {
     background-color: #df0000;
     border: #df0000;
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
     color: black;
     cursor: pointer;
     margin-top: -1.5%;
     width: 70vw;
     /* Large */
     @media screen and (min-width: 1350px) {
-      font-size: 1.7em;
+      font-size: 1.7rem;
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
     /* Mobile */
     @media screen and (max-width: 480px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
   }
 
@@ -228,8 +228,6 @@ export const StyledItem = styled.section`
   }
 
   .add-to-cart:disabled {
-    color: dimgray;
-    cursor: none;
-    transform: scale(1);
+    display: none;
   }
 `;
