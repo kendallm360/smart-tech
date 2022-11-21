@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const StyledApp = styled.section`
+  height: 100vh;
+  width: 99.2vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
   font-family: "impact-regular", sans-serif;
 `;
 // Template

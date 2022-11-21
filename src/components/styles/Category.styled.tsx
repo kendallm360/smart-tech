@@ -6,7 +6,6 @@ export const StyledCategory = styled.section`
   align-items: center;
   background-color: #df0000;
   color: black;
-  width: 100vw;
 
   .header {
     margin-top: 1%;

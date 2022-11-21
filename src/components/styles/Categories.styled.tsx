@@ -5,7 +5,6 @@ export const StyledCategories = styled.section`
   flex-direction: column;
   background-color: #df0000;
   height: 100%;
-  width: 100vw;
 
   .header {
     color: black;

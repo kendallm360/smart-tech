@@ -6,7 +6,6 @@ export const StyledHeader = styled.header`
   background-color: #df0000;
   border-bottom: solid 1px white;
   height: 10vh;
-  width: 100vw;
 
   .logo {
     cursor: pointer;
