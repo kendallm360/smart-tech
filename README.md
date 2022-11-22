@@ -23,7 +23,7 @@ More importantly Smart Tech is an application that I built in my free time to sh
 
 
 ## Deployed Application
-[Smart Tech](https://smart-tech-539bksv5l-kendallm360.vercel.app/)
+[Smart Tech](https://smart-tech-odhkz7ler-kendallm360.vercel.app/)
 
 ## User Stories
 - As a user I should be able to see a list of different categories to choose from
@@ -36,16 +36,16 @@ More importantly Smart Tech is an application that I built in my free time to sh
 ## Application in Action
 
 ### Choosing a category of devices from the options populated on page load:
-![Demo1](https://media.giphy.com/media/LwwFk8FeVzh40Y1vBt/giphy.gif)
+![Demo1](https://media.giphy.com/media/ooeIWt7YQgq9Eus3oq/giphy.gif)
 
 ### Sorting items by price both directions or with the newest arrivals first:
-![Demo2](https://media.giphy.com/media/6D2IDxbU4jK2eADoCi/giphy.gif)
+![Demo2](https://media.giphy.com/media/za1WLJnvbzTHp0cUGr/giphy.gif)
 
 ### Adding items to the cart:
-![Demo3](https://media.giphy.com/media/Rh14RVV17xSgGV1wtq/giphy.gif)
+![Demo3](https://media.giphy.com/media/AxAuA3Dr4yZVcvn1ur/giphy.gif)
 
 ### Removing items from cart and adjusting the quantity of items:
-![Demo4](https://media.giphy.com/media/dFS5x3LLYisowP52r1/giphy.gif)
+![Demo4](https://media.giphy.com/media/V7xs7jR2aDZVDTdjmX/giphy.gif)
 
 
 ## Technologies Used
