@@ -10,7 +10,7 @@
     <li><a href="#technologies-used">Technologies Used</a></li>
     <li><a href="#tools-used">Tools Used</a></li>
     <li><a href="#accessibility">Accessibility</a></li>
-    <li><a href="#organizational-resources">Organizational & Planning Resources</a></li>
+    <li><a href="#organizational-resources">Organizational Resources</a></li>
     <li><a href="#future-additions">Future Additions</a></li>
     <li><a href="#contributor">Contributor</a></li>
   </ol>
@@ -70,11 +70,11 @@ More importantly Smart Tech is an application that I built in my free time to sh
 <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-## Accessibiility
+## Accessibility
 - [Lighthouse Scores](https://docs.google.com/document/d/17Sl9c4BiYSNiIOhNJ5BE8Fv9ghZdMn3CNmGaxPCDKQs/edit?usp=sharing)
 - [Taba11y Demos](https://docs.google.com/document/d/1XyG8hIZ5lnz9SoLt_lnrc83zQvd29UzW0jGX6fsPG5U/edit?usp=sharing)
 
-## Organizational/Planning Resources
+## Organizational Resources
  - [Project Board](https://github.com/users/kendallm360/projects/4/views/1)
  - [Figma](https://www.figma.com/file/UsOAE3rAptWu0q4lLhCgI2/Smart-Tech?node-id=1%3A2)
  - [MVP](https://docs.google.com/document/d/1Bn9kGBiyN8qaxEYMc9hHdi1dHYXkHljyGGNz2hM-8-E/edit)
@@ -87,10 +87,6 @@ More importantly Smart Tech is an application that I built in my free time to sh
 - Give users the ability to leave reviews about the items
 - Give users the ability to rate items
 - Give users the ability to see a page with all smart tech team members
-
-
-To see which features I am currently working on check out my [Github Project Board](https://github.com/users/kendallm360/projects/4/views/1)
-
 
 ## Contributor
   Kendall McGree
