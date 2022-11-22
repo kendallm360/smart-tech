@@ -17,9 +17,12 @@
 </details>
 
 ## About the project
-FAQ: Is this the same Smart Tech that Steve Carell's character in "The 40-Year-Old Virgin" worked? Answer: YES 
+FAQ: Is this the same Smart Tech that Steve Carell's character in "The 40-Year-Old Virgin" worked throughtout the movie? 
+Answer: YES 
 
-More importantly Smart Tech is an application that I built in my free time to showcase all of the skills I learned this year. I am still challenging myself to learn <a href="#future-additions">more technologies</a> while improving on what I've already learned so this project will always be under construction. 
+More importantly Smart Tech is an application that I built in my free time to showcase all of my frontend engineering skills. I am currently rewriting the application to solidify my learning while still challenging myself to learn more technologies. Smart Tech2.0 will include Jest testing, themes for my styled components, an Express.js backend, materialUI, and github documentation via Wiki. 
+
+I am still challenging myself to learn <a href="#future-additions">more technologies</a> while improving on what I've already learned so this project will always be under construction. 
 
 
 ## Deployed Application
