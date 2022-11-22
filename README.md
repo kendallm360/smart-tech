@@ -10,7 +10,7 @@
     <li><a href="#technologies-used">Technologies Used</a></li>
     <li><a href="#tools-used">Tools Used</a></li>
     <li><a href="#accessibility">Accessibility</a></li>
-    <li><a href="#organizational-resources">Organizational/Planning Resources</a></li>
+    <li><a href="#organizational-resources">Organizational & Planning Resources</a></li>
     <li><a href="#future-additions">Future Additions</a></li>
     <li><a href="#contributor">Contributor</a></li>
   </ol>
