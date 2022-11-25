@@ -31,10 +31,8 @@ describe("category", () => {
 
   it("Should be able to sort items from highest price to lowest", () => {
     cy.get('[data-cy="sort-dropdown"]').select("high");
-    cy.get('[data-cy="item-name"]')
-      .eq(0)
-      .contains("Alienware - AREA-51 2.8GHz Notebook");
-    cy.get('[data-cy="price"]').eq(0).contains("2,529");
+    cy.get('[data-cy="item-name"]').eq(0).contains("GeForce RTX 2080");
+    cy.get('[data-cy="price"]').eq(0).contains("3,699");
   });
 
   it("Should be able to sort with the newest items first", () => {
