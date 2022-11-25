@@ -23,7 +23,7 @@ Answer: YES
 More importantly Smart Tech is an application that I built in my free time to showcase all of my frontend engineering skills. I am currently rewriting the application to solidify my learning while still challenging myself to learn more technologies. Smart Tech2.0 will include Jest testing, themes for my styled components, an Express.js backend, materialUI, and github documentation via Wiki. 
 
 ## Deployed Application
-[Smart Tech](https://smart-tech-odhkz7ler-kendallm360.vercel.app/)
+[Smart Tech](https://smart-tech-c9yjukahg-kendallm360.vercel.app/)
 
 ## User Stories
 - As a user I should be able to see a list of different categories to choose from
