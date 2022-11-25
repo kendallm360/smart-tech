@@ -121,13 +121,13 @@ export const StyledCategories = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 10rem;
-      width: 10rem;
+      height: 7.5rem;
+      width: 7.5rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 9rem;
-      width: 9rem;
+      height: 8rem;
+      width: 8rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
@@ -154,13 +154,13 @@ export const StyledCategories = styled.section`
     }
     /* Desktops */
     @media screen and (max-width: 1349px) {
-      height: 7rem;
-      width: 7rem;
+      height: 5rem;
+      width: 5rem;
     }
     /* Laptops */
     @media screen and (max-width: 1024px) {
-      height: 6rem;
-      width: 6rem;
+      height: 5rem;
+      width: 5rem;
     }
     /* Tablets */
     @media screen and (max-width: 768px) {
